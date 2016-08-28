@@ -28,6 +28,10 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     color: #000E2F;
 }
+h2 {
+    font-size: 1.75em;
+    color: #000E2F;
+}
 p {
     font-size: 1em;
     line-height: 1.1em;
