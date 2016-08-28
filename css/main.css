@@ -12,6 +12,7 @@ nav ul, footer ul {
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
+    text-align: center;
 }
 a {
     text-decoration: none;
@@ -43,4 +44,7 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+nav {
+        text-align: center;
 }
