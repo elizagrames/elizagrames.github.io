@@ -1,2 +1,4 @@
+permalink: /blog/:year/:month/:day/:title
+
 name: Eliza Grames, Ecology Graduate Student
 markdown: kramdown
