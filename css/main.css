@@ -8,6 +8,7 @@ nav ul, footer ul {
     list-style: none;
     font-weight: bold;
     font-color: #7c878e;
+     text-align: center;
 }
 nav ul li, footer ul li {
     display: inline;
