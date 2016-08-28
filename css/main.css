@@ -32,8 +32,8 @@ p {
     color: #000000;
 }
 footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    border-top: 5px solid #000E2F;
+    font-size: 1em;
 }
 
 ul.posts { 
