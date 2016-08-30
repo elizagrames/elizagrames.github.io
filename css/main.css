@@ -59,3 +59,21 @@ footer {
 b {
     font-weight: bold;
 }
+
+wrapper {
+  margin-right: 200px;
+}
+content {
+  float: left;
+  width: 100%;
+  background-color: #CCF;
+}
+sidebar {
+  float: right;
+  width: 200px;
+  margin-right: -200px;
+  background-color: #FFA;
+}
+cleared {
+  clear: both;
+}
