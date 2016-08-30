@@ -65,11 +65,11 @@ b {
 }
 #content {
   float: left;
-  width: 90%;
+  width: 85%;
 }
 #sidebar {
   float: right;
-  width: 220px;
+  width: 300px;
   margin-right: -200px;
 }
 #cleared {
