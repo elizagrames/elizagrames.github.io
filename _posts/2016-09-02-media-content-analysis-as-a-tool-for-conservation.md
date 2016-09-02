@@ -4,9 +4,14 @@ title: "Media content analysis as a tool for conservation"
 date: 2016-09-02
 ---
 
-<p>Given my background in public relations and communications before I decided to study ecology, I'm interested in the role communication plays in ecology and conservation biology. Recently, I began thinking about how conservation-oriented ecological research is portrayed in the media and if anyone is studying this topic. 
+<p>
+<figure>
+<img src="https://c3.staticflickr.com/8/7503/26366569074_8e763d0d81_n.jpg" align="right" hspace="10">
+<figcaption>Florida Panther Kittens in Den, photo by David Shindle for the Florida Fish and Wildlife Conservation Commission</figcaption>
+</figure>
+Given my background in public relations and communications before I decided to study ecology, I'm interested in the role communication plays in ecology and conservation biology. Recently, I began thinking about how conservation-oriented ecological research is portrayed in the media and if anyone is studying this topic. 
 </p><p>
-<img src="https://c3.staticflickr.com/8/7503/26366569074_8e763d0d81_n.jpg" align="right" hspace="10" width="213" height="160">The best tool for studying media coverage of an issue is a media content analysis, so I did a quick search through the literature for studies that included both "media content analysis" and "conservation" and did not come up with much. The articles that I did find were primarily focused on large carnivores (Alexander and Quinn, 2011; Bhatia et al., 2013; Jacobson et al., 2012; Siemer et al., 2007). The Jacobson et al. article on media coverage of the Florida panther is an excellent example of using media content analysis to explore public opinions on ecological research and conservation issues, so I will focus on that article. I'm omitting citations because they're all in the Jacobson et al. article, which I would encourage you to read.</p>
+The best tool for studying media coverage of an issue is a media content analysis, so I did a quick search through the literature for studies that included both "media content analysis" and "conservation" and did not come up with much. The articles that I did find were primarily focused on large carnivores (Alexander and Quinn, 2011; Bhatia et al., 2013; Jacobson et al., 2012; Siemer et al., 2007). The Jacobson et al. article on media coverage of the Florida panther is an excellent example of using media content analysis to explore public opinions on ecological research and conservation issues, so I will focus on that article. I'm omitting citations because they're all in the Jacobson et al. article, which I would encourage you to read.</p>
 
 <h2>Background: Agenda-setting Theory and Framing</h2>
 
