@@ -20,9 +20,9 @@ To demonstrate the relationship between frames and tone, let's look at the examp
 
 <table>
 <tr>
-<td><b>Frame</td>
-<td>Positive</td>
-<td>Negative</b></td>
+<td><b>Frame</b></td>
+<td><b>Positive</b></td>
+<td><b>Negative</b></td>
 </tr>
 <tr>
 <td>Risks to livestock</td>
