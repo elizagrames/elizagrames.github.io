@@ -18,7 +18,7 @@ The tone of an article (also sometimes called the valence) impacts how the publi
 </p><p>
 To demonstrate the relationship between frames and tone, let's look at the example of large carnivores, which could be Florida panthers, or wolves near Yellowstone, or mountain lions in the southwest.</p>
 
-<table bgcolor="#FFFFFF"; width="600px">
+<table bgcolor="#FFFFFF"; width="300px">
 <tr>
 <td><b>Frame</b></td>
 <td><b>Positive</b></td>
