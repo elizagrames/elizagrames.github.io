@@ -4,6 +4,8 @@ title: "Media content analysis as a tool for conservation"
 date: 2016-09-02
 ---
 
+Media content analysis as a tool for conservation
+
 <p>Given my background in public relations and communications before I decided to study ecology, I'm interested in the role communication plays in ecology and conservation biology. Recently, I began thinking about how conservation-oriented ecological research is portrayed in the media and if anyone is studying this topic. 
 </p><p>
 The best tool for studying media coverage of an issue is a media content analysis, so I did a quick search through the literature for studies that included both "media content analysis" and "conservation" and did not come up with much. The articles that I did find were primarily focused on large carnivores (Alexander and Quinn, 2011; Bhatia et al., 2013; Jacobson et al., 2012; Siemer et al., 2007). The Jacobson et al. article on media coverage of the Florida panther is an excellent example of using media content analysis to explore public opinions on ecological research and conservation issues, so I will focus on that article. I'm omitting citations because they're all in the Jacobson et al. article, which I would encourage you to read.</p>
@@ -34,6 +36,7 @@ To demonstrate the relationship between frames and tone, let's look at the examp
 <th>Humans should curb development to preserve habitat<br>Sources: conservation organizations, researchers	</th>
 <th>Conservation of habitat for large carnivores is restricting growth<br>Sources: developers, business bureaus</th>
 </tr>
+</table>
 
 <h2>The Jacobson et al. Study</h2>
 
@@ -56,10 +59,11 @@ I would encourage all ecologists and conservation biologists to delve into the m
 
 <h2>Further Reading</h2>
 
-Alexander, S.M. & Quinn, M.S. (2011). Coyote (<i>Canis latrans</i>) interactions with humans and pets reported in the Canadian print media (1995-2010). <i>Human Dimensions of Wildlife</i>, 16(5): 345-359.
-
+<p>Alexander, S.M. & Quinn, M.S. (2011). Coyote (<i>Canis latrans</i>) interactions with humans and pets reported in the Canadian print media (1995-2010). <i>Human Dimensions of Wildlife</i>, 16(5): 345-359.
+</p><p>
 Bhatia, S., Athreya, V., Grenyer, R., & MacDonald, D.W. (2013). Understanding the role of representations of human-leopard conflict in Mumbai through media-content analysis. <i>Conservation Biology</i>, 27(3): 588-594.
-
+</p><p>
 Jacobson, S.K., Langin, C., Carlton, J.S., & Kaid, L.L. (2012). Content analysis of newspaper coverage of the Florida panther. <i>Conservation Biology</i>, 26(1): 171-179.
-
+</p><p>
 Siemer, W.F., Decker, D.J., & Shanahan, J. (2007). Media frames for black bear management stories during issue emergence in New York. <i>Human Dimensions of Wildlife</i>, 12(2): 89-100. 
+</p>
