@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "About This Blog"
-date: 2016-09-30
+date: 2016-08-30
 ---
 
 <p>This blog isn't for you. It's for me. What you learn from it is entirely secondary to its true purpose. This blog is a chance for me to practice writing in a non-technical manner, to explore and come to understand new concepts (to me, at least) by blogging about them, and to give me a chance to reflect on topics in ecology besides just my dissertation research. I hope that some of the posts are interesting, educational, or at least not unpleasant for you to read and that you find some value in the topics I write about. 
