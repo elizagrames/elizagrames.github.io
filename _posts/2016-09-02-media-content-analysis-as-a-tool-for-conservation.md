@@ -40,7 +40,7 @@ To demonstrate the relationship between frames and tone, let's look at the examp
 
 <h2>The Jacobson et al. Study</h2>
 
-<p>Large carnivores are well-suited to studies of media coverage because they elicit strong feelings from members of the public. They are often perceived as threatening human lives, harming livestock, or limiting recreation, but we are also awed by their beauty, secretive ways, and wildness. These perceptions generate large amounts of media coverage due to the role humans play in conflicts and our fascination with charismatic megafauna. 
+<p><img src="https://c6.staticflickr.com/8/7079/7013874693_7963a10d55_n.jpg" align="left">Large carnivores are well-suited to studies of media coverage because they elicit strong feelings from members of the public. They are often perceived as threatening human lives, harming livestock, or limiting recreation, but we are also awed by their beauty, secretive ways, and wildness. These perceptions generate large amounts of media coverage due to the role humans play in conflicts and our fascination with charismatic megafauna. 
 </p><p>
 For their study, Jacobson et al. looked at articles, editorials, and letters to the editor that were published in six newspapers around the state of Florida. A total of 513 articles published in these sources that were related to Florida panthers were retrieved from an online database. The content of the articles was used to classify them as being primarily or secondarily about panthers, as fitting into one of eleven themes, whether the tone was positive or negative, and a number of other factors. 
 </p><p>
