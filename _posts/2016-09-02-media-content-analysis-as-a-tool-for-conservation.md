@@ -6,7 +6,7 @@ date: 2016-09-02
 
 <p>
 <figure>
-<img src="https://c3.staticflickr.com/8/7503/26366569074_8e763d0d81_n.jpg" align="right" hspace="10">
+<img src="https://c3.staticflickr.com/8/7503/26366569074_8e763d0d81_n.jpg" align="right" hspace="10" />
 <figcaption>Florida Panther Kittens in Den, photo by David Shindle for the Florida Fish and Wildlife Conservation Commission</figcaption>
 </figure>
 Given my background in public relations and communications before I decided to study ecology, I'm interested in the role communication plays in ecology and conservation biology. Recently, I began thinking about how conservation-oriented ecological research is portrayed in the media and if anyone is studying this topic. 
