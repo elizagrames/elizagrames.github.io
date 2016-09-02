@@ -25,14 +25,14 @@ To demonstrate the relationship between frames and tone, let's look at the examp
 <th>Negative</th>
 </tr>
 <tr>
-<td>Risks to livestock</th>
-<td>Reassuring the reader that risks are minimal	<br>Sources: conservation organizations, researchers</th>
-<td>Painting a grim picture of rampant attacks and economic loss<br>Sources: ranchers, industry groups</th>
+<td>Risks to livestock</td>
+<td>Reassuring the reader that risks are minimal	<br>Sources: conservation organizations, researchers</td>
+<td>Painting a grim picture of rampant attacks and economic loss<br>Sources: ranchers, industry groups</td>
 </tr>
 <tr>
-<td>Housing development</th>
-<td>Humans should curb development to preserve habitat<br>Sources: conservation organizations, researchers	</th>
-<td>Conservation of habitat for large carnivores is restricting growth<br>Sources: developers, business bureaus</th>
+<td>Housing development</td>
+<td>Humans should curb development to preserve habitat<br>Sources: conservation organizations, researchers	</td>
+<td>Conservation of habitat for large carnivores is restricting growth<br>Sources: developers, business bureaus</td>
 </tr>
 </table>
 
