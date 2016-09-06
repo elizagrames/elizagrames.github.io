@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Measures of urbanization and the influence of environmental factors on avian reproductive success"
+title: "Measures of urbanization"
 date: 2016-09-06
 ---
 
