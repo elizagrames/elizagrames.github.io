@@ -5,7 +5,6 @@ date: 2016-09-02
 ---
 
 <p>
-<img src="https://c3.staticflickr.com/8/7503/26366569074_8e763d0d81_n.jpg" align="right" hspace="10">
 Given my background in public relations and communications before I decided to study ecology, I'm interested in the role communication plays in ecology and conservation biology. Recently, I began thinking about how conservation-oriented ecological research is portrayed in the media and if anyone is studying this topic. 
 </p><p>
 The best tool for studying media coverage of an issue is a media content analysis, so I did a quick search through the literature for studies that included both "media content analysis" and "conservation" and did not come up with much. The articles that I did find were primarily focused on large carnivores (Alexander and Quinn, 2011; Bhatia et al., 2013; Jacobson et al., 2012; Siemer et al., 2007). The Jacobson et al. article on media coverage of the Florida panther is an excellent example of using media content analysis to explore public opinions on ecological research and conservation issues, so I will focus on that article. I'm omitting citations because they're all in the Jacobson et al. article, which I would encourage you to read.</p>
@@ -40,7 +39,7 @@ To demonstrate the relationship between frames and tone, let's look at the examp
 
 <h2>The Jacobson et al. Study</h2>
 
-<p><img src="https://c6.staticflickr.com/8/7079/7013874693_7963a10d55_n.jpg" align="left" hspace="10">Large carnivores are well-suited to studies of media coverage because they elicit strong feelings from members of the public. They are often perceived as threatening human lives, harming livestock, or limiting recreation, but we are also awed by their beauty, secretive ways, and wildness. These perceptions generate large amounts of media coverage due to the role humans play in conflicts and our fascination with charismatic megafauna. 
+Large carnivores are well-suited to studies of media coverage because they elicit strong feelings from members of the public. They are often perceived as threatening human lives, harming livestock, or limiting recreation, but we are also awed by their beauty, secretive ways, and wildness. These perceptions generate large amounts of media coverage due to the role humans play in conflicts and our fascination with charismatic megafauna. 
 </p><p>
 For their study, Jacobson et al. looked at articles, editorials, and letters to the editor that were published in six newspapers around the state of Florida. A total of 513 articles published in these sources that were related to Florida panthers were retrieved from an online database. The content of the articles was used to classify them as being primarily or secondarily about panthers, as fitting into one of eleven themes, whether the tone was positive or negative, and a number of other factors. 
 </p><p>
