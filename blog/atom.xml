@@ -4,7 +4,7 @@ layout: feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-	<title>Placeholder for blog title</title>
+	<title>Blog</title>
 	<link href="http://elizagrames.github.io/blog/atom.xml" rel="self"/>
 	<link href="http://elizagrames.github.io/blog"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
@@ -20,7 +20,7 @@ layout: feed
 			<link href="http://elizagrames.github.io{{ post.url }}"/>
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
 			<id>http://elizagrames.github.io/{{ post.id }}</id>
-			<content type="html">{{ post.content | xml_escape }}</content>
+			<content type="html">{{ post.content | xml_escape }}</content></br></br>
 		</entry>
 	{% endfor %}
 
