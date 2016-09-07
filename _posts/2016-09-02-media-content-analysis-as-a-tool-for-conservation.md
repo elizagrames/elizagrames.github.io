@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Media content analysis as a tool for conservation"<br></br>
+title: "Media content analysis as a tool for conservation"
 date: 2016-09-02
 ---
 
