@@ -8,3 +8,10 @@ images:
   - image_path: /images/wbba/IMG_1156.jpg
     title: Female Ruby-throated Hummingbird on nest
 ---
+<ul class="photo-gallery">
+  {% for image in page.images %}
+    <li>
+      <img src="{{ image.image_path }}" alt="{{ image.title}}"/>
+    </li>
+  {% endfor %}
+</ul>
