@@ -7,7 +7,7 @@ nav ul, footer ul {
     padding: 0px;
     list-style: none;
     font-weight: bold;
-    font-color: #7c878e;
+    color: #7c878e;
      text-align: center;
 }
 nav ul li, footer ul li {
@@ -21,7 +21,7 @@ a {
 }
 a:hover {
     text-decoration: underline;
-    color: #7c878e;
+    color: #000E2F;
 }
 h1 {
     font-size: 2.5em;
