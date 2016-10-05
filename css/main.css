@@ -9,13 +9,12 @@ nav ul, footer ul {
     font-weight: bold;
     color: #7c878e;
      text-align: center;
-    position: fixed;
 }
+
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
     text-align: center;
-    position: fixed;
 }
 a {
     text-decoration: none;
