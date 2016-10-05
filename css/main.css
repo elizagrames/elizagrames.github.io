@@ -40,10 +40,6 @@ p {
 footer {
     border-top: 5px solid #000E2F;
     font-size: 1em;
-    position: fixed;
-}
-header{
-    position: fixed;
 }
 
 ul.posts { 
