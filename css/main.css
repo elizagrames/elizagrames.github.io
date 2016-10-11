@@ -65,6 +65,7 @@ b {
 }
 #content {
   float: left;
+    width:85%;
 }
 #sidebar {
   float: right;
