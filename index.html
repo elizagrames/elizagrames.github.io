@@ -4,88 +4,45 @@ title: Eliza Grames, Ecology PhD Student
 ---
 
 <style type="text/css">
-
-.gallerycontainer{
-position: relative;
-/*Add a height attribute and set to largest image's height to prevent overlaying*/
+body {
+  font: 14px/1.4 arial;
 }
 
-.thumbnail img{
-border: 0px solid white;
-margin: 0 5px 5px 0;
+.imgWrap {
+  position: relative;
+  height: 200px;
+  width: 257px;
 }
 
-.thumbnail:hover{
-background-color: transparent;
-}
-.gallerycontainer{
-position: relative;
-/*Add a height attribute and set to largest image's height to prevent overlaying*/
-}
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
 
-.thumbnail img{
-border: 1px solid white;
-margin: 0 5px 5px 0;
-}
 
-.gallerycontainer{
-position: relative;
-/*Add a height attribute and set to largest image's height to prevent overlaying*/
-}
+  visibility: hidden;
+  opacity: 0;
 
-.thumbnail img{
-border: 1px solid white;
-margin: 0 5px 5px 0;
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
 }
 
-.thumbnail:hover{
-background-color: transparent;
-}
 
-.thumbnail:hover img{
-}
-
-.thumbnail span{ /*CSS for enlarged image*/
-position: absolute;
-left: -1000px;
-  border: none;
-visibility: hidden;
-color: black;
-text-decoration: none;
-}
-
-.thumbnail span img{ /*CSS for enlarged image*/
-border-width: 0;
-}
-
-.thumbnail:hover span{ /*CSS for enlarged image*/
-visibility: visible;
-top: 0;
-  left: 0px; /*position where enlarged image should offset horizontally */
-
-  z-index: 50;
+.imgWrap:hover .imgDescription {
+  visibility: visible;
+  opacity: 1;
 }
 	
 </style>
 
-<div class="gallerycontainer">
-
-<a class="thumbnail" href="/about">
-	<img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/me.png?raw=true" border="0" /><span>
-  <img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/me-bw.png?raw=true" /><br />
-	</span></a>
-<a class="thumbnail" href="/research">
-	<img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/AMKE-chick.png?raw=true" border="0" /><span>
-  <img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/AMKE-bw.png?raw=true" /><br />
-	</span></a>
-<a class="thumbnail" href="/teaching">
-	<img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/MOWA-home.png?raw=true" border="0" /><span>
-  <img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/MOWA-bw.png?raw=true" /><br />
-	</span></a>
-<a class="thumbnail" href="/cv">
-	<img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/dragon-home.png?raw=true" border="0" /><span>
-  <img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/dragon-bw.png?raw=true" /><br />
-	</span></a>
-
+<div class="imgWrap">
+  <img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/me.png?raw=true" alt="About" />
+  <p class="imgDescription">About</p>
 </div>
+
 
