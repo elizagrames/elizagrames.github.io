@@ -21,16 +21,16 @@ a {
     color: #7c878e;
 }
 a:hover {
-    color: #b20e31;
+    color: #1f7212;
 }
 h1 {
     font-size: 2.5em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    color: #b20e31;
+    color: #1f7212;
 }
 h2 {
     font-size: 1.5em;
-    color: #b20e31;
+    color: #1f7212;
 }
 p {
     font-size: 1em;
@@ -38,7 +38,7 @@ p {
     color: #000000;
 }
 footer {
-    border-top: 5px solid #b20e31;
+    border-top: 5px solid #1f7212;
     font-size: 1em;
 }
 
