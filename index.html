@@ -5,82 +5,93 @@ title: Eliza Grames, Ecology PhD Student
 
 <style type="text/css">
 
-
-.module {
-  background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
-  background-size: cover;
-  width: 300px;
-  height: 200px;
-  margin: 10px 0 0 10px;
-  position: relative;
-  float: left;
+.gallerycontainer{
+position: relative;
+/*Add a height attribute and set to largest image's height to prevent overlaying*/
 }
 
-.top h2 {
-  color: white;
-  margin: 0;
-  padding: 20px;
+.thumbnail img{
+border: 0px solid white;
+margin: 0 5px 5px 0;
 }
 
-.lr p {
-  font-family: sans-serif;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  margin: 0;
+.thumbnail:hover{
+background-color: transparent;
+}
+.gallerycontainer{
+position: relative;
+/*Add a height attribute and set to largest image's height to prevent overlaying*/
 }
 
-.mid h2 {
-  font-family: sans-serif;
-  font-weight: 900;
-  color: white;
-  text-transform: uppercase;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 2rem;
-  transform: translate(-50%, -50%);
+.thumbnail img{
+border: 1px solid white;
+margin: 0 5px 5px 0;
 }
 
-.cap p {
-  padding: 20px;
-  color: white;
-  font: 12px Monaco, Mono-Space;
-  margin: 0;
+.gallerycontainer{
+position: relative;
+/*Add a height attribute and set to largest image's height to prevent overlaying*/
 }
 
+.thumbnail img{
+border: 1px solid white;
+margin: 0 5px 5px 0;
+}
 
+.thumbnail:hover{
+background-color: transparent;
+}
+
+.thumbnail:hover img{
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: relative;
+left: -1000px;
+  border: none;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image*/
+visibility: visible;
+top: 0;
+  left: -360px; /*position where enlarged image should offset horizontally */
+
+  z-index: 50;
+}
+	
+	.button-image {
+    display: block;
+    cursor: default;
+	background-color: #78787c;
+}
+.button-image:hover img { opacity : .5; }
+.button-image img { display: block; }
 	
 </style>
 
-
-<div class="blurb">
-
-
-<div class="module top">
-  <h2>Skyscrapers</h2>
-</div>
-
-<div class="module mid">
-  <h2>Skyscrapers</h2>
-</div>
-
-<div class="module cap">
-  <p>Skyscraper are really neat and stuff because they are tall.</p>
-</div>
-
-<div class="module lr">
-  <p>Skyscrapers sometimes have nicknames like jim or shim.</p>
-</div>
-
-
+<div class="gallerycontainer">
+<a class="button-image" href="/about">
+<img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/me.png?raw=true" border="0" /><span>
+  <img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/me-bw.png?raw=true" />
+		</span></a><a class="button-image" href="/research">
+	<img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/AMKE-chick.png?raw=true" border="0" /><span>
+  <img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/AMKE-bw.png?raw=true" />
+	</span></a>
+	<a class="button-image" href="/teaching">
+	<img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/MOWA-home.png?raw=true" border="0" /><span>
+  <img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/MOWA-bw.png?raw=true" />
+	</span></a>
+<a class="button-image" href="/cv">
+	<img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/dragon-home.png?raw=true" border="0" /><span>
+  <img src="https://github.com/elizagrames/elizagrames.github.io/blob/master/images/dragon-bw.png?raw=true" />
+	</span></a>
 
 </div>
 
