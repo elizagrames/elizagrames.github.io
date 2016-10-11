@@ -6,7 +6,7 @@ title: Eliza Grames, Ecology PhD Student
 <style type="text/css">
 
 .gallerycontainer{
-position: absolute;
+position: relative;
 /*Add a height attribute and set to largest image's height to prevent overlaying*/
 }
 
@@ -46,7 +46,7 @@ background-color: transparent;
 }
 
 .thumbnail span{ /*CSS for enlarged image*/
-position: absolute;
+position: relative;
 left: -1000px;
   border: none;
 visibility: hidden;
@@ -61,7 +61,7 @@ border-width: 0;
 .thumbnail:hover span{ /*CSS for enlarged image*/
 visibility: visible;
 top: 0;
-  left: 0px; /*position where enlarged image should offset horizontally */
+  left: -360px; /*position where enlarged image should offset horizontally */
 
   z-index: 50;
 }
