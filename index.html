@@ -11,7 +11,7 @@ position: relative;
 }
 
 .thumbnail img{
-border: 1px solid white;
+border: 0px solid white;
 margin: 0 5px 5px 0;
 }
 
@@ -23,8 +23,7 @@ background-color: transparent;
 }
 
 .thumbnail span{ /*CSS for enlarged image*/
-position: absolute;
-left: -1000px;
+position: relative;
   border: none;
 visibility: hidden;
 color: black;
@@ -38,7 +37,7 @@ border-width: 0;
 .thumbnail:hover span{ /*CSS for enlarged image*/
 visibility: visible;
 top: 0;
-  left: 250px; /*position where enlarged image should offset horizontally */
+  left: 0px; /*position where enlarged image should offset horizontally */
 
   z-index: 50;
 }
