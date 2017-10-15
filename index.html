@@ -125,7 +125,7 @@
   <h2>Mentoring</h2>
 <hr>
 <h3>Field techs</h3>
-  <ul><li><b>Patrick Carr</b> (summer 17) is a recent UConn grad who helped with point count surveys, nest searches, pitfall trap placement and collection, and data entry.</li>
+  <div class="col-md-4"><img src="images/pcarr.png" width=246 height=246 float=right></div><ul><li><b>Patrick Carr</b> (summer 17) is a recent UConn grad who helped with point count surveys, nest searches, pitfall trap placement and collection, and data entry.</li>
   <li><b>Ben Ranelli</b> (summer '17) is an undergraduate at UConn majoring in Ecology and Evolutionary Biology. He helped with point count surveys, nest searches, and pitfall trap collection. Ben also created an independent project on nest provisioning and worked with a volunteer from the Master Naturalist class at Goodwin Conservation Center to assist in his data collection. </li>
   <li><b>David Mathieu</b> (summer '17) is an undergraduate at UConn majoring in Chemistry who helped with point count surveys, nest searches, and pitfall trap collection.</li></ul> 
   <h3>Lab techs</h3>
@@ -159,9 +159,10 @@ After taking Bill Shipley's <a href="http://www.billshipley.recherche.usherbrook
 <div id="code" class="container">
   <h2>Code</h2>
 <hr>
-  <h3>Convert between .csv and waypoints for Garmin GPS</h3>
-  <h3>Simulate Twitter hashtags as a Hawkes point process</h3>
-  <h3>Download eBird data based on location, species, and year</h3>
+  <ul><li><b>Garmin GPS waypoints conversion</b>. This script takes a waypoints file from a Garmin GPS unit and converts it to a .csv file. The code can easily be reversed to write waypoints files from .csv files.</li><li>
+  <b>Mapping plots by GPS points.</b> I wrote this script to take the GPS points from site plots and use those to pull maps and add triangular plots over the satellite maps. </li><li>
+  <b>Simulate Twitter hashtags as a Hawkes point process</b>. Twitter hashtags can be thought of as self-exciting processes where one use of a hashtags spurs additional uses but the process dies out over time according to its decay function. This code simulates Twitter hashtags as Hawkes processes though it has some kinks to work out and relies on the unsupported ptproc package. </li><li>
+  <b>Download eBird data based on location, species, and year</b>. Because the eBird reference dataset is cumbersome to work with, I wrote a script that queries the eBird website for species reports for up to five species for any number of years and downloads the resulting data. </li></ul>
 </div>
 
 <!--cv-->
