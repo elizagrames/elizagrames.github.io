@@ -5,10 +5,14 @@ packages <- c("twitteR",
               "ptproc",
               "hawkes")
 lapply(packages, require, character.only = TRUE)
-setup_twitter_oauth("En3urmOYV3BMcjk1jFNCBWc3t", 
-                    "6fZEwF2MEgL0mBdQv5LJQ0xPe9tqlDBkX7GCSgxjHXezvL0oHh", 
-                    "714612211-JncPp57aPyBJ3wx0p1VDoZyB4TKLywfE7WbiUORx", 
-                    "nfiVgGE4X3PTqyNjby3ZuqgsK8dk85lwYl7c6bcMt2NnO")
+
+# add your own twitter authorization here
+consumer_key <- ""
+consumer_secret <- ""
+access_token <- ""
+access_secret <- ""
+
+setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
 
 
 #### search twitter ####
