@@ -49,7 +49,31 @@ papers
 # General ecology {.tabset .tabset-fade .tabset-pills}
 
 # Population and community ecology {.tabset .tabset-fade .tabset-pills}
+## Vandermeer and Goldberg
+### 1. Elementary Population Dynamics
+$\frac{Kk-N}{K}$ from the logistic equation $\frac{dN}{dt}=rN\frac{(K-N)}{K}$ can be thought of as the available niche space that has not already been used by members of the population. 
 
+Shinozaki and Kira came up with a simple hyperbolic equation to describe yield-density relationships that result in constant final yield. Yield is a function of density, maximum yield without density effects, and a constant. $Y=\frac{D(w_{max})}{(1+\alpha D)}$.If $k$ is the biomass of a single plant growing alone, then the biomass of a plot of plants is $w=k-\sum\alpha_{i,j}w_j$ which can be rearranged to get the average biomass of an individual in the plot as $w' = \frac{k}{(1+\alpha ' D)}$. Yoda reasoned that the $-\frac{3}{2}$ constant of yield decrease with increasing density was due to trees being equated with cubes and with self-thinning this is the expected constant.
+
+### 2. Life History Analysis
+Semelparous strategy is to do either reproduction or maintenance in a given year, contrasted with iteroparity in which a bit of energy is put into both. Depending on if it is a good year in terms of resources or a bad year, one or the other strategy can be favored. For an annual plant, fecundity has to be higher than fecundity for a perennial in order for it to be the strategy. 
+
+### 3. Projection Matrices: Structured Models
+Structured populations at their stable age distribution grow exponentially, but density dependence can be incorporated into Leslie (population projection) matrices. Lewis actually came up with the matrices in 1942, three years before Leslie. In a Leslie matrix, the first row is the fecundities (generally, $m$) and the diagonal is the survival probabilities at that age class. 
+
+The rate of increase of a stable age population is the dominant eigenvalue of the projection matrix. If we have a sufficiently large $t$, we can say that $N_{t+1}=\lambda N_t$ where $\lambda$ is the diagonal of the matrix resulting from multiplying $P$ by itself $n$ times. We can rewrite this as $PN_t = \lambda N_t$, which when rearranged and factored is $(P-\lambda I)N_t =0$ with $I$ as the identity matrix. The determinant of this is $\lambda^2 - gm$ and the roots of this are the eigenvalues; the larger is the dominant eigenvalue and represents the rate of increase in the population. 
+
+When a population follows $PN_t=\lambda N_t$, then we can say that there is a column vector $u$ that satisfies the equation $Pu = \lambda u$ and a vector $v$ that satisfies $P'v = \lambda v$. $u$ is the right eigenvector and represents the contribution of other stages to that stage (stable stage distribution) and $v$ is the left eigenvector that represents the contributions of a stage to all other stages (reproductive value).
+
+The <b>sensitivity</b> of a matrix is how the rate of population growth changes with changes to $p_{ij}$. Because changes are in the units of the matrix and mortality and natality vary widely (e.g. grasses with thousands of seeds), ecologists use elasticity which is based on logs. Elasticity is $e_{ij}=\frac{\partial(\ln\lambda)}{\partial(\ln p_{ij}}$. This sums to 1, so elasticity of each individual element of the matrix can be seen as proportional sensitivity. 
+### 4. A Closer Look at the 'Dynamics' in Population Dynamics
+Attractor means a singularity in stable equilibrium, a repellor is a singularity that leads to unstable equilibrium. These can be visualized as a magnet falling through a beaker of water and the trajectory as viewed from the bottom matches with the phase plane diagrams; swirling the bucket creates oscillators which leads to damped oscillations if it is an oscillatory point attractor. There are also periodic attractors/repellers, like a bundt cake pan. Strange attractors are attractors that are flat from a distance, but up close are bumpy, so once a system reaches them, then it bounces around on that bumpy space. With strange attractors, we want to know the range over which a system can move and also its morphology.
+
+The eigenvalue is the rate at which a system tends towards a point attractor and can be thought of as the slope of the line connecting the tips of the arrows pointing towards an attractor. If the eigenvalue has a non-zero complex part (i.e. it has $i$) then it is oscillatory; if the complex part is positive, it is a repellor and if it is negative then it is an attractor. <br><br>
+
+In a one-dimensional graph created by stair-stepping, the slope of the function as it crosses the 45-degree plane is the eigenvalue. <br><b><center>oscillatory repellor $< 1 <$ oscillatory attractor $< 0 <$ point attractor  $< 1 <$ point repellor</center></b>
+
+Systems are structurally unstable if a small change in $r$ leads to a change in the behavior of the system. These are bifurcation points and can lead to period doubling; Hopf bifurcations are a special case for continuous systems with differential equations. Bifurcations create attractors (nodes) and repellors (saddles) and are sometimes called "blue sky bifurcations" because they come out of the blue. Basin coundary collisions are a special type of bifurcation in which a point and strange attractors basins collide. Enough bifurcations lead to chaos via the period doubling route to chaos. 
 # Landscape ecology {.tabset .tabset-fade .tabset-pills}
 
 # Behavioral ecology {.tabset .tabset-fade .tabset-pills}
@@ -61,7 +85,7 @@ papers
 ## Quinn and Keough
 
 ### Experimental Design and Data Analysis for Biologists
-### 1.    Introduction
+### 1. Introduction
 
 #### 1.1   Scientific method
 
@@ -89,7 +113,7 @@ The expected value of a random variable is the mean of its probability distribut
 
 Theoretical distributions are used for hypothesis testing and describe the distribution of statistics rather than variables. In ecology, the four most frequently used are the $z$-distribution which is the normal distribution; <b>Student's t</b> which starts resembling the normal with increasing sample size; $\chi^2$ which is the square of the normal and is bounded by $0$ and $\infty$; and the <b>F distribution</b> which is the ratio of two $\chi^2$ each divided by their own df. 
 
-### 2.  Estimation
+### 2. Estimation
 
 
 #### 2.1 Samples and populations
@@ -281,6 +305,7 @@ The goal of ANOVA is to partition the variance in a response variable so that it
 #### 10.14 General issues and hints for analysis
 
 
+
 # Bayesian statistics {.tabset .tabset-fade .tabset-pills}
 
 # Information theoretic models {.tabset .tabset-fade .tabset-pills}
@@ -291,6 +316,7 @@ The goal of ANOVA is to partition the variance in a response variable so that it
 
 # Experimental design {.tabset .tabset-fade .tabset-pills}
 
+# Structural equation modeling {.tabset .tabset-fade .tabset-pills}
 #
 
 
