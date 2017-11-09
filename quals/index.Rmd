@@ -1,0 +1,296 @@
+---
+title: "Qualifying Exam Notes"
+author: Eliza Grames
+output: 
+  html_notebook: 
+    collapsed: no
+    smooth_scroll: no
+    theme: journal
+    toc: yes
+    toc_float: yes
+---
+
+# Classic Works {.tabset .tabset-fade .tabset-pills}
+This section contains notes on classic works in ecology and evolutionary biology.
+
+## Foundations of Ecology 
+
+citation
+
+## On the Origin of Species
+
+citation
+
+# Current topics in ecology {.tabset .tabset-fade .tabset-pills}
+
+## Methods in Ecology and Evolution
+
+papers
+
+## Ecology Letters
+
+papers
+
+## Trends in Ecology and Evolution
+
+papers
+
+# Ornithology and ornithologists {.tabset .tabset-fade .tabset-pills}
+## Gill's Ornithology
+## Notable ornithologists
+
+### David Lack
+### Margaret Morse-Nice
+
+# Conservation biology {.tabset .tabset-fade .tabset-pills}
+
+# Basic evolution {.tabset .tabset-fade .tabset-pills}
+
+# General ecology {.tabset .tabset-fade .tabset-pills}
+
+# Population and community ecology {.tabset .tabset-fade .tabset-pills}
+
+# Landscape ecology {.tabset .tabset-fade .tabset-pills}
+
+# Behavioral ecology {.tabset .tabset-fade .tabset-pills}
+
+# Ecological models {.tabset .tabset-fade .tabset-pills}
+
+# Basic statistics {.tabset .tabset-fade .tabset-pills}
+
+## Quinn and Keough
+
+### Experimental Design and Data Analysis for Biologists
+### 1.    Introduction
+
+#### 1.1   Scientific method
+
+Bacon advocated the inductive approach, said that a law or theory is true if there is lots of evidence for it and nothing contradicts it. Popper advocated the hypothetico-deductive approach of disproving theories because proof is logically impossible.
+
+Verbal models describe an idea with words. Empiric models are mathematical descriptions of relationships, like fitting observations to a curve and are usually statistical models. Theoretic models are also mathematical models, but they describe a process and generalizations drawn from them are better than from empiric models.
+
+Imre Lakatos suggested that science needs core theories that are almost universally accepted and not tested. These core theories are then supplemented by auxiliary theories that are tested frequently and replaced if they are not supported
+
+#### 1.2 Experiments and other tests
+Inferences from manipulative experiments are stronger than from natural experiments because of the inability to control for other factors as well.
+
+#### 1.3 Data, observations, and variables
+A random variable $X$ is a variable whose values aren't known until we sample it; each value of $X$ is $x$.  
+
+#### 1.4 Probability
+Process uncertainty is an actual change, like taking samples at two different times and having the mean really change between then. Sample uncertainty is due to random sampling. There is also measurement uncertainty.
+
+The probability that $A$ will happen is equal to $1$ minus the probability that it does not happen and vv. $P(A) = 1- P(\tilde{} A)$. In joint probability distributions, you can also have the probability that both $A$ and $B$ happen as $P(A \cup B) = P(A)+P(B) - P(A \cap B)$ which means that we take the probability of the union (total) as equal to the probability of each $A$ and $B$ minus their intersection (overlap).
+
+In conditional probability, want to know probability of $A$ given $B$ which is $P(A|B) = \frac{P(A \cap B)}{P(B)}$. Using Bayes theorem, we can assess posterior probability of observing the data given prior likelihood. $P(\theta | X) = \frac{P(X | \theta)P(\theta)}{P(X)}$ where $X$ is our data. In this case, $P(\theta)$ is unconditional, $P(X | \theta)$ is the likelihood of observing the $X$ if $\theta$ is true and $P(\theta | X)$ is the posterior.
+
+#### 1.5 Probability distributions
+The expected value of a random variable is the mean of its probability distribution. In ecology, variables tend to follow a common set of probability distributions (these are different than distributions for statistics). The <b>exponential distribution</b> is used for the time to first occurrence, like in failure analysis; its only parameter is $\lambda$ and $\frac{1}{\lambda}$ is the mean time to first occurrence. The <b>Weibull distribution</b> can be either positive skewed or symmetric depending on its parameters; it usually only has two but can have three and is used to model failure rates. The <b>beta distribution</b> has two parameters and can be shaped either like a U or J or be symmetrical; it is used as the prior probability distribution for dichotomous variables in Bayesian analysis. Bernoulli trials only have success or failures, like coin flips, so they are described by a <b>binomial distribution</b>. The <b>Poisson distribution</b> is usually for things with rare and discrete occurrences, like point counts, and is all integers; the mean of the Poisson distribution equals its variance. The <b>negative binomial distribution</b> has two parameters, mean and dispersion, and is used to measure degree of clumpiness.
+
+Theoretical distributions are used for hypothesis testing and describe the distribution of statistics rather than variables. In ecology, the four most frequently used are the $z$-distribution which is the normal distribution; <b>Student's t</b> which starts resembling the normal with increasing sample size; $\chi^2$ which is the square of the normal and is bounded by $0$ and $\infty$; and the <b>F distribution</b> which is the ratio of two $\chi^2$ each divided by their own df. 
+
+### 2.  Estimation
+
+
+#### 2.1 Samples and populations
+In frequentist framework, population parameters are fixed but unknown; they are not random variables and have no distribution. In Bayesian, they have distributions. 
+
+#### 2.2 Common parameters and statistics
+<b>L-estimators</b> are based on ordering data from smallest to largest. The median, trimmed mean (remove 5 percent at tail ends first) and the Winsorized mean (replacing the trimmed values with the nearest remaining value) are all L-estimators. <b>M-estimators</b> include a measure of variability in estimation. Huber M-estimator and Hampel M-estimator use different approaches of weighting observations. M-estimators require iteration and are not common except in robust regression.<b>R-estimators</b> are based on ranks and are the basis for most non-parametric tests. Hodges-Lehmann estimator is the only common one.
+
+Sum of squares (SS) is the sum of the squared standard deviations from the sample mean. 
+
+#### 2.3 Standard errors and confidence intervals for the mean
+The z transformation conversts a normal distribution to the standard normal distribution with a mean of 0 and variance of 1. Sample means are normallly distributed random variables; as the sample size of sample means increases they tend more towards a normal distribution which is the basis for the Central Limit Theorem. The mean of the sample means is the population mean. The <b>standard error of the mean</b> is the standard deviation of the sample means. It is "error" because using $\hat{y}$ as an estimator of $\mu$ has some error.
+
+We can transform any sample mean into one from a standard normal distribution with $z=\frac{\hat{y}-\mu}{\sigma_{\hat{y}}}$ which then gives us confidence intervals of how close our sample mean $\hat{y}$ is to the true population mean $\mu$. In practice, we don't know the standard error for our sample, so we use the sample standard deviation to estimate it which is why we end up with a $t$ distribution. The $t$ distribution approaches the normal as sample size increases because it is imprecise at small sample sizes. The $t$ distribution's shape changes with degrees of freedom.
+
+We can only use the above methods for tests that assume normality. For sample statistics with non-normal or unknown distributions, we generally need to use resampling to find the standard error.
+
+Because variances are positive, confidence intervals for them are based on the $\chi^2$ distribution. 
+#### 2.4 Explanation of degrees of freedom
+Degrees of freedom is the number of observations that are "free to vary" when estimating variance; we can calculate the mean, so that is fixed, which is why it is $n-1$ instead of $n$ for df. Wider confidence intervals: Increasing variance, reducing sample size, and increasing the level of confidence all result in wider confidence intervals.
+
+#### 2.5 Methods for estimating parameters
+The maximum likelihood estimator (ML) is based on trying to find the parameter value assuming the data is fixed. It is a function of $f(y_i; \theta)$ which is the probability distribution of values of $Y$ for possible values of the parameter $\theta$. The likelihood function is $L(y; \theta) = \prod\limits_{i=1}^{n}f(y_i; \theta)$ but because no one likes working with products, instead we use the log-likelihood which is $L(\theta)=\ln\bigg[\prod\limits_{i=1}^{n}f(y_i; \theta)\bigg] = \sum\limits_{i=1}^{n}\ln[f(y_i;\theta)]$
+
+Ordinatory least squares (OLS) estimators always have exact solutions. They are commonly used for linear models. OLS attempts to find the value that minimizes the sum of squared differences between $y_i$ and $\mu$. OLS is not suited for models with non-normal response variables, so GLMs and nonlinear models use ML. ML is more time-intensive, but generally the same as OLS or better except when estimating the population variance $\sigma^2$ at small sample sies. 
+
+#### 2.6 Resampling methods for estimation
+Efron developed bootstrapping - resampling from the same sample with replacement. Then the bootstrap estimate uses all these multiple resampled samples to come up with means and standard deviations from the bootstrapped samples.
+
+Jackknifing involves creating pseudovalues by iteratively removing an onvservation and then taking the mean and standard deviation of all the pseudovalues of the mean. It requires less computing power than bootstrapping but assumes independence of samples (not true) and normality. 
+
+#### 2.7 Bayesian inference - estimation
+Bayesian inference incorporates prior knowledge of a parameter value as degrees-of-belief. Population parameters are random variables in Bayesian methods. Because we don't always have prior knowledge, we can use uninformative priors in Bayesian methods. Doing this lets the data determine the posterior distribution.
+
+The Bayesian equivalent of a confidence interval is a credible interval,whihch suggests directly that there is a specific probability (e.g. 95 percent) that the value lies within our credible range. The posterior is mostly influenced by the data unless the prior has a small variance.
+
+
+
+### 3. Hypothesis testing
+#### 3.1 Statistical hypothesis testing
+Fisher's approach to hypothesis testing is to set up $H_0$, choose test statistic (e.g. $t$), collect data and compare sample data to test statistic distribution, then determine the $P$ value (probability of obtaining sample value or one more extreme if $H_0$ is true) and then reject or retain $H_0$ depending on $P$. Neyman and Pearson (1933) took this a step further and said that we should set the significance level in advance and stick to it. In the Neyman-Pearson scheme, there is also an alternative hypothesis $H_A$ that is accepted as true if $H_0$ is rejected. Neyman and Pearson also came up with Type I ($\alpha$, falsely rejecting $H)0$) and Type II ($\beta$, failing to reject $H_0$) error.
+
+An F-test is the ratio of two sample variances to see if they are the same or different according to the F-distribution. A $t$ test relies on three assumptions: samples are from a normally distributed population, equal variance between populations, and observations are randomly sampled. 
+
+#### 3.2 Decision errors
+Type I errors can only occur when $H_0$ is true whereas Type II errors can only occur when $H_0$ is false. In environmental decision making Type II errors are more serious because of failing to address a problem, whereas a Type I error just means that you've done mitigation for no reason. 
+
+
+#### 3.3. Other testing methods
+When variances or sample sizes are unequal, can do a robust parametric test that calculates $t$ differently (e.g. Behrens-Fisher, Welch test, etc...). If data is not normally distributed, then the Wilcox $H$ test (based on M-estimators) is more appropriate. <b>Randomization tests</b> take the comparison between two groups, then reassign groups iteratively and calculate the proportion of the reassigned differences to the actual difference to see how many reiterations are significantly different. This approach is useful for time series and for data with unknown distributions or no opportunity to randomly sample (e.g. collections specimens).
+
+The Mann-Whitney test (also sometimes Mann-Whitney-Wilcoxon because it was developed twice) is a rank-based non-parametric test. You rank all your observations, regardless of their group, then calculate the sum of the ranks for each sample (we would expect them to be similar if no difference); repeat this for random group reassignment and then do normal tests on it. For paired samples, can do the <b>Wilcoxon signed-rank test</b> in which each part of a pair gets a $+$ or $-$ and then you look at the sum of positive and negative ranks. The only good reason to do rank-based tests instead of parametric ones is if the distribution is weird, transformations can't normalize it, or there are outliers. 
+
+
+#### 3.4 Multiple testing
+Bonferroni can be used to adjust significance levels to control for Type I errors in families of tests, but the sequential Bonferroni (Holm or Hochberg) is preferred because it gives more power to individual tests. 
+
+#### 3.5 Combining results from statistical tests
+P-values can be combined for tests of the same $H_0$, which produces a total measure of the $H_0$ and we can reject or not reject an overall effect. This is still only a reject/not-reject test, and a meta-analysis should combine effect sizes. 
+
+#### 3.6 Critique of statistical hypothesis testing
+
+### 4. Graphical exploration of data
+#### 4.1 Analysis with graphs
+Multimodal (two or more peaks) data can't reliably be tested with parametric or non-parametric tests and should be split into multiple populations. Similarly, if you have a lot of zeros, the best thing to do is to break tests up into response/non-response and then look at effects within the groups that do respond while ignoring the zeros. 
+
+### 5. Correlation and regression
+#### 5.1 Correlation analysis
+Bivariate normal distribution is defined by the mean and standard deviation of each variable and the correlation coefficient.
+
+Covariance depends on the units of measurement; standardizing it (dividing by standard deviations of the two variables) produces the Pearson correlation, which is the strength of the relationship. $r$ can also be found by finding the covariance of two standardized variables with a mean of $0$ and variance of $1$.
+
+Covariance is symbolized $\sigma_{Y_1Y_2}$ and is estimated as
+
+\large $s_{Y_1Y_2}=\frac{\sum\limits_{i=1}^n (y_{i1}-\bar{y_1})(y_{i2}-\bar{y_2})}{n-1}$. 
+
+\small
+Correlation is symbolized $\rho_{Y_1Y_2}$ and is estimated as
+
+$r_{Y_1Y_2}=\frac{\sum\limits_{i=1}^n(y_{i1}-\bar{y_1})(y_{i2}-\bar{y_2})}{\sqrt{\sum\limits_{i=1}^n(y_{i1}-\bar{y_1})^2\sum\limits_{i=1}^n(y_{i2}-\bar{y_2})^2}}$
+\small
+If $\rho \neq 0$, then the distribution of $r$ is complex and the standard error should be found with resampling or bootstrapping. Confidence intervals for $r$ can be found using z-transformation. If $H_0$ is that $\rho = 0$, then we can use $t = \frac{r}{s_r}$ and comapre this to a t-distribution. If $H_0$ is that $\rho =$ any value but $0$, then you have to use a test based on z-transformation. 
+
+<b>Assumptions</b> of Pearson correlation coefficient are that the joint probability distrbution is bivariate normal, which means each of the individual variables must also have normal distributions and there is a linear relationship between them. Scatterplots will help you find non-linear patterns, which can sometimes be corrected with transformation.
+
+Spearman's correlation coefficient ($r_s$) is the same as Pearson's but the variables are rank-transformed first. Kendall's tau $\tau$ does a similar thing. These measures are good for detecting non-linear monotonic relationships, but not non-monotonic relationships. 
+
+
+#### 5.2 Linear models
+A linear model is basically just response = model + error where the model is some number of predictors and their parameter values. <b>General</b> linear models means that either categorical or continuous predictor variables are allowed. <b>Generalized</b> linear models allow non-normal distributions and relationships between the mean and variance of the response. 
+
+#### 5.3 Linear regression analysis
+A $\beta$ coefficient is a standardized regression coefficient to make comparisons between models easier since the value of a regression coefficient depends on the units used. It is calculated by multiplying the regression coefficient by the ratio of the standard deviation of $X$ to the standard deviation of $Y$. $\beta = b_1\frac{s_X}{s_Y}$.
+
+Confidence intervals are biconcave bands around a regression line; 95% of the time the true regression line will lie within them.
+
+With linear models, we can partition the variability in the response into that which is due to its relationsihp with predictor variables and also variability due to random error. The part due to the relationship is the sum of squares of the regression and is $\sum\limits_{i=1}^n(\hat{y_i}-\bar{y})^2$ where the df is the number of parameters minus $1$. The sum of squares due to random error is the difference between the predicted value of $\hat{y_i}$ and the actual value of $y_i$, the residual. This is $\sum\limits_{i=1}^n(y_i-\hat{y_i})^2$. The regression and residual SS (sum of squares) are additive to get the total SS, including adding the df. Because it is additive, this will always get bigger, so MS (mean square) is used instead. MS is the SS divided by degrees of freedom and is not additive. Both MS for regression and residual estimate $\sigma_{\epsilon}^2$ except the regression MS also has an extra source of variation based on the strength of the relationship between the predictor and response.
+
+$r^2$ is not the absolute fit of a model to data; it is how much better a model that includes one or more parameters fits the data than a model with no slope parameter.
+
+<b>Diagnostics</b> of regression models are used to check that a model does indeed fit the data and there aren't extreme outliers with extra influence on it. Leverage is how much each $x_i$ influences the model, so high leverage influences the model more. Leverage is usually symbolized $h_i$ because of the hat matrix ($H$). Leverage is included as part of Cook's D. Residuals can be studentized by standardizing them and incorporating leverage in order to compare them and detect outliers. Cook's D measures the influence of each observation on the slope of the regression line by incorporating size of residuals and leverages.
+
+Model II regression is when $X$ values are not fixed and are instead take random values. We can use OLS to make predictions still, but if we want to describe the relationship, OLS might not be the best approach. MA is major-axis regression and minimizes perpendicular distance to the regression line, instead of verticle like with OLS. There is also reduced major-axis regression (RMA) which minimizes the sums of the areas of right triangles from the observations to the regression line.
+
+Robust regression techniques minimize the amount of influence that outliers have on regression and aren't as sensitive to if distributions don't meet assumptions. Least absolute deviations (LAD) minimizes absolute values of residuals instead of their squares, so extreme values of residuals don't influence the model as much since they aren't squared. Huber M-estimators can be used in which you switch from OLS to LAD as you get farther from zero. 
+
+
+
+
+#### 5.4 Relationship between regression and correlation
+Regression is related to correlation by the ratio of the standard deviations of $Y$ and $X$ so with an OLS estimate, $b_Y=r_{YX} \frac{s_Y}{s_X}$.
+
+#### 5.5 Smoothing
+Smoothers, like running means, Loess, splines, and kernels are used to figure out a relationship without specifying any parameters or type of model, so they can show linear or non-monotonic relationships. They rely on moving windows to smooth data, but the smoothing value is chosen by the user. Standard errors for smoothers are based on bootstrapping and hypothesis tests are based on randomization. 
+
+### 6. Multiple and complex regression
+#### 6.1 Multiple linear regression analysis
+Partial regression coefficients measure the change in the response with a one unit change in that predictor if all other predictors are held constant. When looking at the analysis of variance, we are interested now in the variability explained by each of the predictor variables in addition to splitting it up into regression and residuals. To test partial regression slopes as being different from $H_0$, we compare the fit of the full model to reduced models. When checking SS, we need to divide by df to get MS; for reduced models this is the number of predictors in the full minus the number of predictors in the reduced model (so when checking one partial regression slope, df is 1). For any of the predictor variables, we can also test that it is different from zero with a $t$ statistic. If you use $F$ tests instead, you can check subsets of regression slopes at the same time.
+
+To compare relative importance of predictors, we can compare the fit of reduced models or can standardize the partial regression slopes (i.e. make them into $/beta$-coefficients). Some people also use partial standard deviations to standardize. To deal with collinearity, standardized (or even just centered) predictor variables should be used.
+
+<b>Assumptions</b> of multiple regression is that error terms are normally distributed, that each $X$ is fixed (i.e. not random, could resample with the same $X$ values), that the predictor variables are not correlated with each other, and that you have more observations than predictors because otherwise the matrix fails.
+
+Bivariate scatterplots can be used to check for multicollinearity of predictor variables. To view the relationship between $Y$ and $X_j$, we need to see what the relationship is when all other $X$s are held constant, so we look at the partial regression plot (also called added variable plot).
+
+The problem with collinearity is that if your predictors are correlated, when you invert the matrix, you divide by the determinant. Having rows (or columns) that are correlated makes your determinant close to zero, so when you divide by the determinant it is sensitive to small changes so the inverted matrix and all the partial regression slopes are unstable. We can check for collinearity with scattterplots and should also check tolerance values. Tolerance is $1-r^2$ from the regression of $X_i$ against all the other predictor variables. Low tolerance means that $X_i$ is correlated with at least one of the other $X$s; anything less than $0.1$ is bad.
+
+One problem with just removing highly correlated predictors is that then their parameter estimates are biased since they are also accounting for the removed variables. Another way to deal with collinearity is to do principal components regression by extracting $p$ principal components from the matrix and regressing $Y$ on them instead, since the principal components are uncorrelated. However, this is difficult to interpret, so we can back-calculate partial regression slopes for the original variables based on the principal components. 
+
+
+### 7. Design and power analysis
+#### 7.1 Sampling
+If a population is stratified and you want to use stratified sampling to make sure you capture all the variation and don't miss any by random chance with simple random sampling, you need to include the relative proportion of the population that each stratum is when calculating the mean or sample proportionally. For cluster sampling (think of it hierarchically like tree > branch > leaves), do simple random sampling at each cluster stage. Cluster sampling is best suited for hierarchical or nested models. The primary problem with systematic sampling is that unknown gradients can bias the samples. 
+
+To determine the size of the sample needed to estimate the true population mean, you use the $z$ value from a standard normal distribution for confidence levels, the variance of the population based on a previous data, and the allowed difference between the sample mean and population mean. $n \geq \frac{z^2 \sigma^2}{d^2}$
+#### 7.2 Experimental design
+Pseudoreplication, confounding factors, randomization; considerations for field and manipulative experiments. 
+
+#### 7.3 Power analysis
+Power is the long-term probability of detecting an effect if it occurs and is $1 - \beta$ if $\beta$ symbolizes the probability of making a Type II error. Power is some function of the effect size ($ES$), sample size ($n$), variance ($\sigma^2$), and desired significance level ($\alpha$). Power $\propto \frac{ES \alpha \sqrt{n}}{\sigma}$. 
+
+The Minimum Detectable Effect Size (MDES), also called a reverse power analysis, determines what effect size you can detect given variation in your available sample. This is most often used for controls to show that even a small effect would have been detected in your control smaples. 
+
+One of the main problems with post hoc power calculation ("observed power") is that it uses the variance and effect size from your sample. Post hoc power analysis corresponds to $\rho$-values, so it tells you nothing new. 
+
+There are no firm rules for meaningful effect sizes since it depends on what is biologically significant in a system. One useful way to determine a sampling regime is to plot potential effect sizes against sample size and find the most reasonable size that is logistically feasible and yields a desired effect size. 
+
+#### 7.4 General issues and hints for analysis
+To do a power analysis, you need to have an estimate of variation and the statistical model you are going to apply to your data. 
+
+### 8. Comparing groups or treatments - analysis of variance
+The goal of ANOVA is to partition the variance in a response variable so that it is explained by categorical factors.
+#### 8.1 Single factor (one way) designs
+
+#### 8.2 Factor effects
+#### 8.3 Assumptions
+#### 8.4 ANOVA diagnostics
+#### 8.5 Robust ANOVA
+#### 8.6 Specific comparison of means
+#### 8.7 Tests for trends
+#### 8.8 Testing equality of group variances
+#### 8.9 Power of single factor ANOVA
+#### 8.10 General issues and hints for analysis
+
+
+
+
+### 9. Multifactor analysis of variance
+#### 9.1 Nested (hierarchical) designs
+#### 9.2 Factorial designs
+#### 9.3 Pooling in multifactor designs
+#### 9.4 Relationship between factorial and nested designs
+#### 9.5 General issues and hints for analysis
+
+### 10. Randomized blocks and simple repeated measures: unreplicated two factor designs
+#### 10.1 Unreplicated two factor experimental designs
+#### 10.2 Analyzing RCB and RM designs
+#### 10.3 Interactions in RCB and RM models
+#### 10.4 Assumptions
+#### 10.5 Robust RCB and RM analyses
+#### 10.6 Specific comparisons
+#### 10.7 Efficiency of blocking
+#### 10.8 Time as a blocking factor
+#### 10.9 Analysis of unbalanced RCB designs
+#### 10.10 Power of RCB or simple RM designs
+#### 10.11 More complex block designs
+#### 10.12 Generalized randomized block designs
+#### 10.13 RCB and RM designs and statistical software
+#### 10.14 General issues and hints for analysis
+
+
+# Bayesian statistics {.tabset .tabset-fade .tabset-pills}
+
+# Information theoretic models {.tabset .tabset-fade .tabset-pills}
+
+# Linear algebra {.tabset .tabset-fade .tabset-pills}
+
+# Probability theory {.tabset .tabset-fade .tabset-pills}
+
+# Experimental design {.tabset .tabset-fade .tabset-pills}
+
+#
+
+
