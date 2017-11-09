@@ -10,45 +10,67 @@ output:
     toc_float: yes
 ---
 
-# Classic Works {.tabset .tabset-fade .tabset-pills}
-This section contains notes on classic works in ecology and evolutionary biology.
+# Classic works {.tabset .tabset-fade .tabset-pills}
+This section contains notes on classic works in ecology and evolutionary biology or historical perspectives.
 
 ## Foundations of Ecology 
 
-citation
-
 ## On the Origin of Species
 
-citation
+## Modeling Nature
+
+## Classic papers
+
+## Notable ecologists
+
+#### Robert MacArthur
+#### EO Wilson
+#### Charles Darwin
 
 # Current topics in ecology {.tabset .tabset-fade .tabset-pills}
 
-## Methods in Ecology and Evolution
-
-papers
+## Trends in Ecology and Evolution
 
 ## Ecology Letters
 
-papers
+## Ecology
 
-## Trends in Ecology and Evolution
+## Methods in Ecology and Evolution
 
-papers
+## Conservation Biology
+
+## Ecology and Evolution
+
+## Journal of Applied Ecology
+
+## Journal of Field Ornithology  
 
 # Ornithology and ornithologists {.tabset .tabset-fade .tabset-pills}
 ## Gill's Ornithology
+## Birds and Habitat
+## Ovenbirds
 ## Notable ornithologists
-
 ### David Lack
 ### Margaret Morse-Nice
 
 # Conservation biology {.tabset .tabset-fade .tabset-pills}
 
+## Carroll and Fox
+
+## Primack
+
+## Analysis and Management of Animal Populations
+
 # Basic evolution {.tabset .tabset-fade .tabset-pills}
 
 # General ecology {.tabset .tabset-fade .tabset-pills}
 
+## Ricklefs and Relyea
+
+## Gotelli
+
 # Population and community ecology {.tabset .tabset-fade .tabset-pills}
+Hierarchical Modeling and Inference in Ecology
 ## Vandermeer and Goldberg
 ### 1. Elementary Population Dynamics
 $\frac{Kk-N}{K}$ from the logistic equation $\frac{dN}{dt}=rN\frac{(K-N)}{K}$ can be thought of as the available niche space that has not already been used by members of the population. 
@@ -66,6 +88,7 @@ The rate of increase of a stable age population is the dominant eigenvalue of th
 When a population follows $PN_t=\lambda N_t$, then we can say that there is a column vector $u$ that satisfies the equation $Pu = \lambda u$ and a vector $v$ that satisfies $P'v = \lambda v$. $u$ is the right eigenvector and represents the contribution of other stages to that stage (stable stage distribution) and $v$ is the left eigenvector that represents the contributions of a stage to all other stages (reproductive value).
 
 The <b>sensitivity</b> of a matrix is how the rate of population growth changes with changes to $p_{ij}$. Because changes are in the units of the matrix and mortality and natality vary widely (e.g. grasses with thousands of seeds), ecologists use elasticity which is based on logs. Elasticity is $e_{ij}=\frac{\partial(\ln\lambda)}{\partial(\ln p_{ij}}$. This sums to 1, so elasticity of each individual element of the matrix can be seen as proportional sensitivity. 
+
 ### 4. A Closer Look at the 'Dynamics' in Population Dynamics
 Attractor means a singularity in stable equilibrium, a repellor is a singularity that leads to unstable equilibrium. These can be visualized as a magnet falling through a beaker of water and the trajectory as viewed from the bottom matches with the phase plane diagrams; swirling the bucket creates oscillators which leads to damped oscillations if it is an oscillatory point attractor. There are also periodic attractors/repellers, like a bundt cake pan. Strange attractors are attractors that are flat from a distance, but up close are bumpy, so once a system reaches them, then it bounces around on that bumpy space. With strange attractors, we want to know the range over which a system can move and also its morphology.
 
@@ -74,18 +97,57 @@ The eigenvalue is the rate at which a system tends towards a point attractor and
 In a one-dimensional graph created by stair-stepping, the slope of the function as it crosses the 45-degree plane is the eigenvalue. <br><b><center>oscillatory repellor $< 1 <$ oscillatory attractor $< 0 <$ point attractor  $< 1 <$ point repellor</center></b>
 
 Systems are structurally unstable if a small change in $r$ leads to a change in the behavior of the system. These are bifurcation points and can lead to period doubling; Hopf bifurcations are a special case for continuous systems with differential equations. Bifurcations create attractors (nodes) and repellors (saddles) and are sometimes called "blue sky bifurcations" because they come out of the blue. Basin coundary collisions are a special type of bifurcation in which a point and strange attractors basins collide. Enough bifurcations lead to chaos via the period doubling route to chaos. 
+
+## Metapopulation Ecology
+
+## Insect and Bird Interactions
+test
+
 # Landscape ecology {.tabset .tabset-fade .tabset-pills}
+
+## Turner and Gardner
 
 # Behavioral ecology {.tabset .tabset-fade .tabset-pills}
 
-# Ecological models {.tabset .tabset-fade .tabset-pills}
+# Area sensitivity
+
+## Key papers
+
+## Foundational papers
+
+# Ecological modeling {.tabset .tabset-fade .tabset-pills}
+## Kery and Royle
+
+# Bayesian statistics {.tabset .tabset-fade .tabset-pills}
+
+## McCarthy
+
+## Hobbs and Hooten
+
+# Information theoretic approach {.tabset .tabset-fade .tabset-pills}
+
+
+
+# Linear algebra {.tabset .tabset-fade .tabset-pills}
+## Searle
+## Hamilton
+## Harville
+
+# Probability theory {.tabset .tabset-fade .tabset-pills}
+## Chung
+
+
+# Experimental design {.tabset .tabset-fade .tabset-pills}
+
+# Structural equation modeling {.tabset .tabset-fade .tabset-pills}
+## Cause and Correlation
+## USherbrooke
 
 # Basic statistics {.tabset .tabset-fade .tabset-pills}
 
-## Quinn and Keough
+## Quinn and Keough {.tabset .tabset-fade .tabset-pills}
 
-### Experimental Design and Data Analysis for Biologists
-### 1. Introduction
+### 1. Introduction 
 
 #### 1.1   Scientific method
 
@@ -305,18 +367,10 @@ The goal of ANOVA is to partition the variance in a response variable so that it
 #### 10.14 General issues and hints for analysis
 
 
+## Gotelli and Ellison {.tabset .tabset-fade .tabset-pills}
 
-# Bayesian statistics {.tabset .tabset-fade .tabset-pills}
+# Calculus
 
-# Information theoretic models {.tabset .tabset-fade .tabset-pills}
-
-# Linear algebra {.tabset .tabset-fade .tabset-pills}
-
-# Probability theory {.tabset .tabset-fade .tabset-pills}
-
-# Experimental design {.tabset .tabset-fade .tabset-pills}
-
-# Structural equation modeling {.tabset .tabset-fade .tabset-pills}
 #
 
 
