@@ -1,17 +1,159 @@
 ---
 title: "Qualifying Exam Notes"
-author: Eliza Grames
-output: 
-  html_notebook: 
+author: "Eliza Grames"
+output:
+  html_notebook:
     collapsed: no
     smooth_scroll: no
     theme: journal
     toc: yes
     toc_float: yes
+  html_document:
+    df_print: paged
+    toc: yes
 ---
 
-# Classic works {.tabset .tabset-fade .tabset-pills}
-This section contains notes on classic works in ecology and evolutionary biology or historical perspectives.
+# Checklist {.tabset .tabset-fade .tabset-pills}
+## >>
+
+## Checklist 
+
+### Historical perspectives
+
+&#9744; Foundations of Ecology
+
+&#9744; On the Origin of Species
+
+&#9745; Modeling Nature
+
+&#9744; Classic papers
+
+&#9744; Summaries of notable ecologists
+
+### Current Topics
+
+&#9744; Catch up on all journal articles in reading archive
+
+### Ornithology
+
+&#9744; Gill's Ornithology
+
+&#9744; Birds and Habitat
+
+&#9744; Summaries of notable ornithologists
+
+### Conservation Biology
+
+&#9744; Carrol and Fox Conservation Biology
+
+&#9744; Primack cons bio
+
+&#9744; Restoring North America's Birds
+
+&#9744; Saving the World's Deciduous Forests
+
+&#9744; Analysis and Management of Animal Populations
+
+&#9744; Structured Decision Making
+
+### Basic Evolution
+
+&#9744; Evolution Textbook
+
+### General Ecology
+
+&#9744; Ricklefs and Relyea
+
+&#9744; Gotelli's Primer of Ecology
+
+### Population and Community Ecology
+&#9745; Vandermeer and Goldberg
+
+&#9744; Mittelbach
+
+&#9744; Metapopulation ecology (TBD)
+
+&#9744; Insect and Bird Interactions
+
+&#9744; Ecological Niches: Linking Classical and Contemporary Approaches
+
+### Macroecology and theoretical ecology
+
+&#9744; An Illustrated Guide to Theoretical Ecology
+
+&#9744; The Unified Neutral Theory of Biodiversity and Biogeography
+
+&#9744; Jim Brown's Macroecology
+
+&#9744; History of the Ecosystem Concept
+
+### Landscape ecology
+
+&#9744; Turner and Gardner
+
+&#9744; Scales and levels
+
+### Area sensitivity
+
+&#9744; Key papers
+
+&#9744; Foundational papers
+
+### Ecological modeling
+
+&#9744; Kery and Royle
+
+&#9744; Hierarchical Modeling and Inference in Ecology
+
+&#9744; The Ecological Detective
+
+### Species Distribution Models
+
+&#9744; TBD
+
+### Bayesian Statistics
+
+&#9744; McCarthy
+
+&#9744; Hobbs and Hooten
+
+### Information Theoretic Approach
+
+&#9744; Burnham and Anderson
+
+### Linear Algebra
+
+&#9744; Searle
+
+&#9744; Hamilton
+
+&#9744; Harville
+
+### Probability Theory
+
+&#9744; Chung
+
+&#9744; Bayes Theorem
+
+### Experimental Design
+
+&#9744; TBD
+
+### Structural Equation Modeling
+
+&#9744; Shipley
+
+&#9744; Grace
+
+### Basic statistics
+
+&#9744; Quinn and Keough
+
+&#9744; Gotelli and Ellison
+
+# Historical perspectives {.tabset .tabset-fade .tabset-pills}
+## >> 
+This section contains notes on classic works in ecology and evolutionary biology or historical perspectives on the development of theories and models in ecology. 
 
 ## Foundations of Ecology 
 
@@ -21,13 +163,34 @@ This section contains notes on classic works in ecology and evolutionary biology
 
 ## Classic papers
 
-## Notable ecologists
+## Notable ecologists {.tabset .tabset-fade .tabset-pills}
 
 #### Robert MacArthur
 #### EO Wilson
 #### Charles Darwin
+#### Dan Janzen
+#### David Tilman
+#### Alfred Wallace
+#### Ernst Mayr
+#### N Tinbergen
+#### Stephen J Gould
+#### Holling
+#### Simberloff
+#### Sewall Wright
+#### RA Fischer
+#### Richard Dawkins
+#### Peter and Rosemary Grant
+#### Thomas Hunt Morgan
+#### JBS Haldane
+#### CH Waddington
+#### Niles Eldridge
+#### RC Lewontin
 
 # Current topics in ecology {.tabset .tabset-fade .tabset-pills}
+
+## >>
+
+In this section, I have notes on recent papers relevant to my field or interests from selected journals. Articles are chosen for inclusion in this section based on skimming Table of Contents (TOC) emails and it will be updated continuously. 
 
 ## Trends in Ecology and Evolution
 
@@ -37,41 +200,85 @@ This section contains notes on classic works in ecology and evolutionary biology
 
 ## Methods in Ecology and Evolution
 
+## Global Change Biology
+
 ## Conservation Biology
+
+## Conservation Letters
 
 ## Ecology and Evolution
 
-## Journal of Applied Ecology
+## Condor
 
-## Journal of Field Ornithology  
+## Auk
 
-# Ornithology and ornithologists {.tabset .tabset-fade .tabset-pills}
+## Nature
+
+## Science
+
+# Ornithology {.tabset .tabset-fade .tabset-pills}
+## >>
+
+Because I am studying birds, this section is dedicated to the field of ornithology and more specifically, my study system and trophic interactions. 
+
 ## Gill's Ornithology
 ## Birds and Habitat
 ## Ovenbirds
-## Notable ornithologists
+## Notable ornithologists {.tabset .tabset-fade .tabset-pills}
 ### David Lack
 ### Margaret Morse-Nice
+### John James Audubon
+### Louis Agassiz Fuertes
+### Alexander Wilson
+### John Gould
+### Thomas Nuttall
+### John Kirk Townsend
+### Roger Tory Peterson
+### David Sibley
 
 # Conservation biology {.tabset .tabset-fade .tabset-pills}
+
+## >>
+
+Although I don't model conservation biology explicitly, contributing to knowledge about species' conservation is an implicit goal in all of my research. 
 
 ## Carroll and Fox
 
 ## Primack
 
+## Restoring North American Birds
+
+## Saving the World's Deciduous Forests
+
 ## Analysis and Management of Animal Populations
+
+## Structured decision making 
+
+Jim Nichols, Bryan Ken Williams, Andy J Royle
+Sustainable resource management
 
 # Basic evolution {.tabset .tabset-fade .tabset-pills}
 
+## >>
+
+I have not taken a graduate course in evolution yet and will not take it until after my general exams, so this section will be necessarily somewhat brief and will only cover basic topics in evolution. 
+
 # General ecology {.tabset .tabset-fade .tabset-pills}
+
+## >>
+
+Although there are more specific sections below for population and community ecology and landscape ecology, this section is dedicated to general ecology and is based on introductory ecology texts. 
 
 ## Ricklefs and Relyea
 
 ## Gotelli
 
 # Population and community ecology {.tabset .tabset-fade .tabset-pills}
-Hierarchical Modeling and Inference in Ecology
+
+## >>
+
 ## Vandermeer and Goldberg
+
 ### 1. Elementary Population Dynamics
 $\frac{Kk-N}{K}$ from the logistic equation $\frac{dN}{dt}=rN\frac{(K-N)}{K}$ can be thought of as the available niche space that has not already been used by members of the population. 
 
@@ -99,26 +306,54 @@ In a one-dimensional graph created by stair-stepping, the slope of the function 
 Systems are structurally unstable if a small change in $r$ leads to a change in the behavior of the system. These are bifurcation points and can lead to period doubling; Hopf bifurcations are a special case for continuous systems with differential equations. Bifurcations create attractors (nodes) and repellors (saddles) and are sometimes called "blue sky bifurcations" because they come out of the blue. Basin coundary collisions are a special type of bifurcation in which a point and strange attractors basins collide. Enough bifurcations lead to chaos via the period doubling route to chaos. 
 
 ## Metapopulation Ecology
-
+## Mittelbach
 ## Insect and Bird Interactions
-test
+## Ecological Niches: Linking Classical and Contemporary Approaches
+
+# Macroecology and theoretical ecology {.tabset .tabset-fade .tabset-pills}
+## >>
+## An Illustrated Guide to Theoretical Ecology
+## The Unified Neutral Theory of Biodiversity and Biogeography
+
+## Jim Brown's Macroecology
+
+## History of the Ecosystem Concept
 
 # Landscape ecology {.tabset .tabset-fade .tabset-pills}
 
+## >>
+
 ## Turner and Gardner
 
-# Behavioral ecology {.tabset .tabset-fade .tabset-pills}
+## Scales and levels
 
-# Area sensitivity
+Cash
+
+# Area sensitivity {.tabset .tabset-fade .tabset-pills}
+
+## >>
 
 ## Key papers
 
 ## Foundational papers
 
 # Ecological modeling {.tabset .tabset-fade .tabset-pills}
+
+## >>
+
 ## Kery and Royle
 
+## Hierarchical Modeling and Inference in Ecology
+
+## The Ecological Detective
+
+# Species Distribution Models {.tabset .tabset-fade .tabset-pills}
+
+## >>
+
 # Bayesian statistics {.tabset .tabset-fade .tabset-pills}
+
+## >>
 
 ## McCarthy
 
@@ -126,24 +361,43 @@ test
 
 # Information theoretic approach {.tabset .tabset-fade .tabset-pills}
 
+## >>
+
 
 
 # Linear algebra {.tabset .tabset-fade .tabset-pills}
+
+## >>
+
 ## Searle
+
 ## Hamilton
+
 ## Harville
 
 # Probability theory {.tabset .tabset-fade .tabset-pills}
+
+## >>
+
 ## Chung
 
+## Bayes Theorem
 
 # Experimental design {.tabset .tabset-fade .tabset-pills}
 
+## >>
+
 # Structural equation modeling {.tabset .tabset-fade .tabset-pills}
-## Cause and Correlation
-## USherbrooke
+
+## >>
+
+## Shipley
+
+## Grace
 
 # Basic statistics {.tabset .tabset-fade .tabset-pills}
+
+## >>
 
 ## Quinn and Keough {.tabset .tabset-fade .tabset-pills}
 
@@ -369,8 +623,8 @@ The goal of ANOVA is to partition the variance in a response variable so that it
 
 ## Gotelli and Ellison {.tabset .tabset-fade .tabset-pills}
 
-# Calculus
+
+# References
 
 #
-
 
