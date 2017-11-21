@@ -1,6 +1,7 @@
 ---
 title: "Qualifying Exam Notes"
 author: "Eliza Grames"
+bibliography: ../../master-bib.bib
 output:
   html_notebook:
     collapsed: no
@@ -192,7 +193,12 @@ This section contains notes on classic works in ecology and evolutionary biology
 
 In this section, I have notes on recent papers relevant to my field or interests from selected journals. Articles are chosen for inclusion in this section based on skimming Table of Contents (TOC) emails and it will be updated continuously. 
 
+In order to keep notes in a usable format, they are stored in R objects that are then written to a master .bib file which is linked to kbibtex. Notes are also reproduced here in more readable paragraph form. 
+
 ## Trends in Ecology and Evolution
+
+### [@Corlett2015]
+
 
 ## Ecology Letters
 
@@ -215,6 +221,51 @@ In this section, I have notes on recent papers relevant to my field or interests
 ## Nature
 
 ## Science
+
+## Code for bibliography
+
+
+
+```{r}
+
+write2bib <- function(article.id="", author="", title="", journal="", volume="", number="", pages="", year="", localfile="", note=""){
+    entry <- paste("@article\\{", article.id, ",",
+               "author =", "\"", author, "\",",
+               "journal = ", "\"", journal, "\"", ",", 
+               "localfile = ", "\"", localfile, "\"", ",",
+               "note = ", "\"", note, "\"", ",", 
+               "number = ", "\"", number, "\"", ",", 
+               "pages = ", "\"", pages, "\"", ",", 
+               "title = ", "\"", "\\{", title, "\\}", "\"", ",", 
+               "volume = ", "\"", volume, "\"", ",", 
+               "year = ", "\"", year, "\"", ",", 
+               "\\}", sep="")
+    edited.entry <- gsub("\\", entry, replacement="", fixed=TRUE)
+    read.bib <- readLines("~/master-bib.bib")
+    updated.bib <- append(read.bib, entry)
+    writeLines(updated.bib, "~/master-bib.bib")
+}
+
+#### Corlett2015 ####
+Corlett2015.id <- "Corlett2015"
+Corlett2015.auth <- "Richard T Corlett"
+Corlett2015.title <- "The Anthropocene concept in ecology and conservation"
+Corlett2015.jour <- "Trends in Ecology and Evolution"
+Corlett2015.volume <- "30"
+Corlett2015.num <-"1"
+Corlett2015.pgs <- "36--41"
+Corlett2015.yr <- "2015"
+Corlett2015.file <- "/home/aleph/Documents/readings/TREE/Corlett2015.pdf"
+Corlett2015.notes <- c("")
+
+write2bib(Corlett2015.id, Corlett2015.auth, Corlett2015.title, Corlett2015.jour, Corlett2015.volume, Corlett2015.num, Corlett2015.pgs, Corlett2015.yr, Corlett2015.file, Corlett2015.notes)
+
+#### Next Article ####
+
+
+
+```
+
 
 # Ornithology {.tabset .tabset-fade .tabset-pills}
 ## >>
@@ -270,6 +321,86 @@ I have not taken a graduate course in evolution yet and will not take it until a
 Although there are more specific sections below for population and community ecology and landscape ecology, this section is dedicated to general ecology and is based on introductory ecology texts. 
 
 ## Ricklefs and Relyea
+
+### Chapter 1: Ecology, Evolution, and the Scientific Method
+
+This chapter deals primarily with basic conepts in ecology, such as populations and ecosystems, so the notes are quite brief in an attempt to use time effectively. 
+
+Ernst Haeckel gave the first formal definition of ecology and species interactions, describing what Darwin called the "economy of nature."
+
+Ecological systems must obey the law of the conservation of mass and the conservation of energy (first law of thermodynamics). If a system has gains and losses balancing each other, it is a dynamic steady state. 
+
+### Chapter 2: Adapatations to Aquatic Environments
+
+$Q_{10}$ is a ratio of physiological activity at some temperature to activity at ten degrees cooler; it measures sensitivity of physiological processes to temperature.
+
+### Chapter 3: Adaptations to Terrestrial Environments
+
+Water potential is measured in megapascals; at 0 MPa, water is saturated; at around -1.5 MPa is the wilting point. Water potential is based on osmotic pressure. 
+
+### Chapter 4: Adaptations to Variable Environments
+
+Phenotypic plasticity in behavior, morphology; foraging behavior and central place foraging theory. 
+
+### Chapter 5: Climates and Soils
+
+Young soils have low cation exchange capacity because they have less clay and less organic matter so they don't have calcium, magnesium, potassium, or sodium in great abundance. In acidic soils, podsolization are leached from the B to E horion. Lateritic soils are not acidic, but have ben extremely weathered so clay has leached down to the E layer leaving mostly oxides. Lateritic soils are common in the tropics, whereas podsolized soils are common in New England and the Great Lakes region. 
+
+### Chapter 6: Terrestrial and Aquatic Biomes
+
+Biomes are mostly defined by precipitation and climate. 
+
+Rivers can have allochtonous (similar to exogenous) inputs from outside materals, or internally produced, autochthonous (similar to endogenous) inputs of organic matter. 
+
+
+### Chapter 7: Evolution and Adaptation
+
+Polygenic traits are caused by affects of multiple genes. Pleiotropy is when one gene affects several traits. Epistasis is when one gene's expression is regulated by a different gene. 
+
+### Chapter 8: Life Histories
+
+Life history traits are all tied to fitness. Because of life history tradeoffs, we can generally group organisms along a continuum from slow to fast reproductive strategies. 
+
+### Chapter 9: Reproductive Strategies
+
+Local mate competition favors female offspring (fig wasp). 
+
+### Chapter 10: Social Behaviors
+
+Eusociality and haplodiploidy, types of social interactions. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Gotelli
 
