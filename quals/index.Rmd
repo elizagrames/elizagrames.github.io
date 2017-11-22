@@ -186,6 +186,7 @@ This section contains notes on classic works in ecology and evolutionary biology
 #### CH Waddington
 #### Niles Eldridge
 #### RC Lewontin
+#### G. Evelyn Hutchinson
 
 # Current topics in ecology {.tabset .tabset-fade .tabset-pills}
 
@@ -199,6 +200,29 @@ In order to keep notes in a usable format, they are stored in R objects that are
 
 ### [@Corlett2015]
 
+The anthropocene refers to the geologic period during which human impacts have as great or greater of an impact on the planet as natural factors. One of the chief issues with the term, which was proposed by Crutzen and Stoermer in 2000, is that "-cene" implies it is an epoch that ends the Holocene rather than a division within the Holocene. 
+
+There is debate about when the Anthropocene started (or will start) if it is an accepted period. Because not all characteristics of the Anthropocene are synchronous (e.g. extinction, ocean acidification, agriculture, greenhouse gas emisssions, etc...) it is difficult to pinpoint a start. To define a geologic period, the International Commission on Stratigraphy needs a physical marker to signify the start of the Anthropocene. 
+
+Ecologists tend to place the start of the Anthropocene much more recently than geologists, typically somewhere in the late 1900s. Although the term really has no bearing on ecology, it shapes how we approach ecology, processes, and conservation. Within conservation biology, it has been somewhat polarizing in terms of creating both a lack of self-efficacy and longing for the past, and also by placing emphasis on the role of humans in shaping natural systems. In some ways, this is similar to the debate between preservationists and conservationists. 
+
+### [@Fox2013]
+
+Fox argues that Connell's Intermediate Disturbance Hypothesis should be abandoned due to a lack of empirical and theoretical support. He cites reviews that show less than 20% of studies on diversity and disturbance show the predicted result of IDH. 
+
+The three theoretical bases for IDH are: 1) disturbance reduced densities and reduces competition, 2) disturbance prevents equilibrium, and 3) rapid fluctuations in dominant species enable coexistence. 
+
+Fox argues that although disturbance reduces densities, it also reduces how competitive a species needs to be to exclude competitors. Coexistence is generally due to other factors besides densities. Disturbance does not disrupt a stable state, but rather increase mortality rates and increases competition between species with different growth rates. The third basis is Hutchinson's paradox of the plankton and notion of a nonequilibrium coexistence mechanism (changing conditions change relative fitness). 
+
+Theoretical models are usually false because of assumptions, but they are still usefull. Fox argues that IDH is logically false and so its predictions do not come from the theory. 
+
+### [@Sheil2013]
+
+The IDH is not actually based on the three things Fox cites, and is instead based on the competition-colonization tradeoff that Fox discusses as being a better explanation for IDH-type patterns. The original IDH was developed for sessile organisms and was focused on succession and was not intended for mobile organisms. Sheil and Burslem also cite a more recent review paper that found support for the IDH in 46%, not 20%, of papers on disturbance-density relationships. 
+
+###[@Mittelbach2015]
+
+
 
 ## Ecology Letters
 
@@ -206,11 +230,56 @@ In order to keep notes in a usable format, they are stored in R objects that are
 
 ## Methods in Ecology and Evolution
 
+[@Harrison2011]
+
+Meta-analysis allows us to determine the effect of one variable on another across studies, which can uncover trends that aren't apparent from many small studies with varying sample sizes and reported effects. 
+
+Effect sizes are standardized measures of change in one variable based on change in another variable that account for sample sizes so they can be used across studies. Studies with low variance in their findings are given greater weight in determining the mean effect size. Variation in effects between studies can also be explained by other variables. 
+
+Recommended reading: Stewart (2010) and Hillebrand (2008). 
+
+Historically, vote-counting of significant vs non-significant relationships across studies has been used to determine support for a hypothesis. This is not a valid way to determine support because different studies have different sample sizes, which can change significance so true effects are masked. 
+
+The effect size pulled from studies for meta-analysis depends on the type of study. Comparison studies take the mean difference between groups, regression-type studies take the correlation coefficient, and for binary responses the odds ratio is used. In addition to finding a mean effect size, meta-analysis also looks at the heterogeneity of effect size across studies. 
+
+Recommended reading: Borenstein et al. 2009, Cooper et al. 2009, Lipsey and Wilson 2001, Koricheva et al (ND). Hedges and Olkin 1980, Gurevitch et al. 1992, Gurevitch and Hedges 1993. 
+
+When doing a meta-analysis, first do a systematic review, then create a database of study ID, effect size, sample size, and other variables that may alter the effect size. 
+
+Often in meta-analysis the effect size for a study needs to be calculated by the given means, variances, etc... because data is not reported in a way that is easily translated into an effect size. 
+
+Because some variance in effect size is due to fixed effects (other variables we know influence the effect, like age or sex) but some variance between studies is random. This can be addressed by doing a mixed-effects model to test for significance of confounding variables. 
+
+Meta-analysis is subject to publication bias because studies that find significant effects in the expected direction are more likely to be published. Funnel plots and failsafe sample size can be used to try to correct for this. Failsafe sample size is the number of unpublished studies that would need to exist to make our calculated mean effect size insignificant due to sampling error. 
+
 ## Global Change Biology
+
+### [@Fordham2017]
+
+Instead of taking a mechanistic approach to SDMs, this paper couples populations and demographic factors with environmental variables to model historical range shifts. 
+
+The goal of the study was to run models at varying degrees of complexity, from correlative models to dispersal models to spatially explicit population models to see if the degree of complexity of the model impacted its predictive ability. 
+
+The simple models assume unlimited dispersal, more complex models include species-specific dispersal limitations, and the most complex models include metapopulation dynamics of extinction and colonization. Dispersal models were similar to MigClim models, but instead of predicting a probability of a dispersal event, they predicted the probability of the number of dispersers. In the niche-population model, they included a carrying capacity for each grid cell that was a function of possible maximum abundance, the percent of land cover, suitable climate, and the minimum abundance (to represent an Allee effect). A second niche-population model did not include the percent of land cover. 
+
+In the basic ENM models, including land use improved prediction, but when land use was included in dispersal or metapopulation models it reduced predictive ability. When more complex models did not have land use included, they were the best at predicting ranges. One reason why including land use in the more complex models did a bad job of predicting actual range dynamics is because land use was a static variable and was unknown for grid cells at the start of the model so projections may have had repercussions for later simulations when land use was known. 
 
 ## Conservation Biology
 
 ## Conservation Letters
+
+### [@Kearney2010]
+
+One of the primary problems with correlative models is that they implicitly include ecological processes, but only link species distributions to environmental variables. Mechanistic SDMs, in contrast, explicitly include ecological processes by linking physiological processes to limiting environmental factors. 
+
+This study uses both a mechanistic, functional trait based model and correlative models to project the range of an Australian possum under climate change. 
+
+The mechanistic model included properties of the fur, mass, shape, and core body temperature of possums in connection to metabolic processes as well as nesting, food, digestion, and efficiency of converting food to milk. 
+
+The mechanistic model overpredicted the species range, though the authors say this is to be expected, whereas the correlative model underpredicted the suitable range. A combined approach does a better job than either individual approach because it incorporates changing environmental conditions and physiological processes. 
+
+
+
 
 ## Ecology and Evolution
 
@@ -223,8 +292,6 @@ In order to keep notes in a usable format, they are stored in R objects that are
 ## Science
 
 ## Code for bibliography
-
-
 
 ```{r}
 
@@ -247,21 +314,252 @@ write2bib <- function(article.id="", author="", title="", journal="", volume="",
 }
 
 #### Corlett2015 ####
-Corlett2015.id <- "Corlett2015"
-Corlett2015.auth <- "Richard T Corlett"
-Corlett2015.title <- "The Anthropocene concept in ecology and conservation"
-Corlett2015.jour <- "Trends in Ecology and Evolution"
-Corlett2015.volume <- "30"
-Corlett2015.num <-"1"
-Corlett2015.pgs <- "36--41"
-Corlett2015.yr <- "2015"
-Corlett2015.file <- "/home/aleph/Documents/readings/TREE/Corlett2015.pdf"
-Corlett2015.notes <- c("")
+id <- "Corlett2015"
+auth <- "Richard T Corlett"
+title <- "The Anthropocene concept in ecology and conservation"
+jour <- "Trends in Ecology and Evolution"
+volume <- "30"
+num <-"1"
+pgs <- "36--41"
+yr <- "2015"
+file <- "/home/aleph/Documents/readings/TREE/Corlett2015.pdf"
+notes <- c("
 
-write2bib(Corlett2015.id, Corlett2015.auth, Corlett2015.title, Corlett2015.jour, Corlett2015.volume, Corlett2015.num, Corlett2015.pgs, Corlett2015.yr, Corlett2015.file, Corlett2015.notes)
+The anthropocene refers to the geologic period during which human impacts have as great or greater of an impact on the planet as natural factors. One of the chief issues with the term, which was proposed by Crutzen and Stoermer in 2000, is that -cene implies it is an epoch that ends the Holocene rather than a division within the Holocene. 
 
-#### Next Article ####
+There is debate about when the Anthropocene started (or will start) if it is an accepted period. Because not all characteristics of the Anthropocene are synchronous (e.g. extinction, ocean acidification, agriculture, greenhouse gas emisssions, etc...) it is difficult to pinpoint a start. To define a geologic period, the International Commission on Stratigraphy needs a physical marker to signify the start of the Anthropocene. 
 
+Ecologists tend to place the start of the Anthropocene much more recently than geologists, typically somewhere in the late 1900s. Although the term really has no bearing on ecology, it shapes how we approach ecology, processes, and conservation. Within conservation biology, it has been somewhat polarizing in terms of creating both a lack of self-efficacy and longing for the past, and also by placing emphasis on the role of humans in shaping natural systems. In some ways, this is similar to the debate between preservationists and conservationists. ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### Fox2013 ####
+
+id <- "Fox013"
+auth <- "Jeremy W Fox"
+title <- "The intermediate disturbance hypothesis should be abandoned"
+jour <- "Trends in Ecology and Evolution"
+volume <- "28"
+num <- "2"
+pgs <- "86--92"
+yr <- "2013"
+file <- "/home/aleph/Documents/readings/TREE/Fox2013.pdf"
+notes <- c("
+Fox argues that Connell's Intermediate Disturbance Hypothesis should be abandoned due to a lack of empirical and theoretical support. He cites reviews that show less than 20% of studies on diversity and disturbance show the predicted result of IDH. 
+
+The three theoretical bases for IDH are: 1) disturbance reduced densities and reduces competition, 2) disturbance prevents equilibrium, and 3) rapid fluctuations in dominant species enable coexistence. 
+
+Fox argues that although disturbance reduces densities, it also reduces how competitive a species needs to be to exclude competitors. Coexistence is generally due to other factors besides densities. Disturbance does not disrupt a stable state, but rather increase mortality rates and increases competition between species with different growth rates. The third basis is Hutchinson's paradox of the plankton and notion of a nonequilibrium coexistence mechanism (changing conditions change relative fitness). 
+
+Theoretical models are usually false because of assumptions, but they are still usefull. Fox argues that IDH is logically false and so its predictions do not come from the theory. 
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### Sheil2013 ####
+
+id <- "Sheil2013"
+auth <- "Douglas Sheil and David FRP Burslem"
+title <- "Defining and defending Connell's intermediate disturbance hypothesis: a response to Fox"
+jour <- "Trends in Ecology and Evolution"
+volume <- "28"
+num <- "1"
+pgs <- "571--572"
+yr <- "2013"
+file <- "/home/aleph/Documents/readings/TREE/"
+notes <- c("
+The IDH is not actually based on the three things Fox cites, and is instead based on the competition-colonization tradeoff that Fox discusses as being a better explanation for IDH-type patterns. The original IDH was developed for sessile organisms and was focused on succession and was not intended for mobile organisms. Sheil and Burslem also cite a more recent review paper that found support for the IDH in 46%, not 20%, of papers on disturbance-density relationships. 
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### Kearney2010 ####
+
+id <- "Kearney2010"
+auth <- "Michael R Kearney and Brendan A Wintle and Warren P Porter"
+title <- "Correlative and mechanistic models of species distribution provide congruent forecasts under climate change"
+jour <- "Conservation Letters"
+volume <- "3"
+num <- ""
+pgs <- "203--213"
+yr <- "2010"
+file <- "/home/aleph/Documents/readings/cons-letters/Kearney2010.pdf"
+notes <- c("
+
+One of the primary problems with correlative models is that they implicitly include ecological processes, but only link species distributions to environmental variables. Mechanistic SDMs, in contrast, explicitly include ecological processes by linking physiological processes to limiting environmental factors. 
+
+This study uses both a mechanistic, functional trait based model and correlative models to project the range of an Australian possum under climate change. 
+
+The mechanistic model included properties of the fur, mass, shape, and core body temperature of possums in connection to metabolic processes as well as nesting, food, digestion, and efficiency of converting food to milk. 
+
+The mechanistic model overpredicted the species range, though the authors say this is to be expected, whereas the correlative model underpredicted the suitable range. A combined approach does a better job than either individual approach because it incorporates changing environmental conditions and physiological processes. 
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### Fordham2017 ####
+
+id <- "Fordham2017"
+auth <- "Damien A Fordham and Cleo Bertelsmeier and Barry W Brook and Regan Early and Dora Neto and Stuart C Brown and Sebastien Ollier and Miguel B Araujo"
+title <- "How complex should models be? Comparing correlative and mechanistic range dynamics models"
+jour <- "Global Change Biology"
+volume <- ""
+num <- ""
+pgs <- "1--14"
+yr <- "2017"
+file <- "/home/aleph/Documents/readings/glob-change-bio/Fordham2017.pdf"
+notes <- c("
+
+Instead of taking a mechanistic approach to SDMs, this paper couples populations and demographic factors with environmental variables to model historical range shifts. 
+
+The goal of the study was to run models at varying degrees of complexity, from correlative models to dispersal models to spatially explicit population models to see if the degree of complexity of the model impacted its predictive ability. 
+
+The simple models assume unlimited dispersal, more complex models include species-specific dispersal limitations, and the most complex models include metapopulation dynamics of extinction and colonization. Dispersal models were similar to MigClim models, but instead of predicting a probability of a dispersal event, they predicted the probability of the number of dispersers. In the niche-population model, they included a carrying capacity for each grid cell that was a function of possible maximum abundance, the percent of land cover, suitable climate, and the minimum abundance (to represent an Allee effect). A second niche-population model did not include the percent of land cover. 
+
+In the basic ENM models, including land use improved prediction, but when land use was included in dispersal or metapopulation models it reduced predictive ability. When more complex models did not have land use included, they were the best at predicting ranges. One reason why including land use in the more complex models did a bad job of predicting actual range dynamics is because land use was a static variable and was unknown for grid cells at the start of the model so projections may have had repercussions for later simulations when land use was known. 
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### Mittelbach2015 ####
+
+id <- "Mittelbach2015"
+auth <- "Gary G Mittelbach and Douglas W Schemske"
+title <- "Ecological and evolutionary perspectives on community assembly"
+jour <- "Trends in Ecology and Evolution"
+volume <- "30"
+num <- "5"
+pgs <- "241--247"
+yr <- "2015"
+file <- "/home/aleph/Documents/readings/TREE/Mittelbach2015.pdf"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### Harrison2011 ####
+
+id <- "Harrison2011"
+auth <- "Freya Harrison"
+title <- "Getting started with meta-analysis"
+jour <- "Methods in Ecology and Evolution"
+volume <- "2"
+num <- ""
+pgs <- "1--10"
+yr <- "2011"
+file <- "/home/aleph/Documents/readings/methods/Harrison2011.pdf"
+notes <- c("
+Meta-analysis allows us to determine the effect of one variable on another across studies, which can uncover trends that aren't apparent from many small studies with varying sample sizes and reported effects. 
+
+Effect sizes are standardized measures of change in one variable based on change in another variable that account for sample sizes so they can be used across studies. Studies with low variance in their findings are given greater weight in determining the mean effect size. Variation in effects between studies can also be explained by other variables. 
+
+Recommended reading: Stewart (2010) and Hillebrand (2008). 
+
+Historically, vote-counting of significant vs non-significant relationships across studies has been used to determine support for a hypothesis. This is not a valid way to determine support because different studies have different sample sizes, which can change significance so true effects are masked. 
+
+The effect size pulled from studies for meta-analysis depends on the type of study. Comparison studies take the mean difference between groups, regression-type studies take the correlation coefficient, and for binary responses the odds ratio is used. In addition to finding a mean effect size, meta-analysis also looks at the heterogeneity of effect size across studies. 
+
+Recommended reading: Borenstein et al. 2009, Cooper et al. 2009, Lipsey and Wilson 2001, Koricheva et al (ND). Hedges and Olkin 1980, Gurevitch et al. 1992, Gurevitch and Hedges 1993. 
+
+When doing a meta-analysis, first do a systematic review, then create a database of study ID, effect size, sample size, and other variables that may alter the effect size. 
+
+Often in meta-analysis the effect size for a study needs to be calculated by the given means, variances, etc... because data is not reported in a way that is easily translated into an effect size. 
+
+Because some variance in effect size is due to fixed effects (other variables we know influence the effect, like age or sex) but some variance between studies is random. This can be addressed by doing a mixed-effects model to test for significance of confounding variables. 
+
+Meta-analysis is subject to publication bias because studies that find significant effects in the expected direction are more likely to be published. Funnel plots and failsafe sample size can be used to try to correct for this. Failsafe sample size is the number of unpublished studies that would need to exist to make our calculated mean effect size insignificant due to sampling error. 
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/TREE/"
+notes <- c("
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/TREE/"
+notes <- c("
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/TREE/"
+notes <- c("
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/TREE/"
+notes <- c("
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/TREE/"
+notes <- c("
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
 
 
 ```
