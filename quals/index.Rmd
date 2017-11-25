@@ -57,17 +57,14 @@ output:
 
 &#9744; Structured Decision Making
 
-### Basic Evolution
+### Ecology and Evolution
 
 &#9744; Evolution Textbook
-
-### General Ecology
 
 &#9744; Ricklefs and Relyea
 
 &#9744; Gotelli's Primer of Ecology
 
-### Population and Community Ecology
 &#9745; Vandermeer and Goldberg
 
 &#9744; Mittelbach
@@ -78,8 +75,6 @@ output:
 
 &#9744; Ecological Niches: Linking Classical and Contemporary Approaches
 
-### Macroecology and theoretical ecology
-
 &#9744; An Illustrated Guide to Theoretical Ecology
 
 &#9744; The Unified Neutral Theory of Biodiversity and Biogeography
@@ -87,8 +82,6 @@ output:
 &#9744; Jim Brown's Macroecology
 
 &#9744; History of the Ecosystem Concept
-
-### Landscape ecology
 
 &#9744; Turner and Gardner
 
@@ -100,7 +93,7 @@ output:
 
 &#9744; Foundational papers
 
-### Ecological modeling
+### Modeling, statistics, and math
 
 &#9744; Kery and Royle
 
@@ -108,21 +101,11 @@ output:
 
 &#9744; The Ecological Detective
 
-### Species Distribution Models
-
-&#9744; TBD
-
-### Bayesian Statistics
-
 &#9744; McCarthy
 
 &#9744; Hobbs and Hooten
 
-### Information Theoretic Approach
-
 &#9744; Burnham and Anderson
-
-### Linear Algebra
 
 &#9744; Searle
 
@@ -130,27 +113,19 @@ output:
 
 &#9744; Harville
 
-### Probability Theory
-
 &#9744; Chung
 
 &#9744; Bayes Theorem
-
-### Experimental Design
-
-&#9744; TBD
-
-### Structural Equation Modeling
 
 &#9744; Shipley
 
 &#9744; Grace
 
-### Basic statistics
-
 &#9744; Quinn and Keough
 
 &#9744; Gotelli and Ellison
+
+&#9744; Handbook of Meta-analysis in Ecology and Evolution
 
 # Historical perspectives {.tabset .tabset-fade .tabset-pills}
 ## >> 
@@ -220,7 +195,6 @@ Theoretical models are usually false because of assumptions, but they are still 
 
 The IDH is not actually based on the three things Fox cites, and is instead based on the competition-colonization tradeoff that Fox discusses as being a better explanation for IDH-type patterns. The original IDH was developed for sessile organisms and was focused on succession and was not intended for mobile organisms. Sheil and Burslem also cite a more recent review paper that found support for the IDH in 46%, not 20%, of papers on disturbance-density relationships. 
 
-###[@Mittelbach2015]
 
 
 
@@ -230,7 +204,7 @@ The IDH is not actually based on the three things Fox cites, and is instead base
 
 ## Methods in Ecology and Evolution
 
-[@Harrison2011]
+### [@Harrison2011]
 
 Meta-analysis allows us to determine the effect of one variable on another across studies, which can uncover trends that aren't apparent from many small studies with varying sample sizes and reported effects. 
 
@@ -293,7 +267,7 @@ The mechanistic model overpredicted the species range, though the authors say th
 
 ## Code for bibliography
 
-```{r}
+```{r, eval=FALSE}
 
 write2bib <- function(article.id="", author="", title="", journal="", volume="", number="", pages="", year="", localfile="", note=""){
     entry <- paste("@article\\{", article.id, ",",
@@ -335,7 +309,7 @@ write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
 
 #### Fox2013 ####
 
-id <- "Fox013"
+id <- "Fox2013"
 auth <- "Jeremy W Fox"
 title <- "The intermediate disturbance hypothesis should be abandoned"
 jour <- "Trends in Ecology and Evolution"
@@ -418,24 +392,6 @@ The goal of the study was to run models at varying degrees of complexity, from c
 The simple models assume unlimited dispersal, more complex models include species-specific dispersal limitations, and the most complex models include metapopulation dynamics of extinction and colonization. Dispersal models were similar to MigClim models, but instead of predicting a probability of a dispersal event, they predicted the probability of the number of dispersers. In the niche-population model, they included a carrying capacity for each grid cell that was a function of possible maximum abundance, the percent of land cover, suitable climate, and the minimum abundance (to represent an Allee effect). A second niche-population model did not include the percent of land cover. 
 
 In the basic ENM models, including land use improved prediction, but when land use was included in dispersal or metapopulation models it reduced predictive ability. When more complex models did not have land use included, they were the best at predicting ranges. One reason why including land use in the more complex models did a bad job of predicting actual range dynamics is because land use was a static variable and was unknown for grid cells at the start of the model so projections may have had repercussions for later simulations when land use was known. 
-
-           ")
-
-write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
-
-#### Mittelbach2015 ####
-
-id <- "Mittelbach2015"
-auth <- "Gary G Mittelbach and Douglas W Schemske"
-title <- "Ecological and evolutionary perspectives on community assembly"
-jour <- "Trends in Ecology and Evolution"
-volume <- "30"
-num <- "5"
-pgs <- "241--247"
-yr <- "2015"
-file <- "/home/aleph/Documents/readings/TREE/Mittelbach2015.pdf"
-notes <- c("
-
 
            ")
 
@@ -815,6 +771,235 @@ Cash
 # Experimental design {.tabset .tabset-fade .tabset-pills}
 
 ## >>
+
+# Meta-analysis {.tabset .tabset-fade .tabset-pills}
+## >>
+## Handbook of Meta-analysis in Ecology and Evolution {.tabset .tabset-fade .tabset-pills}
+
+[@Koricheva2013]
+
+### Section I: Introduction and Planning
+#### Place of meta-analysis among other methods of research synthesis
+
+Historically, synthesis of information in ecology has been done either as a narrative review or by "vote counting" significant findings. What is surprising about the way in which synthesis has historically been done is that it is much less rigorous than standard procedures for analyzing data in a study. Research synthesis should be held to just as high, if not higher, a standard as research. 
+
+One of the primary criticisms of narrative reviews is that they are rarely done systematically and the process of including or excluding articles is opaque. This can lead to apparently contradicting support for hypotheses and limits the usefulness of narrative reviews. Some researchers combine probabilities or Z-scores for research synthesis, but this is not a good approach because one low P-value will almost always ensure the null is rejected. Combining probabilities also doesn't take the direction of the relationship into account. 
+
+Meta-analysis combines effect sizes from multiple studies to determine support for a hypothesis. It expresses effect sizes on a common scale to be able to combine studies. Effect sizes include both direction and magnitude. Meta-analysis can even detect an effect across studies even if none of the studies found a significant effect. 
+
+> "An important contribution of meta-analyses can be to identify gaps in the literature where more research is needed."
+
+Meta-analysis is based on using systematic review to identify articles from which to draw effect sizes. Systematic reviews can be done without meta-analysis, but meta-analysis cannot be done without systematic reviews without producing erroneous results. 
+
+Necessary information to conduct a meta-analysis, such as variances, is often not reported in ecology papers. Because of this problem, some syntheses combine meta-analysis and vote-counting.
+
+#### The procedure of meta-analysis in a nutshell
+
+> "You can think of an effect size as a P-value corrected for sample size with the direction of the relationship also provided"
+
+This quote doesn't seem to represent my understanding of effect sizes, which show the direction and magnitude of an effect corrected for variance?
+
+Doing a meta-analysis requires a formal protocol that specifies the search strategy and inclusion criteria. This criteria should include relevance to your question and also study quality. 
+
+Determining where articles will be pulled from is an important step. For theoretical or non-applied topics, journals are fine, but in conservation many results are in the gray literature associated with government reports or unpublished studies. Similarly, the language of sources included can bias results. 
+
+Although software developed by Lajeunesse allows for controlling for phylogenetic nonindependence of effect sizes for studies of the same species, it is not entirely necessary to do this for every meta-analysis in ecology. 
+
+### Section II: Initiating a meta-analysis
+
+#### First steps in beginning a meta-analysis
+
+Designing a meta-analysis involves the same basic principles of designing a scientific experiment. The population of interest needs to be identified as well as the relationship and response of interest. Comparators should also be specified if response to a treatment is the research question. 
+
+Including large numbers of sub-groups in your population or potential moderating variables can increase the complexity of data collection and analysis but can make things easier down the road because you won't need to go back and do a second round of data extraction. Systematic review reduces bias and meta-analysis reduces imprecision; without doing a systematic review a meta-analysis is biased. 
+
+The protocol should not only specify resources and search strategies, but also the manner in which data will be extracted from articles. Post-hoc revisions can be done, but only if there is good justification for them. For example, if the findings contradict widely held beliefs, exploring moderator effects may be necessary. 
+
+#### Gathering data: searching literature and searching criteria
+
+A scoping search should be done before a full review to determine if enough data exists for a meta-analysis. 
+
+When searching for data, it is not enough to just rely on electronic databases. Reference lists of included articles should be scanned because articles from pre-1980 may not be electronically archived. The gray literature should also be searched, especially if the research question is applied in some way. In particular, conference proceedings, dissertation research, and chapters in books offer the most useful materials in gray literature. In addition, government websites often have reports with useful data. 
+
+Although ideally all the gray literature and unpublished data would be searched and included in a meta-analysis, this can be time-consuming as it is not properly indexed which can bias results. 
+
+Keyword selection is critical because poor selection of keywords can bias search results. If databases have Boolean capabilities, this is a good way to comibne search strings. Use wildcards to capture spelling differences and include both British and American spellings. 
+
+For inclusion criteria, specify the subject, the treatment or study aspect of interest, the response types, comparators or controls, and the type of study. 
+
+The number of papers excluded at the title, abstract, and full-text stage should be recorded. A second reviewer should use the same criteria on a subsample of the total sample to get a kappa score of agreement. 
+
+#### Extraction and critical appraisal of data
+
+For a one-person meta-analysis, a spreadsheet is fine for tracking data. Each article should get an accession number, though if multiple effect sizes come from a paper there needs to be an additional identifier for this. There should also be a separate, but linked, bibliographic database. It is helpful to have a column specifying where data was extracted from for each effect size so that it is easy to go back and check. 
+
+There should also be a library of all the papers not included in the sample and a justification for not including them. For meta-analysis, this includes rejecting articles that don't contain enough data to calculate an effect size. 
+
+If data is presented graphically, it is possible to use software like DataThief, Graphclick, or ImageJ to get data values from a figure. 
+
+Data extraction protocols need to specify what to do for time series data. There also needs to be clear protocols for converting degrees of freedom to sample size, standard deviation to standard error, and converting test statistics to effect sizes. 
+
+Most meta-analysis software requires a single spreadsheet of data, rather than a relational database, so information stored in separate places (e.g. bibliographic information) will need to be merged prior to analysis. 
+
+Some meta-analyses score studies on quality and reject poorly designed or conducted studies to avoid biasing results, however this is a very subjective step in the process. Alternatively, any potential quality issues can be coded for during data extraction and studies can be subsequently removed if the potential quality issues do indeed influence results. 
+
+#### Effect sizes: conventional choices and calculations
+
+Effect size can be measured in different ways, but they all attempt to represent magnitude and direction of a relationship in a common metric that can be interpreted and compared across studies. In meta-analysis, we give greater weight to effects that have higher precision. The same effect size measurement must be used for all studies included in a meta-analysis. 
+
+The original effect size measure was Glass's $\Delta$, though Hedges' $g$ and Cohen's $d$ are also used and are variations on $\Delta$. 
+
+> "The most common (and preferred) metric in use today is known as Hedges' $d$". 
+
+Hedges' $d$ includes a correction for small sample size. The $d$ scores can also be converted to $Z$-scores to determine the percentage of scores different between two treatments. 
+
+Instead of using the standardized mean difference between comparators as a measure of effect size, the ratio of means, or response ratior $R$ can be used. Because ratios aren't great for statistical analysis because of their asymmetrical distributions, they are generally log-transformed. Usually, $R$ is used if both comparator responses have the same direction. If values are log-transformed, they should be back-transformed for interpretation. If the signs of responses are opposite, then $d$ should be used. 
+
+There is no effect size for contingency tables greater than $2 \times 2$. For these types of tables, the rate of response, $P$ is the number showing a response divided by the total number. From this rate $P$, the rate difference, rate ratio, or odds ratio can be used as the effect size. $RD$ causes apparent heterogeneity between studies so it is not widely used. The odds ratio $OR$ is the most commonly used effect size for contingency tables. It is equal to probability of occurence divided by probability of non-occurrence of an event or response. 
+
+For correlation data, Pearson's correlation coefficient $r$ can be used but needs to be transformed with Fisher's $z$-transformation because as $r$ approaches $1$ it gets skewed. It is also possible to transform other statistics into $r$. 
+
+A Mantel correlation represents distance or dissimilarity between two square $n \times n$ matrices excluding the diagonal. Because the matrices have pairwise comparisons, the distribution for Mantel's correlation is not the same as for other correlation coefficients. These should NOT be combined in a meta-analysis with $r$ because they have very different meanings. 
+
+For simple linear regressions, the slope of the regression can be used as the effect size if all studies have the same units of measurement. They also must include a measure of the variance of the estimate of the slope; if slopes are rescaled to have the same units then the variances must also be rescaled. If the variance of the slope is not provided, it is possible to estimate it from other information (see Box 6.7 for details). 
+
+#### Using other metrics of effect size in meta-analysis
+
+For observational studies, it is not possible to get an effect size as a mean difference between comparators because there is no comparator. For example, in studies of biodiversity indices, the index value itself is the value of interest. 
+
+Other measures of effect size need to be drawn from data that is normally distributed. It is safe to assume that means based on large sample sizes, regression parameter estimates, rate estimates, and proportions (if based on large sample sizes) are likely normally distributed. 
+
+See Table 7.1 on page 74 for examples of effect estimates for common effects of interest such as rate of occurrence or probability of success. 
+
+Count data is assumed to follow a Poisson distribution in which the mean and variance are equal, so only the count (which can be estimated from the rate) is necessary for comparison across studies. Count data needs to be on the same scale (i.e. in the same units) and if it needs to be rescaled then the variance must also be rescaled. 
+
+Proportional, or binary data, has a distribution that depends on the probability of success and the number of trials ($p$ and $n$). Generally, $\hat{p}$ needs to transformed either as $\log(\hat{p})$ or as $\sin^{-1}\sqrt{\hat{p}}$ or as $\log({\hat{p}/(1- \hat{p})})$. 
+
+Per capita and whole population parameters have different statistical properties which means their variances are estimated differently. The population parameter is typically estimated based on a sample size $n$, so the variance depends on the distribution, $n$, and for whole population parameters, $N$. 
+
+If studies report a new parameter with unknown distribution, it is typically best to derive a more common effect size, such as $r$ from the data. 
+
+If effect sizes are non-normal, a GLM can be used instead of standard meta-analysis models. 
+
+Because some effect sizes are corrected in original studies, it is necessary to perform a sensitivity analysis to check for influences of assumptions about estimates and distribution of data. 
+
+
+
+
+
+
+
+
+### Section III: Essential analytic models and methods
+
+#### Statistical models and approaches to inference
+
+
+If the interest is to quantify sources of variation among studies based on confounding factors, then those factors need to be inluded in the meta-analysis model, typically as a meta-regression model. Sources of variation are included as either a fixed-effects or random-effects model. 
+
+Bayesian meta-analysis models can be done if there is sufficient prior information. 
+
+If we assume that there is no variation across studies and that sampling variability is only within studies, then we can do a a simple fixed-effects model. Generally in ecology we assume that there are differences across studies, in which case we can use a random-effects model. A random-effects model assumes variance within studies and also that the effects from studies are grouped around a mean effect for the pouplation. 
+
+Beyond a random-effects model that allows for variation, we can also build models that characterize the sources of variation. These can be mixed-effects models. A meta-regression includes factors and covariates to characterize variation among studies. In a mixed model, we can treat some characteristics of studies as fixed effects and then allow for variation, or random effects, within subgroups. These are often called mxed models but are actually random-effects meta-regression. There can also be hierarchical/nested models and factorial models. 
+
+Models can either be linear or distributional; linear are easier to interpret, but distributional models work for non-normal distributions and can be more complex. 
+
+<ul><li>$T_i$ is the effect of interest
+
+</li><li>$\sigma_i^2$ is the within-study sampling variance of $T_i$
+
+</li><li>$S_i^2$ is the estimate of $\sigma_i^2$; it is not the same as the sample variance; for example if $T_i$ is a sample mean, then $S_i^2$ is the standard error of the mean.
+
+</li><li>$\theta_i$ is the true effect that is estimated by $T_i$
+
+</li><li>$\mu$ is the overall effect across studies</li>
+
+<li>$\tau^2$ is the between study variance 
+
+</li><li>$e_i$ is the residual offseting $T_i$ from $\theta_i$</li></ul>
+
+A <b>fixed effects</b> model is written as:
+<center>$T_i = \theta_i + e_i; e_i \sim N(0, \sigma_i^2)$
+
+$\theta_i=\mu$
+
+</center>or as 
+
+<center>$T_i \sim N(\theta_i, \sigma_i^2)$
+
+$\theta_i=\mu$. </center>
+
+A <b>random effects</b> model is written as:
+<center>$T_i = \theta_i + e_i; e_i \sim N(0, \sigma_i^2)$
+
+$\theta_i=\mu + \epsilon_i; \epsilon_i \sim N(0, \tau^2)$</center>
+
+or as 
+
+<center>$T_i \sim N(\theta_i, \sigma_i^2)$
+
+$\theta_i \sim N(\mu, \tau^2)$. </center>
+
+
+For a <b>meta-reression model</b>, we also have $p$ characteristics $X_1, X_2, X_3, \ldots, X_p$ that may explain variability across studies. Then we have:
+
+<center>$T_i = \theta_i + e_i; e_i \sim N(0, \sigma_i^2)$
+
+$\theta_i = \beta_0 + \beta_1X_{1i} + \beta_2X_{2i} + \ldots + \beta_pX_{pi} + \epsilon_i; \epsilon_i \sim N(0, \tau^2)$</center>
+
+This meta-regression model can then be a simple linear regression, factorial model, mixed-effects, or hierarchical model. Hierarchical models assume subgroups have a mean and that these means are distributed around the overall mean. 
+
+> "This model says, 'each study's estimate, $T_i$, is distributed normally with a true mean $\theta_i$; these $\theta_i$ are normally distributed around subgroup means, $\Psi_j$,and these subgroup means are normally distributed around an overall mean \mu.'"
+
+Most statistical inference in meta-analysis in ecology is based on the method of moments or least-squares which estimate global means and look at subgroups. These are both popular methods because they resemble the least squares approach in regression but can only be used in simpler meta-analysis; hierarchical data requires likelihood or Bayesian approaches. 
+
+Using MLE allows all parameters to be estimated at once which gives a better overall sense of the model. 
+
+Weighting effect sizes from different studies by variance and sample size is a core aspect of meta-analysis. The precision of an effect size, given as the inverse of the sampling variance, is used to weight studies. 
+
+When choosing between fixed effects and random effects (if there is no theoretical reason to choose random effects), you can do a test of homogeneity to see if your studies are from the same population or if you should do a random-effects model. However, these tests have low power and will often suggest using fixed effects even when there is heterogeneity across studies. The only reason to actually do this test is if you were planning to use fixed effects and want to make sure you aren't forgetting to consider some factor that would have caused heterogeneity but there needs to be a good a priori reason to do so. 
+
+#### Moment and least-squares based approaches to meta-analytic inference
+
+Moment estimators of weights in fixed-effects and random-effects models can be calculated as follows.
+
+<b>Fixed effects:</b>
+<center> $w_k = \frac{1}{v_k}$</center>
+<b>Random effects:</b>
+<center>$w_k = \frac{1}{v_k + \hat{\sigma}^2}$</center>
+
+
+The mean effect size across all studies is then the weighted mean of effect sizes from each study with variance $s_{\mu}^2$. 
+
+<center>$\hat{\mu} = {\sum \limits_{k=1}^K w_k \hat{\theta}_k \over \sum\limits_{k=1}^K w_k}$</center>
+
+<center>$s_{\mu}^2 = {1 \over \sum\limits_{k=1}^K w+k}$</center>
+
+Once a mean effect size has been calculated, confidence intervals should be constructed to check that it does not overlap the null (typically an effect size of 0) or a t-test should be done. Typically, a confidence interval around the mean will be larger for a random-effects than for fixed-effects model. 
+
+Heterogeneity is measured with $Q_T$, which is the weighted sums of squares. This test only make sense if doing a fixed-effects model to see if studies assumed to be homogenous were actually heterogenous. An alternative to $Q_T$ is $I^2$, which compares $Q_T$ to the expected value if homogeneity is assumed. Confidence intervals can be constructed around $I^2$. 
+
+> "[$I^2$] can be interpreted as the percentage of total heterogeneity that can be attributed to between-study variance."
+
+Resampling techniques can be used with small sample sizes that don't adhere to distribution assumptions. Bootstrapping can be used to generate confidence intervals for mean effect size. 
+
+#### Maximum likelihood approaches to meta-analysis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Structural equation modeling {.tabset .tabset-fade .tabset-pills}
 
