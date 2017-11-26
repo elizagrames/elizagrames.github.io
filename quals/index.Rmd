@@ -139,6 +139,15 @@ This section contains notes on classic works in ecology and evolutionary biology
 
 ## Classic papers
 
+#### [@Gould1979]
+
+This paper argues that adaptationists, those who view all traits as having an adaptive purpose or function, are akin to Dr. Pangloss. Adaptationists look at traits and then try to determine why they must be optimized and be part of the best of all possible worlds. If a trait is not optimized, it is assumed to be because of tradeoffs with other traits. 
+
+One of the biggest issues with the adaptationist agenda is that current adaptations mask evolutionary history of trait development. This leads to poor reasoning, like assuming that birds evolved wings to fly. Another example is the shortened front legs of T-rex; if we assume they are adaptive in their current state, this ignores the possibility that they were adaptive to an ancestor of T-rex and are no longer adaptive. 
+
+The adaptationist program also breaks from the <i>Bauplan</i>, which views organisms as whole integrated parts, by atomizing traits and assuming selection can work on individual aspects of an organism. 
+
+
 ## Notable ecologists {.tabset .tabset-fade .tabset-pills}
 
 #### Robert MacArthur
@@ -754,7 +763,466 @@ Cash
 
 ## >>
 
-## Searle
+## Searle {.tabset .tabset-fade .tabset-pills}
+
+### Introduction
+
+#### The scope of matrix algebra
+Matrices are rectangular arrays of numbers in rows and columns. Matrix algebra is the algebra of manipulating matrices. Matrix algebra is critical to statistical computing, especially for large data sets.
+
+#### General description of a matrix
+A matrix is an array of numbers and resembles taking out the data from a table but keeping the meaning based on its fixed position. Matrixes are rextangular or square with entries in rows and columns. Entries in a row or column have something in common (e.g. they are measuring the same aspect of an object or are measurements from the same object). 
+
+In matrix algebra, each matrix is treated as an entity denoted by a single symbol, rather than as the complete array. For example, we could take the matrix below and assign it as $A$.
+\[ \left[ \begin{array}{ccc}
+a & b & c \\
+d & e & f \\
+g & h & i \end{array} \right]\] 
+
+#### Subscript notation
+It is more helpful to write matrix $A$ using subscripts, rather than letters, because there are only 26 letters. 
+\[ A = \left[ \begin{array}{ccc}
+a_1 & a_2 & a_3 \\
+a_4 & a_5 & a_6 \\
+a_7 & a_8 & a_9 \end{array} \right]\] 
+The same principal can be applied to row and column notation. For example, all elements in a row could begin with the same number and all elements in a column could end with the same number as illustrated below.
+\[ A = \left[ \begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33} \end{array} \right]\] 
+
+We can denote a row as $i$ and a column as $j4. Thus, $a_{ij}$ is equal to the object in the $i$th row and $j$th column. If $i=2$ and $j=3$, then $a_{ij} = a_{33}$. We can then say that the entire matrix $A = {a_{ij}}$ for $i=1,2$ and $j=1,2,3$.
+
+#### Summation notation
+The summation of a series can be written as illustrated below.
+
+<center>  $\sum\limits_{i=1}^{n}x_{i} = x_1 + x_2 +x_3 + \ldots + x_{n-2}+x_{n-1}+x_n$  </center>
+
+
+This can be applied to matrix notations as well. Using the same example as above, we can see that:
+
+<center>
+$\sum\limits_{i=1}^{2}a_{ij} = a_{1j} + a_{2j}$  and  $\sum\limits_{j=1}^{3} a_{ij} = a_{i1} + a_{i2} + a_{i3}$
+</center> 
+This means that the entire matrix can be written in summation notation as 
+<center>  $\sum\limits_{i=1}^{2}\sum\limits_{j=1}^{3}a_{ij}$ </center> or, in more general terms as <center> $\sum\limits_{i=1}^{m}\sum\limits_{j=1}^{n}a_{ij}$
+</center>
+This notation can also be used to indicate summing the term by term products of two matrices, as shown below for $A$ and a new matrix, $B$. 
+<center>  $\sum\limits_{j=1}^{m}a_{ij}b_{jk}$
+</center>
+If instead of summing the term by term products of multiplying two matrices you want to multiply them, you can use $\Pi$ in lieu of $\Sigma$. 
+
+#### Dot notation
+If the context of the limits for summation are clear, $\sum\limits_{i=1}^{m}a_{ij}$ can be replaced by $a._j$ or we can say that $a.. = \sum\limits_{i=1}^{m}\sum\limits_{j=1}^{n}a_{ij}$
+
+#### Definition of a matrix
+The order of a matrix is the number of its rows and columns (i.e. size). Order is written as $r\times c$ and is often put as a subscript, such as $A_{r\times c}$. 
+
+Transition probability matrices always sum to 1.00 across each row. This is part of a class of probability models called Markov chains. Transition probability matrices can be used to determine the probabilities of moving from category $i$ to $j$ in a given time. 
+
+#### Vectors and scalars
+Column vectors consist of a single column and a matrix that is a single row is a row vector. Examples are shown below. <center> 
+\[c= \left[ \begin{array}{c}
+a \\ b \\ c\end{array} \right]\] 
+\[r'= \left[ \begin{array}{ccc}
+a & b & c\end{array} \right]\] 
+</center>
+In general objects within a matrix are scalars, but it is possibly to have a matrix whose elements are other matrices. 
+
+#### General notation
+In general, matrices are denoted by capital letters and element are lowercase counterparts. column vectors ($x$) are letters from the end of the alphabet and prime superscripts of the same letter indicate row vectors ($x'$). Scalars are indicated as $\lambda$. 
+
+### Basic Operations
+
+#### The transpose of a matrix
+Arrays can be rearranged to switch columns and rows. The transpose of a matrix is denoted $A'$ and transposed elements as $a'_{ij}$. 
+
+The reason row vectors are denoted as $x'$ is because they are the transpose of a column vector. 
+
+#### Partitioned matrices
+A matrix can be partitioned into smaller matrices as long as the lines breaking it go the full length of a row or column. The original matrix can then be thought of as a matrix composed of several submatrices.
+<center> \[A_{r\times c} = \left[ \begin{array}{cc}
+K_{p\times q} & L_{p\times(c-q)}\\
+M_{(r-p)\times q} & N_{(r-p)\times (c-q)}\end{array} \right]\]
+</center>  
+
+#### The trace of a matrix
+The trace of a matrix is the sum of the diagonal elements of a square matrix. If a matrix is not square then the trace is not defined. 
+
+#### Addition
+The sum of two matrices is the matrix of sums for every element by element sum. In order to add matrices, they must have the same order, in which case they are conformable for addition. 
+
+#### Scalar multiplication
+If a matrix is multipled by $\lambda$, every element is multiplied by $\lambda$.
+
+#### Subtraction
+ Subtraction, like addition, is done on an element by element basis and matrices must be conformable for subtraction, meaning they must be of the same order. 
+
+#### Equality and the null matrix
+ Every matrix has a null matrix of the same order composed entirely of 0. 
+
+#### Multiplication
+The inner product of two vectors $a'$ and $x$ can be found if they have the same order. Each element of $a'$ is multiplied by the corresponding element in $x$ and summed as shown below.<center>  $\sum\limits_{i-1}^{n}{a_i}{x_i}$  </center>
+
+If you instead want to multiply a matrix with two or more rows by a single column vector, the result is a column vector. 
+ <center>
+ \[Ax = \left[\begin{array}{c}
+ a'_{1}\\
+ a'_{2}\end{array}\right]x = \left[\begin{array}{c}
+ a'_{1}x\\
+ a'_{2}x\end{array}\right]\] </center>
+An identity matrix is a matrix where all diagonal elements are equal to unity. In other words, if the null matrix is the 0 of matrices, then the identity matrix is 1. 
+
+Powers of a matrix can only be obtained if it is a square matrix. Looking at the powers of a matrix indicates direct and indirect paths to figure out the number of ways something can be done based on things only occuring in one direction or transmission.
+
+#### The laws of algebra
+Review of associative, commutative, and distributive laws. 
+
+#### Contrasts with scalar algebra
+Need to keep conformability in mind because some values will not be possible. Even if $AB = 0$, this does not mean that $A$ or $B$ is equal to 0, unlike in scalar algebra. If $M = M^2$, it is idempotent.
+
+### Special matrices
+
+#### Symmetric matrices
+Any matrix that is its own transpose is symmetric. Products of symmetric matrices are not generally symmetric. This is partly due to symmetric matrices not needing to be square and having a different order than its transpose. Skew-symmetric matrices are symmetric, except instead of being equal to their transpose they are equal to the negative of the elements. 
+
+#### Matrices having all elements equal
+Matrices where every element is unity (1) are summing vectors. 
+
+#### Idempotent matrices
+Idempotent matrices are when $K^2 = K$. They play an important role in statistics.
+
+#### Orthogonal matrices
+Orthogonal matrices have the property $AA' = I = A'A$.
+
+The norm of a vector is equal to the square root of $x'x$, which is equivalent to what is shown below. If the norm of a vector is unity, it is called normal or a unit vector. 
+<center>  $\left(\sum\limits_{i=1}^{n}x_{i}^{2}\right)^{\frac{1}{2}}$  </center>
+Any non-null vectors can be normalized by multiplying them by the scalar $\frac{1}{\sqrt{x'x}}$. Orthonormal vectors are both orthogonal and normalized. 
+
+#### Quadratic forms
+The quadratic form takes the form of $x'Cx$, which is equal to $\sum\limits_{i=1}^{n}(x_{i} - \bar{x})^{2}$. This means multiplying a row vector ($x'$) by a matrix ($C$) by the transpose of the row vector, which is now a column vector ($x$). For statistics, assume that in $x'Ax$, $A = A'$, meaning it is symmetric. 
+
+#### Positive definite matrices
+Positive definite, positive semidefinite, and non-negative definite matrices are always symmetric because they are in terms of quadratic forms. 
+
+### Determinants
+
+#### Expansion by minors
+Determinants are scalars that are the polynomial of the elements of a square matrix. They are only defined for square matrices. First-order determinants are the value of the only element. Second order determinands are calculated by taking the product of the diagonals and subtracting the product of the off-diagonals. 
+\[|A| = \left| \begin{array}{cc} a_{11} & a_{12}\\ a_{21} & a_{22} \end{array} \right| = a_{11}a_{22} - a_{12}a_{21}\]
+To find third-order determinants, you take an element and multiply it by the determinant of its minors, which are the elements not contained in its row or column. You don't have to start with row one; any element will result in the same determinant. 
+\[|A| = \left| \begin{array}{ccc} 1&2&3\\4&5&6\\7&8&9 \end{array} \right| = 1\left|\begin{array}{cc}5&6\\8&10\end{array}\right| - 2 \left|\begin{array}{cc}4&6\\7&10\end{array}\right| +3\left|\begin{array}{cc}4&5\\7&8\end{array}\right| \]
+To determine whether a term should be added or subtracted, use $(-1)^{i+j}$ as the sign. For n-order determinants, use the equation below. $|M_{ij}|$ denotes the minor. 
+<center>  $|A| = \sum\limits_{i=1}^{n}a_{ij}(-1)^{i+j}|M_{ij}|$
+ </center>
+
+#### Formal definition
+
+#### Basic properties
+The determinant of the transpose of a matrix equals the determinant of the matrix itself because expansion by rows is the corollary of expansion by columns. 
+
+If two rows of $A$ are the same, $|A|=0$. 
+
+The signed minor is called a cofactor, as illustrated below. <center>  $c_{ij}=(-1)^{(i+j)}|M_{ij}|$  </center>
+
+The sum of the elements of a row with their own cofactors is the determinant. <center>  $\sum\limits_{j}^{}a_{ij}c_{ij} = \sum\limits_{j}^{}a_{ij}(-1)^{(i+j)}|M_{ij}| = |A|$
+ </center>
+The sum of products of elements of a row with cofactors of some other row is zero.
+Adding to one row (or column) of a matrix any multiple of another row (or column) does not affect the value of the determinant.
+When $A$ and $B$ are square and of the same order, $|AB|=|A||B|$. Any determinant can be reduced to the determinant of a triangular matrix by adding multiples of row elements to another row to make it triangular. 
+
+#### Elementary row operations
+When $\lambda$ is a factor of a row (or column) of $|A|$, it is also a factor of $|A|$. This means that $|A| = \lambda|A|$ when $\lambda$ is factored out of a row or column. 
+
+When a determinant has zero for every element of a row or column the determinant is zero.
+
+Interchanging two rows or columns of a determinant changes its sign. 
+
+Do not add rows to multiples of a row (but adding multiples of a row to a row is fine). 
+
+#### Diagonal expansion
+Any matrix can be written as the sum of two matrices where one of them is a diagonal matrix. The determinant of a matrix written this way is a polynomial of the elements of the diagonal matrix. 
+
+#### Laplace expansion
+
+#### Sums and differences of determinants
+The sum or difference of the determinants of two or more matrices does not equal the determinant of the sum or difference of two matrices. $|A|-|B| \neq |A-B|$. Even if matrices are of different orders, their determinants can still be compared because determinants are scalars. 
+
+### Inverse matrices
+Division does not exist with matrices. Instead, "dividing" a matrix by $A$ is done by multiplying a matrix by the inverse of $A$.
+
+#### Solving equations
+ The inverse of a square matrix $A$ is a matrix $A^{-1}$ that when multiplied with $A$ results in the identity matrix. Any set of linear equations with a unique solution can be solved as $x=A^{-1}b$ if put in the form $Ax=b$.
+
+#### Products equal to I
+Although being able to find the inverse of a matrix to solve systems of linear equations is a common application, we can also ask if there is a matrix $L$ that exists, which, when multiplied by $A$ results in $I$. Matrix $L$ may or may not be unique to $A$. 
+
+#### Cofactors of a determinant
+Because $|A|$ can be determined either by rows or columns, $|A| = |A'|$. 
+#### Derivation of the inverse
+Take matrix $A$. Form a new matrix by replacing each element of $A$ with its cofactor (this is called the adjugate of $A$. Transpose this new matrix and multiply it by the scalar $\frac{1}{|A|}$. Premultiplying this matrix by $A$ gives the identity matrix, which means that the new matrix is $A^{-1}$. 
+<center>  $A^{-1}=\frac{1}{|A|}adjA$  </center>
+
+#### Conditions for the existence of the inverse
+$A^{-1}$ can only exist if $A$ is a square and if $|A|$ is nonzero (nonsingular).
+
+#### Properties of the inverse
+1) The inverse commutes with $A$, which is to say products equal the identity matrix. 
+
+2) The inverse of $A$ is unique. 
+
+3) $|A^{-1}| = \frac{1}{|A|}$ 
+
+4) $A^{-1}$ is nonsingular. 
+
+5)The inverse of $A^{-1}$ is $A$. 
+
+6) The inverse of the transpose is the transpose of the inverse. 
+
+7) If $A$ is symmetric, so is $A^{-1}$.
+
+8) The inverse of a product is the product of the inverses taken in reverse. $(AB)^{-1}=B^{-1}A^{-1}$. 
+
+#### Some simple special cases
+There are special simple rules for finding the inverse of matrices that are any of the following: order 2, diagonal, I or J, orthogonal, and idempotent.
+
+#### Equations and algebra
+Inverse matrices can be used to solve linear equations because $x=A^{-1}b$. This can be used to find the age distribution of populations. It can also be used for least squares equations. \\Because division doesn't exist with matrices and instead you multiply by the inverse. This means that $AXA^{-1} = BA^{-1}$ does not cancel out to $AX=BA^{-1}$. Similarly, $PK = QK$ does not imply that $P=Q$ because the inverese does not always exist. 
+
+#### Computers and inverses
+Deriving the inverse of a matrix is computationally involved even for small order matrices, so computers have a couple different methods to do it. Many procedures are based on solving linear equations by successive elmination and backward substitution. Although computers save time when inverting matrices, there is always rounding error which can sometimes lead to computers finding an inverse that does not exist. 
+
+### Rank
+$x = A^{-1}b$ is a useful equation, but in order for $A^{-1}$ to exist, $|A|$ has to be nonzero which requires a lot of calculation. Since we don't actually need to know the actual value of $|A|$ and just care if it is nonzero, there are shortcuts to calculate it. 
+
+#### Linear combinations of vectors
+A linear combination of a set of $n$ vectors is written as $a_{1}x_{1}+a_{2}x_{2}+a_{n}x_{n}$ and is always a vector. Every $a$ must be a scalar. Because the values of $a$ can be written as a matrix $X$, the linear combination of a set of $n$ vectors can also be written as $\sum\limits_{i=1}^{n}a_{i}x_{i} = Xa$ where $Xa$ is a column vector that is a linear combination of the columns of $X$. 
+
+#### Linear transformations
+The column vector $Xa$ is alled the linear transformation of the vector $a$ with the matrix $X$ being the matrix of transformation. This is useful because it eliminates the need to use systems of equations and can instead by computerized using basic matrix arithmetic. 
+
+#### Linear dependence and independence
+Linearly dependent vectors are those where $a \neq 0$ and none of the column vectors of $X$ are null but $a_{1}x_{1}+a_{2}x_{2}+a_{n}x_{n} =0$. However, if the only way in which every $a_{1}x_{1}+a_{2}x_{2}+a_{n}x_{n} =0$ is when $a=0$ then the vectors are said to be linearly independent. This characteristic of linear (in)dependence is not for individual vectors, but rather for a set of vectors of the same order. Sets of vectors that include a null vector are always linearly independent, but since this is part of the definition, they are never included when discussing linear (in)dependence. 
+
+#### Linearly dependent vectors
+At least two $a$ are nonzero by definition. Vectors in the set are linear combinations of others because at least two $a$ are nonzero so there are relative values. As a result of being able to write vectors as combinations of other vectors, matrices can be partitioned into a matrix of vectors and a matrix of vectors expressed in terms of other vectors. 
+
+Since each vector can be written as a combination of the other vectors, subtracting it when calculating the determinant results in a zero vector. This means that the determinant of a linearly dependent matrix is always 0. If $|A|=0$ then a matrix has no inverse. Therefore a simple test for linear dependence is to find the determinant; if $|A|=0$ then the vectors of a matrix are linearly dependent. 
+
+#### Linearly independent vectors (LIN)
+The only value of $a$ if $X$ is LIN is 0. This means that no column vector of $X$ can be expressed as a combination of others. This means that its determinant is nonzero and it has an inverse. 
+
+Every $n$th-order vector can be expressed as a linear combination of any set of $n$ independent vectors of order $n$ which means that a set of LIN vectors of order $n$ cannot contain more than $n$ vectors. 
+
+#### The number of LIN rows and columns in a matrix
+
+$|A|=0$ when rows or columns of $A$ do not form a set of LIN vectors. This means that the number of LIN rows must equal the number of LIN columns in a matrix. This is unrelated to the sequence of rows or columns within a matrix. 
+
+#### The rank of a matrix
+The rank of a matrix is the number of LIN rows (or columns) in the matrix. It is denoted as $r_{A}$ or $r(A)$. Rank does not specify which rows are LIN, just how many of them there are. Rank has the following properties:
+
+1) $r_A$ is a positive integer
+
+2) $r(A_{p\times q}) \leq p$ and $\leq q$, which is to say that the rank is less than or equal to the number of rows or columns. 
+
+3) A square matrix has a rank not exceeding its order.
+
+4) When the rank does not equal zero, there is at least one square submatrix that has order $r$ that is nonsingular. 
+
+5) When $r(A_{n\times n}) = n$ it is nonsingular and therefore $A^{-1}$ exists.
+
+6) When $r(A_{n\times n}) < n$ it is singular and therefore $A^{-1}$ does not exist.
+
+7) When $r(A_{p\times q}) = p < q$ it has full row rank.
+
+8) When $r(A_{p\times q}) = q < p$ it has full column rank.
+
+9) When $r(A_{n\times n}) = n$ it has full rank, meaning that its rank equals its order, it is nonsingular, its inverse exists, and it is invertible. 
+
+#### Rank and inverse matrices
+The table summarizes equivalent statements for the existence of $A^{-1}$. Proving any one of them is sufficient. 
+ \begin{table}[H]\centering\caption{Equivalent statements for existence of $A^{-1}$}
+\begin{tabular} {l l}\hline\hline
+Inverse existing & Inverse not existing\\\hline
+$A^{-1}$ exists & $A^{-1}$ does not exist\\
+$A$ is nonsingular & $A$ is singular\\
+$|A| \neq 0$ & $|A|=0$\\
+$A$ has full rank & $A$ has less than full rank\\
+$r_A = n$ & $r_A < n$\\
+A has $n$ LIN rows & A has $<n$ LIN rows\\
+A has $n$ LIN columns & A has $<n$ LIN columns\\ 
+$Ax=0$ is only $x=0$ & $Ax = 0$ has many $x \neq 0$\\
+\hline\end{tabular} \end{table}
+
+#### Permutation matrices
+Because LIN rows and columns might not be the first rows or columns in a matrix, which is what the proof depends on, it is necessary to use a permutation matrix $E_{rs}$ to interchange rows/columns. A permutation matrix is an identity matrix with its rows/columns resequenced. It is not necessarily symmetric but it is always orthogonal. 
+
+#### Full-rank factorization
+For $A_{(p\times q)}$ where $r \neq 0$, $A$ can be partitioned into submatrices with one being those of $r$ LIN rows and a second group of $p-r$ rows that are linear combinations of the first group. This full rank factorization is written as $A_{(p \times q)} = K_{(p \times r)}L_{(r \times q)}$ where $K$ has full column rank and $L$ has full row rank. 
+
+#### Vector spaces
+Euclidean space is $n$-space in which a vector of order $n$ represents a point in $n$-dimensional space. It is denoted $R^n$. It is a specific case of vector space. There is only one Euclidean $R^n$ but there are many vector spaces of order $n$.
+
+### Canonical forms
+
+#### Elementary operators
+$E_{ij}$ interchanges the $i$th and $j$th rows. $R_{iii}(\lambda)$ multiples the $i$th row by $\lambda$. $P_{ij}(\lambda)$ adds $\lambda$ times the $j$th row to the $i$th row. These elementary operators and their transposes are the same form. Premultiplication by an operator performs manipulations on rows whereas postmultiplication performs the same manipulation on columns.
+
+All elementary operators have inverses; $E$-type are the same as their inverse but $R$-type and $P$-type have $\frac{1}{\lambda}$ instead of $\lambda$. 
+
+#### Rank and the elementary operators
+When $A$ is multiplied by any elementary operator, it is said to be equivalent and its rank does not change. 
+#### Calculating the rank of a matrix
+Matrices with ever increasing numbers of zeros in their rows are called row-echelon form. 
+
+By row operations, we can reduce a matrix to have all elements below the diagonal equal to 0. Once this is complete, the rank of the matrix is equal to the number of non-null rows. Sometimes interchanging columns may be necessary. 
+
+#### Reduction to equivalent canonical form
+For any non-null matrix $A_{(m \times n)}$ with rank $r$, there are two nonsingular matrices $P_{m}$ and $Q_{n}$ that are the products of elementary operators. In order to make $C$ the same order as $A$, we can use null matrices. <center>  \[PAQ = \left[ \begin{array} {c c} I_{r} & 0\\0 & 0 \end{array} \right] = C \]
+</center> 
+This is called the equivalent canonical form and it always exists. It can always be obtained by carrying out row and column operations on $A$ and $P$ and $Q$ are not unique. 
+
+#### Rank of a product matrix
+The rank of the product matrix of $A$ and $B$ is less than or equal to the lesser of the rank of $A$ or the rank of $B$. $r_{AB} \leq $ the lesser of $ r_A$ or $r_B$. 
+
+#### Symmetric matrices
+With symmetric matrices, if the same operations are done on columns and rows it will reduce to zero all elements above the diagonal. This means that for any symmetric matrix the form below is the diagonal form. This in turn can be reduced to the canonical form which is then called the congruent canonical form. 
+<center>  \[PAP' = \left[ \begin{array} {c c} D_{r} & 0\\0 & 0 \end{array} \right] = D \]
+</center> 
+This leads to two problems: 1) maintaining symmetry by filtering null rows to the bottom, and 2) having negative elements in the diagonal form that result in non-real elements (i.e. $\sqrt{-1}$) which can be avoided with some transformation.
+
+#### Non-negative definite matrices}
+n.n.d. matrices are symmetric and $x'Ax \geq 0$. R is always real in the congruent canonical form. Quadratic forms in statistics are almost always n.n.d. 
+
+### Generalized inverses
+
+#### The Moore-Penrose inverse
+Given any matrix $A$, there exists a unique matrix $M$ such that: 1) $AMA = A$, 2) $MAM = M$, 3) $AM$ is symmetric and 4) $MA$ is symmetric. These are the Penrose conditions. 
+
+#### Generalized inverses
+The matrix $M$ meets all four Penrose conditions, however there are many matrices $G$ that satisfy the first condition that $AGA = A$. These are called the generalized inverses and any $G$ is just one of many generalized inverses. When $A$ is $p \times q$ then $G$ is $q \times p$.
+
+Only when $A$ is square and full rank is there a unique $G$. 
+
+#### Other names and symbols
+$G$ can also be written as $A^{-1}$. A reflexive generalized inverse which satisfies the first two Penrose conditions is $A_{r}^{-1}$. Sometimes subscript numbers are used to indicate which Penrose conditions an inverse meets. 
+
+#### An algorithm
+To find $G$, find a nonsingular submatrix in $A$ and denote it $W$. Invert and transpose $W$. In $A$, replace each element of $W$ with $(W^{-1})'$. Replace all the other elements of $A$ with 0 and transpose the resulting matrix. The result is $G$. 
+
+#### Arbitrariness in a generalized inverse
+$G$ is arbitrary and non-unique so it can always be written as $G^{*} = GAG + (I-GA)T + S(I-AG)$ with an appropriate $T$ and $S$. 
+
+#### Symmetric matrices
+$G$ is not necessarily symmetric even if $A$ is, however the tranpose $G'$ is also a generalized inverse of $A$. The same algorithm can be used however transposing is not necessary if $A$ is symmetric. 
+
+### Solving linear equations
+
+#### Equations having many solutions
+Systems of linear equations may have more than one solution. This is pretty common in the analysis of linear statistical models. 
+
+#### Consistent equations
+A set of linear equations which when solved results in a meaningless result (e.g. $0=-3$) are inconsistent. Inconsistent equations cannot be solved but consistent ones can. To check if a set of equations is consistent, $A$ can be augmented by $y$ as an additional column vector. If the rank of the augmented matrix is the same as the rank of $A$ the equations of $Ax = y$ are consistent. 
+
+
+#### Equations having one solution
+Consistent equations $Ax = y$ have one solution if $A$ has full column rank. In that case, the solution is $x = A_{11}^{-1}y_{1}$. If $LA = I$, the solution can also be $x = Ly$. 
+
+#### Deriving solutions using generalized inverses
+When $A$ has less than full column rank or is square and singular, there are infinitely many solutions to $Ax = y$. In this case, the solution to the consistent equations $Ax = y$ is $x = Gy$ if $AGA=A$ and $y \neq 0$. This results in a column vector that is all possible solutions.
+
+To determine how many solutions there are to a matrix $A$ of order $q$, a vector $z$ of the order $q$ can be appended to the equation so that   $\tilde{x} = Gy + (GA - I)z$. 
+
+#### Linearly independent solutions
+Because the solutions to $Ax = y$ for $A_{(p \times q)}$ are vectors of order $q$, no more than $q$ can be LIN. The actual number of solutions is equal to $q - r_A +1$. 
+
+#### An invariance property
+For certain vectors $k$ the value of $k'\tilde{x}$ is invariant to whatever $\tilde{x}$ is used. 
+
+#### Equations $Ax = 0$
+$Ax = 0$ can always be solved so it is always consistent. $x=0$ is the only solution when $A$ has full column rank. The non-null solutions can be written as $\tilde{x} = (GA - I)z$ where $z$ is a vector of the order $q-r_A + 1 LIN$ except that there are no LIN vectors because null vectors are excluded from LIN. Any linear combination of LIN solutions is a solution. 
+
+#### A complete example
+
+#### Least squares equations
+With a set of inconsistent equations $Ax = y$ (e.g. data points) we can find an approximate solution using least squares, which minimizes the distance between $y$ and $Ax$. The approximate solution is $A'A\tilde{x} = A'y$. In statistics, this is usually written as $X'X\hat{b} = X/y$ except $X/X$ is generally not full rank so the generalized inverse of $X'X$ is used instead.
+
+### Partitioned matrices
+
+#### Orthogonal matrices
+Partitioning an orthogonal matrix $P$ into $A$ and $B$ means that $AA' + BB' = 1$ and that $A/A = 1$ and $B/B =1$. 
+
+#### Determinants
+
+#### Inverses
+
+#### Schur complements
+
+#### Generalized inverses
+
+#### Direct sums
+The direct sum of $A$ and $B$ is written as: \[A \oplus B = \left[\begin{array}{cc}A & 0\\0&B\end{array}\right] \] 
+Matrices do not need to be of the same order because the in between is filled with a null matrix of an appropriate order.
+
+Transposing a direct sum is the same as doing a direct sum of the transposes. The rank of a direct sum is the same as the sum of the ranks. If $A$ and $B$ are both square, $|A \oplus B| = |A||B|$.
+
+#### Direct products
+The direct product of two matrices  is called the Kronecker product or Zehfuss product. It has order of $pm \times qn$. \[ A_{(p \times q)} \otimes B_{(m \times n)} = \left[\begin{array}{ccc} a_{11}B & \ldots & a_{1q}B\\ \vdots && \vdots \\a_{p1}B & \ldots & a_{pq}B \end{array} \right] \]
+Properties of direct products:\\1) $(A \otimes B)=A' \otimes B'$ \\2) $x' \otimes y = yx' = y \otimes x'$ \\3) $\lambda \otimes A = \lambda A = A \otimes \lambda = A\lambda$\\4) $[\begin{array}{cc}A_1 & A_2\end{array}] \otimes B = [\begin{array}{cc}A_{1} \otimes B & A_{2} \otimes B\end{array}]$ but $A \otimes [\begin{array}{cc}B_1 & B_2\end{array}] \neq [\begin{array}{cc}A \otimes B_1 & A \otimes B_2\end{array}]$\\5) If conformability is satisfied, $(A \otimes B)(X \otimes Y) = AX \otimes BY$\\6) If $A$ and $B$ are square and nonsingular, $(A \otimes B)^{-1} = A^{-1} \otimes B^{-1}$\\7) For a diagonal matrix of order $k$, the direct product is equal to the sum of the direct sums of the elements of $D$ and $A$ through $d_kA$. $D_k \otimes A = d_1A \oplus d_2A \oplus \ldots \oplus d_kA$\\8) Rank and trace obey product rules. \\9) If $A$ and $B$ are square, $|A_{(p \times p)}\otimes B_{(m \times m)}| = |A|^m|B|^p$\\10) Eigenvalues of $A \otimes B$ are products of eigenvalues of $A$ with those of $B$.
+
+### Eigenvalues and eigenvectors
+#### Introduction: Age distribution vectors
+To determine the age distribution of a population at time $t$ can be summarized as $n_t = [\begin{array}{ccccccc}n_{0t} & n_{1t} & n_{2t} & \ldots & n_{it} & \ldots & n_{kt}\end{array}]'$ which represents all individuals who are at least age $i$ at time $t$ but are less than age $i + 1$. $n_t$ is the age distribution vector at time $t$. If we know $n_t$, we can then try to predict what $n_{(t+1)}$ is by determining survivorship and birth rates. 
+
+If we only look at females, we can say that $p_i$ is the probability that a female aged $i$ at time $t$ survives to time $t+1$. We can also use $f_i$ to indicate the number of daughters alive at time $t+1$ that were born during the time from $t$ to $t+1$ to the females who were aged $i$ at time $t$. 
+
+The age distribution at time $n_{(t+1)}$ can be represented as a matrix called $Mn_t$. 
+
+If we want to determine when the age distribution becomes stable, we can look for a time $t=T$ which works out to be that $Mn_T = \lambda n_T$. We now need to determine if there is a vector $n_T$ and a scalar $\lambda$ that makes $Mn_T = \lambda n_T$ true; such a scalar and vector will always exist. 
+#### Derivation of eigenvalues
+We can generalize the age distribution equation from the previous section as $Au = \lambda u$, which can be rewritten as $(A - \lambda I)u = 0$. If $A - \lambda I$ is singular (i.e. $|A - \lambda I| =0$, we know that a non-null solution for $u$ can be obtained as $u = [(A- \lambda I)^{-}(A- \lambda I) - I]z$.
+
+The equation $|A - \lambda I| =0$ is the characteristic equation of $A$, which is a polynomial equation in $\lambda$ or order $n$ with $n$ roots denoted as $\lambda_1, \lambda_2, \ldots ,\lambda_n$ some of which may be 0. These roots are called the eigenvalues. Each eigenvalue has a corresponding vector $u$ which satisfies the equation $Au_i = \lambda_iu_i$ for $i=1, \ldots ,n$. These $u$ vectors are called the eigenvectors.  
+#### Elementary properties of eigenvalues
+When $\lambda$ is an eigenvalue of $A$, then $\lambda^k$ is an eigenvalue of $A^k$ and if $A$ is nonsingular, then $A^{-1}u = \lambda^{-1}u$. Basically, eigenvalue powers correspond to the powers of a matrix. 
+
+When $A$ has an eigenvalue $\lambda$, every polynomial in $A$ has a corresponding eigenvalue; so $f(A)$ has an eigenvalue $f(\lambda)$. 
+
+The sum of the eigenvalues of a matrix equals the trace and their product equals its determinant. 
+<center>  $\sum\limits_{(i=1)}^{n}\lambda_i = tr_1(A) = tr(A)$\\ $\prod\limits_{(i=1)}^{n}\lambda_i = |A|$
+</center> 
+#### Calculating eigenvectors
+Eigenvalues that are solutions to $|A - \lambda I| = 0$ multiple times are called multiple eigenvalues and the number of times they are a solution is called their multiplicity. If $u$ is the eigenvector corresponding to the eigenvalues $\lambda_k$, then it can be found with $u_{k} = [{(A - \lambda_{k} I)}^{-}(A - \lambda_{k} I)- I]z$. 
+#### The similar canonical form
+If $U$ is a matrix of eigenvectors and $D$ is the diagnoal matrix of the eigenvalues, then $AU = UD$. The canonical form under similarity or similar canonical form is $D$. This can be reduced to $U^{-1}AU = D$ if $U$ is nonsingular. If $U$ is nonsingular, then $A$ is diagonable; ascertaining this is the diagonability theorem. 
+#### Symmetric matrices
+If $A$ is symmetric and has all real numbers, then all of its eigenvalues are real. It is also diagonable and $U$ is orthogonal. The canonical form under orthogonal similarity ($U'AU = D$) exists for symmetric matrices. For symmetric matrices rank is equal to the number of nonzero eigenvalues (this applies to any diagonable matrix, not just symmetric ones). 
+#### Dominant eigenvalues
+The dominant eigenvalue is the largest, though it doesn't always exist and is complicated by multiple roots, multiple cominant roots, and roots with complex numbers. Because $A = UDU^{-}$, then $A^{k} = UD^{k}U^{-1} = [\begin{array}{cccc}\lambda_{1}^{k} u_1 & \lambda_{2}^{k} u_2 & \ldots & \lambda_{1}^{n} u_n\end{array}]V$ which can be written as $\sum\limits_{j=1}^{n}\lambda_j^ku_jv'_j$
+
+Finding the dominant eigenvalue can be done by premultiplying a non-null vector $x$ by $A$ repeatedly until it becomes vector $w_k$ such that the ratio of each element to the corresponding element of $w_{k-1}$ is the same for all the elements. This ratio is the largest eigenvalue of $A$. Computers typically either use a sum of ratios or ratio of sums to determine when to stop calculations. 
+
+In biostats, dominant eigenvalues can be used to find the rate of annual reproduction. For example, researchers can compare dominant eigenvalues for different population control strategies for bunnies. 
+#### Factoring the characteristic equation
+The second dominant root is obtained by finding the dominant root of $A - \lambda_{1}uv'$ where $v$ is a vector such that $v'u = 1$. 
+
+### Applications in statistics
+
+#### Variance-covariance matrices
+The variance-covariance matrix (or dispersion matrix) is formed by placing the variances on the diagonal and the covariances in rows and columns. It is symmetric, so $V' = V$. 
+<center>  \[ var(x) = V = \left[\begin{array}{cccc}\sigma_1^2 & \sigma_12 & \ldots & \sigma_{1k}\\ \sigma_{12} & \sigma_2^2 & \ldots & \sigma_{2k}\\ \vdots & \vdots & & \vdots \\ \sigma_{1k} & \sigma_{2k} & \ldots & \sigma_k^2 \end{array} \right] \]
+</center> 
+
+#### Correlation matrices
+The correlation matrix $R$ is $\rho_{ij}$ with a diagonal of 1 ($\rho_{ii}=\frac{\sigma_{ii}}{\sigma_i \sigma_i} = \frac{\sigma_{ii}}{\sigma_{ii}}=1$). For the density function you need $|R|$ and $R^{-1}$ which are non-negative since $V$ is psd, so $1 \geq \rho \geq \frac{1}{k-1}$. 
+
+#### Matrices of sums of squares and cross-products
+Data matrices are arrays of $n$ observations on $k$ variables. We can also create a matrix of the uncorrected sum of squares. 
+
+If every element of a matrix $X$ is replaced by its deviation from its column mean, which is $(x_{ij} - \mean{x{.j}})=X - 1\mean{x'}$. This can be reduced to $C_{n}x_{j}$ where $C$ is the centering matrix. 
+
+The Wishart matrix ($S$) is  the matrix of corrected sums of squares and products. 
+
 
 ## Hamilton
 
@@ -952,7 +1420,7 @@ This meta-regression model can then be a simple linear regression, factorial mod
 
 > "This model says, 'each study's estimate, $T_i$, is distributed normally with a true mean $\theta_i$; these $\theta_i$ are normally distributed around subgroup means, $\Psi_j$,and these subgroup means are normally distributed around an overall mean \mu.'"
 
-Most statistical inference in meta-analysis in ecology is based on the method of moments or least-squares which estimate global means and look at subgroups. These are both popular methods because they resemble the least squares approach in regression but can only be used in simpler meta-analysis; hierarchical data requires likelihood or Bayesian approaches. 
+Most statistical inference in meta-analysis in ecology is bas ed on the method of moments or least-squares which estimate global means and look at subgroups. These are both popular methods because they resemble the least squares approach in regression but can only be used in simpler meta-analysis; hierarchical data requires likelihood or Bayesian approaches. 
 
 Using MLE allows all parameters to be estimated at once which gives a better overall sense of the model. 
 
@@ -1118,7 +1586,7 @@ Covariance depends on the units of measurement; standardizing it (dividing by st
 
 Covariance is symbolized $\sigma_{Y_1Y_2}$ and is estimated as
 
-\large $s_{Y_1Y_2}=\frac{\sum\limits_{i=1}^n (y_{i1}-\bar{y_1})(y_{i2}-\bar{y_2})}{n-1}$. 
+ $s_{Y_1Y_2}=\frac{\sum\limits_{i=1}^n (y_{i1}-\bar{y_1})(y_{i2}-\bar{y_2})}{n-1}$. 
 
 \small
 Correlation is symbolized $\rho_{Y_1Y_2}$ and is estimated as
