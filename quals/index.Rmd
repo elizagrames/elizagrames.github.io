@@ -107,7 +107,7 @@ output:
 
 &#9744; Burnham and Anderson
 
-&#9744; Searle
+&#9745; Matrix Algebra Useful for Statistics (Searle)
 
 &#9744; Hamilton
 
@@ -145,8 +145,9 @@ This paper argues that adaptationists, those who view all traits as having an ad
 
 One of the biggest issues with the adaptationist agenda is that current adaptations mask evolutionary history of trait development. This leads to poor reasoning, like assuming that birds evolved wings to fly. Another example is the shortened front legs of T-rex; if we assume they are adaptive in their current state, this ignores the possibility that they were adaptive to an ancestor of T-rex and are no longer adaptive. 
 
-The adaptationist program also breaks from the <i>Bauplan</i>, which views organisms as whole integrated parts, by atomizing traits and assuming selection can work on individual aspects of an organism. 
+The adaptationist program also breaks from the <i>Bauplan</i>, which views organisms as whole integrated parts, by atomizing traits and assuming selection can work on individual aspects of an organism.
 
+Evidently there was misappropriation of select quotes in support of creationism.
 
 ## Notable ecologists {.tabset .tabset-fade .tabset-pills}
 
@@ -273,6 +274,27 @@ The mechanistic model overpredicted the species range, though the authors say th
 ## Nature
 
 ## Science
+
+## Biometrics
+
+[@Lin2017a]
+
+Studies that find significant results are more likely to be published; this publication bias can undermine meta-analyses based on systematic review. 
+
+Selection models try to correct for this by modeling the process of papers being removed during publication, but these models are usually too complex to actually work in many cases because of the assumptions made. 
+
+Funnel plots are commonly used as a visual check; if they are skewed to positive effect sizes when there is higher standard error rates, this suggests publication bias. Begg's rank test and Egger's regression test both look at the relationship between effect sizes and sampling variance; a positive relationship is taken as a sign of publication bias. 
+
+The authors propose using skewness as a measure of publication bias and applied it to three studies in order to be able to compare publication bias across meta-analyses. 
+
+[@Geller2017]
+
+Because assymetry in funnel plots can arise from the scale used for the y-axis, this should be considered in addition to any measure based on funnel plots. 
+
+
+[@Jackson2017]
+
+Lin and Chu do not specify how the between-study variance, $\tau^2$ should be used in their approach, though it seems they are suggesting method of moments. One problem with this is that other papers have shown that $\tau^2$ can be affected by publication bias as well. Jackson suggests that the approach needs more development and needs to be tested on more simulated data for both fixed-effects and random-effects models and on actual data. 
 
 ## Code for bibliography
 
@@ -441,52 +463,59 @@ Meta-analysis is subject to publication bias because studies that find significa
 
 write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
 
-#### NEXT PAPER ####
+#### Lin2017-1 ####
 
-id <- ""
-auth <- ""
-title <- ""
-jour <- ""
+id <- "Lin2017a"
+auth <- "Lifeng Lin and Haitao Chu"
+title <- "Quantifying publication bias in meta-analysis"
+jour <- "Biometrics"
 volume <- ""
 num <- ""
 pgs <- ""
-yr <- ""
-file <- "/home/aleph/Documents/readings/TREE/"
+yr <- "2017"
+file <- "/home/aleph/Documents/readings/biometrics/Lin2017-1.pdf"
 notes <- c("
+Studies that find significant results are more likely to be published; this publication bias can undermine meta-analyses based on systematic review. 
 
+Selection models try to correct for this by modeling the process of papers being removed during publication, but these models are usually too complex to actually work in many cases because of the assumptions made. 
+
+Funnel plots are commonly used as a visual check; if they are skewed to positive effect sizes when there is higher standard error rates, this suggests publication bias. Begg's rank test and Egger's regression test both look at the relationship between effect sizes and sampling variance; a positive relationship is taken as a sign of publication bias. 
+
+The authors propose using skewness as a measure of publication bias and applied it to three studies in order to be able to compare publication bias across meta-analyses. 
            ")
 
 write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
 
-#### NEXT PAPER ####
+#### Geller2017 ####
 
-id <- ""
-auth <- ""
-title <- ""
-jour <- ""
+id <- "Geller2017"
+auth <- "Nancy L Geller"
+title <- "Discussion on 'Quantifying Publication Bias in Meta-Analysis' by Lin and Chu"
+jour <- "Biometrics"
 volume <- ""
 num <- ""
 pgs <- ""
-yr <- ""
-file <- "/home/aleph/Documents/readings/TREE/"
+yr <- "2017"
+file <- "/home/aleph/Documents/readings/biometrics/Geller2017.pdf"
 notes <- c("
-
+Because assymetry in funnel plots can arise from the scale used for the y-axis, this should be considered in addition to any measure based on funnel plots. 
            ")
 
 write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
 
-#### NEXT PAPER ####
+#### Jackson2017 ####
 
-id <- ""
-auth <- ""
-title <- ""
-jour <- ""
+id <- "Jackson2017"
+auth <- "Dan Jackson"
+title <- "Discussion on quantifying publication bias in meta-analysis"
+jour <- "Biometrics"
 volume <- ""
 num <- ""
 pgs <- ""
-yr <- ""
-file <- "/home/aleph/Documents/readings/TREE/"
+yr <- "2017"
+file <- "/home/aleph/Documents/readings/biometrics/Jackson2017.pdf"
 notes <- c("
+Lin and Chu do not specify how the between-study variance, $\tau^2$ should be used in their approach, though it seems they are suggesting method of moments. One problem with this is that other papers have shown that $\tau^2$ can be affected by publication bias as well. Jackson suggests that the approach needs more development and needs to be tested on more simulated data for both fixed-effects and random-effects models and on actual data. 
 
            ")
 
@@ -882,7 +911,6 @@ Review of associative, commutative, and distributive laws.
 Need to keep conformability in mind because some values will not be possible. Even if $AB = 0$, this does not mean that $A$ or $B$ is equal to 0, unlike in scalar algebra. If $M = M^2$, it is idempotent.
 
 ### Special matrices
-
 #### Symmetric matrices
 Any matrix that is its own transpose is symmetric. Products of symmetric matrices are not generally symmetric. This is partly due to symmetric matrices not needing to be square and having a different order than its transpose. Skew-symmetric matrices are symmetric, except instead of being equal to their transpose they are equal to the negative of the elements. 
 
@@ -1362,7 +1390,6 @@ Because some effect sizes are corrected in original studies, it is necessary to 
 
 #### Statistical models and approaches to inference
 
-
 If the interest is to quantify sources of variation among studies based on confounding factors, then those factors need to be inluded in the meta-analysis model, typically as a meta-regression model. Sources of variation are included as either a fixed-effects or random-effects model. 
 
 Bayesian meta-analysis models can be done if there is sufficient prior information. 
@@ -1454,10 +1481,123 @@ Resampling techniques can be used with small sample sizes that don't adhere to d
 
 #### Maximum likelihood approaches to meta-analysis
 
+The method of moments is really only appropriate for simple models whose data follow a Gaussian distribution. If the data follows any other distribution, then maximum likelihood is necessary. 
+
+For a set of events $T_1, T_2, \ldots, T_k$ that has mean $\theta_i$ and variance $\sigma_i^2$, we can figure out the likelihood of observing these events given various parameter values as the product of their probability densities. The parameter values are changed to maximize the resulting product. So for $T_i \sim N(\theta_i, \sigma_i^2)$, the maximum likelihood function is $\prod\limits_{i=1}^k N(T_i; \theta_i, \sigma_i^2)$. 
+
+REML (restricted ML) estimates one parameter and then uses that as a fixed value before moving on to the next parameter with the previous parameter as a given. REML is similar to EB (empirical Bayes). 
+
+If instead of having a fixed $\tau^2$, we need to estimate $\theta$, $\mu$, and $\tau^2$, then we would need to use REML and the parameters are not normally distributed now. Alternatively, profile log-likelihood can be used; PLL maximizes LL($\mu, \tau^2$) for one parameter and PLL is the estimate of the parameter of interest when the other is maximized. The likelihood ratio can then be used to construct confidence intervals. 
+
+#### Bayesian meta-analysis
+
+For a random-effects model, a Bayesian analysis requires a prior distribution for $\tau^2$, but an empirical Bayes analysis can use the estimate $\hat{\tau^2}$ based on the data and treat it as a known parameter. The main drawback of empirical Bayes is that it underestimates posterior variances so credible intervals are short. 
+
+In the absence of informative prior information, Bayesian estimates will resemble MLE however it allows for a probabilistic interpretation of parameter values. In contrast to a frequentist approach, Bayesian sets the parameters as unknowns and the data as fixed, whereas frequentist sets the parameters as fixed unknowns and the data as random. 
+
+Convergence in Markov chain Monte Carlo simulations is determined by the ratio of the variance within simultaneous chains to the variance between simultaneous chains. Once convergence is achieved, then all the previous simulations are tossed out and the following simulations are kept. 
+
+Posterior predictive bootsrap checks (sometimes called Bayesian bootstrap) should be done after the model is fit to see how well the model supports the data. 
+
+#### Software for statistical meta-analysis
+
+### Section IV: Statistical issues and problems
+
+#### Recovering missing or partial data from studies: a survey of conversions and imputations for meta-analysis
+
+Missing data in studies is often due to not reporting non-significant findings, which is dissemination bias. This data is not missing at random and can exacerbate publication bias in favor of significant results. 
+
+Box 13.2-13.5 on pages 200-202 provide equations to convert what studies report into effect sizes if some information is missing from the original paper.
+
+Missing data can also be imputed from studies with complete information. Multiple imputation resamples from the distribution of values repeatedly to get an average value for the missing value. Alternatively, a regression of complete datasets can be used to predict missing values. 
+
+#### Publication and related biases
+
+Although some people suggest that meta-analysis is invalid because of publication bias, this isn't a valid criticism as it applies to any synthesis of scientific research. 
+
+Publication bias arises from studies that support a hypothesis being more likely to be published than those that don't find support for it. It also more broadly includes selective reporting of statistical tests in papers, which is driven by writing papers to tell a story surrounding the main significant findings. 
+
+In most fields, published studies tend to report larger effect sizes than unpublished studies. In an analysis Koricheva did of published and unpublished PhD chapters, there were actually fewer significant results in published chapters. 
+
+Non-English language journals contain more non-significant results than English language journals; this could be due either to cultural differences or potentially due to the incentive to translate a paper to English if it has significant findings. 
+
+Even when published and unpublished studies are located, this doesn't correct for selective reporting of significant results. Often, non-significant results are just reported as being non-significant or are not reported as having been tested at all. 
+
+Approaches to checking for publication bias include visual inspection of funnel plots, regression tests of effect size and sample size, trim and fill, failsafe numbers (Rosenberg's method is suggested), and model selection based on likelihood models. 
+
+If using a visual inspection of a funnel, need to actually have a reason to assumpe that small samples with low effect sizes were actually subject to publication bias. 
+
+A non-parametric correlation (Kendall or Spearman) between standardized effect size and sample variance can be used to check for the small study effect if there is a relationship. One advantage of doing a regression-based test of asymmetry is that other sources of heterogeneity between studies can be controlled for. 
+
+Trim and fill is a method of generating new data points to represent studies that "should" exist to make a symmetric funnel plot. 
+
+The failsafe or file drawer number is a measure of how many studies with a null effect size would need to be included to make the confidence interval for the calculated mean effect size overlap the null. In its original formulation, Rosenthal (1972) suggested that if it was greater than $5k + 10$, where $k$ is the number of studies in the meta-analysis, that this was good enough. Rosenberg (2005) updated this approach to weight studies so that the failsafe number fits into a modern meta-analysis framework. 
+
+Selection models are computationally intense, but they do try to correct for publication bias like trim and fill. However, it is really only an appropriate approach when the number of studies is greater than 100. 
 
 
+#### Temporal trends in effect sizes: causes, detection, and implications
 
+There is potential for real temporal differences in effect sizes because of changes in how studies are designed, conducted, and analyzed over time or due to external factors. In general, there is a decrease in effect size over time across meta-analyses in ecology. The first studies, by publication year, tend to have the greatest effect sizes reported. 
 
+If initial studies are trying to establish an effect, they generally overestimate its magnitude and have small sample sizes so they have low statistical power. However, sample sizes tend to be similar in ecology over time, so this is likely not the issue in most cases. 
+
+There is bias against nonconfirmatory evidence for a hypothesis, especially shortly after the first instance of an effect being detected. Another possibility is research bias, because studies are conducted on organisms that are expected to demonstrate an effect first and over time it is studied in organisms with weaker responses. Changes in research methods and statistical approaches can also alter effect sizes over time. 
+
+In other cases, including fragmentation, there could be real changes in effect size over time. For fragmentation, we know that it has increased since it started being studied, so a change in effect size could be a result of more severe human impacts on the landscape. 
+
+You can check for potential temporal trends visually with a scatterplot. Alternatively, cumulative meta-analysis (CMA) can be done by sorting studies by year and then adding them into the analysis at each step until the mean effect size and confidence intervals stabilize. After the effect size stabilizes, any subsequent studies were unnecessary. CMA plots can also suggest alternative sources of heterogeneity among studies if they vary and don't stabilize. In a frequentist framework, using CMA as an actual test inflates type I error because of multiple testing of the same hypothesis, but it can also be viewed in a Bayesian sense of priors and posteriors.
+
+If effect sizes follow a normal distribution, then significant changes in effect sizes over time can be calculated with the formula below; values above 1.96 indicate significant differences at $\alpha = .05$. 
+
+<center>${z = }{{T_1 - \bar{T_2}} \over {\sqrt{v_1 + v_2}}}$</center>
+
+Some researchers will use nonparameteric tests to capture changes in the sign of the effect size, however this doesn't take magnitdude into account so it is not recommended. The failsafe number can also be used, but it still has the same limitations as a failsafe number used for unpublished studies. The slope of changes in the CMA can be used if it approaches 0, but it can't be statistically tested for. A regression of effect size and year could be used, but only if the trend is monotonic. 
+
+The authors suggest using statistical quality control (QC) charts. Because it is not always easy to tell which study was published first in a given year (due to early view, etc...). 
+
+#### Statistical models for the meta-analysis of nonindependent data
+
+There can be nonindependence of effect sizes both within and among studies.
+
+For grouped estimates of a single effect, this can be accounted for either with a multivariate hierarchical model or with a two-step process of calculating mean effect sizes within groups and then pooling these for the global mean effect size. 
+
+There can also be nonindependence of effect sizes if there are repeated measures of a single effect (e.g. time series). If time series are of interest, then time can be included as a fixed factor in a mixed model, though there are many approaches to this issue. 
+
+If a composite measure of effect sizes from the same individual (e.g. multiple responses that all relate to reproductive succcess), then the responses are not independent because they stem from the same individual. This doesn't require each study to estimate all effect sizes since the composite effect is the measure of interest. 
+
+##### Situation 4: Multiple effects
+There can be multiple effects reported in a study and we are interested in all of them, but we assume they might be correlated (and we don't want to make a composite measure of them). For this, you could do a separate meta-analysis on each effect, but this ignores correlation. In this case, we need to have a vector of effect estimates for each study, a vector of true effects, and a vector of combined effects across studies. We also need a variance-covariance matrix of the effects. 
+
+If you have $I$ studies with $P$ effects, then your effect estimates are $T_i = (T_{i1}, T_{i2}, \ldots, T_{iP})$ and your true effects are $\theta_i = (\theta_{i1}, \theta_{i2}, \ldots, \theta_{iP})$ and your overall effects across studies are $\mu = (\mu_1, \mu_2, \ldots, \mu_P)$. You then have a variance-covariance matrix of effect estimates $C_i$ and for true effects $\Sigma_i$. Here, $S_{i1}^2$ represents variance of $T_{i1}$ and $S_{i24}$ would represent the covaraniance between $T_{i2}$ and $T_{i4}$. 
+
+\[C_i=\left[\begin{array}{cccc}
+S_{i1}^2 & S_{i12} & \ldots & S_{i1P} \\
+\vdots & \vdots & \vdots & \vdots \\
+S_{iP1} & S_{iP2} & \ldots & S_{iP}^2
+\end{array}\right]\]
+
+\[\Sigma_i=\left[\begin{array}{cccc}
+\sigma_{i1}^2 & \sigma_{i12} & \ldots & \sigma_{i1P} \\
+\vdots & \vdots & \vdots & \vdots \\
+\sigma_{iP1} & \sigma_{iP2} & \ldots & \sigma_{iP}^2
+\end{array}\right]\]
+
+We also have a variance-covariance matrix $\Gamma$ for the overall parameters combined across studies. 
+
+\[\Gamma = \left[\begin{array}{cccc} 
+\gamma_1^2 & \gamma_{12} & \ldots & \gamma_{1P}\\
+\vdots & \vdots & \vdots & \vdots \\
+\gamma_{P1} & \ldots & \ldots & \gamma_{P}^2
+\end{array}\right]\]
+
+If we assumed independence of effects, then we could just do several univariate meta-analyses, one for each effect. This is how most meta-analyses in ecology are done, but it can misrepresent variances and effect sizes and has interpretation issues. 
+
+If studies are missing an effect or covariance, this data can either be estimated or imputed. Alternatively, different subsets can have different effects if there is enough overlap. This is not addressed here, but there is an example in Nam et al. 2003. If effects for some responses are not missing at random, this introduces bias. Riley et al. (2008) take a Bayesian approach to estimating missing covariances. 
+
+#### Phylogenetic nonindependence and meta-analysis
+
+Related taxa may show more similar effects than non-related taxa. 
 
 
 
