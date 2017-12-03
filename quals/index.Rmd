@@ -127,6 +127,8 @@ output:
 
 &#9744; Handbook of Meta-analysis in Ecology and Evolution
 
+&#9744; Occupany Modeling (MacKenzie)
+
 # Historical perspectives {.tabset .tabset-fade .tabset-pills}
 ## >> 
 This section contains notes on classic works in ecology and evolutionary biology or historical perspectives on the development of theories and models in ecology. 
@@ -210,6 +212,16 @@ The IDH is not actually based on the three things Fox cites, and is instead base
 
 ## Ecology Letters
 
+### [@Hoekstra2005]
+
+This study combines habitat loss and protection efforts to determine the most vulnerable biomes and ecoregions. They used land cover data and information on protected areas for 13 terrestrial biomes and 810 ecoregions (excluding mangroves and Antarctica because of the land cover data). 
+
+The most protected areas are montane grasslands and temperate coniferous forests, yet these are some of the least converted areas. The conversion risk index is an index of relative risk for biodiversity loss and is highest for temperate grasslands and mediterranean forests or scrub. 
+
+The CRI was also calculated for each ecoregion. Every biome except for tundra and boreal forests was represented by at least one ecoregion classified as a "crisis" region. The crisis ecoregions are home to half of endemic IUCN listed vertebrate species. 
+
+The most threatened ecoregions are grouped geographically. The middle of North America, east coast of South America, the area north of the Mediterranean, the Indian subcontinent, and northern China are the most threatened. Despite common emphasis on protecting the tropical rainforest, this is not one of the more threatened regions. 
+
 ## Ecology
 
 ## Methods in Ecology and Evolution
@@ -277,7 +289,7 @@ The mechanistic model overpredicted the species range, though the authors say th
 
 ## Biometrics
 
-[@Lin2017a]
+###[@Lin2017a]
 
 Studies that find significant results are more likely to be published; this publication bias can undermine meta-analyses based on systematic review. 
 
@@ -287,12 +299,12 @@ Funnel plots are commonly used as a visual check; if they are skewed to positive
 
 The authors propose using skewness as a measure of publication bias and applied it to three studies in order to be able to compare publication bias across meta-analyses. 
 
-[@Geller2017]
+###[@Geller2017]
 
 Because assymetry in funnel plots can arise from the scale used for the y-axis, this should be considered in addition to any measure based on funnel plots. 
 
 
-[@Jackson2017]
+###[@Jackson2017]
 
 Lin and Chu do not specify how the between-study variance, $\tau^2$ should be used in their approach, though it seems they are suggesting method of moments. One problem with this is that other papers have shown that $\tau^2$ can be affected by publication bias as well. Jackson suggests that the approach needs more development and needs to be tested on more simulated data for both fixed-effects and random-effects models and on actual data. 
 
@@ -310,7 +322,7 @@ write2bib <- function(article.id="", author="", title="", journal="", volume="",
                "pages = ", "\"", pages, "\"", ",", 
                "title = ", "\"", "\\{", title, "\\}", "\"", ",", 
                "volume = ", "\"", volume, "\"", ",", 
-               "year = ", "\"", year, "\"", ",", 
+               "year = ", "\"", year, "\"",  
                "\\}", sep="")
     edited.entry <- gsub("\\", entry, replacement="", fixed=TRUE)
     read.bib <- readLines("~/master-bib.bib")
@@ -521,19 +533,26 @@ Lin and Chu do not specify how the between-study variance, $\tau^2$ should be us
 
 write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
 
-#### NEXT PAPER ####
+#### Hoekstra2005 ####
 
-id <- ""
-auth <- ""
-title <- ""
-jour <- ""
-volume <- ""
+id <- "Hoekstra2005"
+auth <- "Jonathan M Hoekstra and Timothy M Boucher and Taylor H Ricketts and Carter Roberts"
+title <- "Confronting a biome crisis: global disparities of habitat loss and protection"
+jour <- "Ecology Letters"
+volume <- "8"
 num <- ""
-pgs <- ""
-yr <- ""
-file <- "/home/aleph/Documents/readings/TREE/"
+pgs <- "23--29"
+yr <- "2005"
+file <- "/home/aleph/Documents/readings/eco-letters/Hoekstra2005.pdf"
 notes <- c("
 
+This study combines habitat loss and protection efforts to determine the most vulnerable biomes and ecoregions. They used land cover data and information on protected areas for 13 terrestrial biomes and 810 ecoregions (excluding mangroves and Antarctica because of the land cover data). 
+
+The most protected areas are montane grasslands and temperate coniferous forests, yet these are some of the least converted areas. The conversion risk index is an index of relative risk for biodiversity loss and is highest for temperate grasslands and mediterranean forests or scrub. 
+
+The CRI was also calculated for each ecoregion. Every biome except for tundra and boreal forests was represented by at least one ecoregion classified as a 'crisis' region. The crisis ecoregions are home to half of endemic IUCN listed vertebrate species. 
+
+The most threatened ecoregions are grouped geographically. The middle of North America, east coast of South America, the area north of the Mediterranean, the Indian subcontinent, and northern China are the most threatened. Despite common emphasis on protecting the tropical rainforest, this is not one of the more threatened regions. 
            ")
 
 write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
@@ -769,6 +788,8 @@ Cash
 ## Hierarchical Modeling and Inference in Ecology
 
 ## The Ecological Detective
+
+# Occupancy modeling
 
 # Species Distribution Models {.tabset .tabset-fade .tabset-pills}
 
@@ -1270,6 +1291,7 @@ The Wishart matrix ($S$) is  the matrix of corrected sums of squares and product
 
 # Meta-analysis {.tabset .tabset-fade .tabset-pills}
 ## >>
+
 ## Handbook of Meta-analysis in Ecology and Evolution {.tabset .tabset-fade .tabset-pills}
 
 [@Koricheva2013]
@@ -1597,15 +1619,89 @@ If studies are missing an effect or covariance, this data can either be estimate
 
 #### Phylogenetic nonindependence and meta-analysis
 
-Related taxa may show more similar effects than non-related taxa. 
+Related taxa may show more similar effects than non-related taxa. Using information about shared ancestry, researchers concerned with phylogenetic nonindependence can generate a phylogenetially independent mean effect size. This is especially important for studies that consider a wide range of taxa. 
+
+#### Meta-analysis of primary data
+
+Meta-analysis can be done if primary data is available; the main advantage is that the same analysis can be done on each study which removes confounding analysis factors. However, combining data from multiple studies can be problematic because different study designs necessitate different analysis approaches and it is difficult to actually acquire all study data so results of a meta-analysis are biased towards the available sample (i.e. you may lose the systematic review aspect). It is possible to combine primary and secondary data into the same model. Alternatively, summary statistics can be used to generate data and a meta-analysis can be done on this generated "primary" data. Meta-analyses of primary data is a growing field of interest within meta-analysis. 
+
+#### Meta-analysis of results from multisite studies
+
+Many studies are replicated across sites by the same research group using the same methods in order to make comparisons. Meta-analysis can be done on these types of studies, however the results are potentially biased because it is not based on a systematic review so it is difficult to generalize results. 
 
 
+### Section V: Presentation and interpretation of results
+#### Quality standards for research synthesis
 
+Note: this is a good chapter to re-read as a summary of the entire book.
 
+When defining the research question, it needs to have clear importance, conceptual definitions of variables, there needs to be enough studies available to sample, and it needs to have clear decision rules for inclusion of studies. 
 
+When collecting data, there needs to be multiple databases searched, alternatives for key variables in search terms, the inclusion criteria need to be consistently applied, data needs to be extracted correctly, and the methods need to be appropriate and repeatable. 
 
+Approriate effect size metrics need to be used and justified. Mean effect sizes and confidence intervals need to be reported and weighting by inverse variance needs to be done. Heterogeneity should be investigated as well as potential moderating factors. 
 
+After the meta-analysis, there needs to be a sensitivity analysis and also any missing data should be considered. This tests the robustness of the results. 
 
+#### Graphical presentation of results
+
+The two most common meta-analysis plots are forest plots for weighted mean effects and meta-regression plots to show relationships between effects and covariates. 
+
+#### Power statistics for meta-analysis: tests for mean effects and homogeneity
+
+The power of a test is the probability that it will find an effect given that the effect exists. Power is $\rho = 1 - \beta$ where $\beta$ is the probability of a type II error (failure to detect a true effect). Power is a function of standard error, effect size, and significance level of the test ($\alpha$). 
+<center>$\rho \propto {\delta \times \alpha \over SE}$</center>
+<center>$SE = \sqrt{\sigma^2 \over n}$</center>
+Meta-analysis has higher statistical power than vote-counting type methods because it incorporates the sampling error within studies so that studies with low statistical power aren't overrepresented as "null" results. However, met-analysis can have second-order sampling error by not having enough studies included. The power of a meta-analysis depends on the pooled effect $\bar{\delta}$ and its standard error depends on both the variance of studies in the sample and between-study variance. 
+
+<center>$\rho \propto {(\bar{\delta} - \delta_0)\times\alpha \over SE(\bar{\delta})}$</center>
+<center>$ SE(\bar{\delta}) = \sqrt{\sigma^2(\bar\delta)} = \sqrt{{1 \over \sum_i^K[\sigma^2(\delta_i)+\tau^2]-1}}$</center>
+
+Instead of having a direct effect on power like $n$, $K$, the number of studies in a meta-analysis, has an indirect effect via the sum. Random-effects models have less statistical power compared to a fixed-effects model if there is homogeneity among studies. 
+
+Power statistics can also be performed on the mean effect size and on the $Q$ test for homogeneity among studies. 
+
+#### Role of meta-analysis in interpreting the scientific literature
+
+Ecologists often attempt to place their results in a broader context, which is generally done by comparing them to syntheses like reviews. Because narrative reviews are subject to bias, they influence how results are interpreted. When reviews aren't available, authors tend to rely on their own non-systematic literature reviews and informal vote counting. 
+
+Because humans tend to recall more memorable (in this case, significant study results with large effect sizes), ad hoc reviews are subjected to bias in sampling. 
+
+Researchers should report effect sizes and 95% confidence intervals in papers, rather than just p-values. Confidence intervals give biological relevance, whereas p-values do not. 
+
+>"Many researchers will flatly state that they conducted their study because previous tests of a hypothesis yielded contradictory outcomes. An unflattering but plausible interpretation of their statement is that they implicitly believe that the earlier studies were flawed, and a new study is required in which all confounding variables are controlled to obtain the true answer. ...this view is patently absurd."
+
+Research should always seek to be part of generalization, rather than supporting or refuting previous studies. 
+
+>"Traditionally [discussion sections] are a forum where one must inflate the conclusions that can be drawn from a study in order to ensure its publication."
+
+The authors suggest using the discussion section to highlight sample sizes, experimental design flaws, and mediating factors. 
+
+#### Using meta-analysis to test ecological and evolutionary theory
+
+Meta-analysis can be used to turn putative rules into ecological rules or to determine support for hypotheses and theories. It can also be used to look at support for predictions and not find that they hold up across studies, such as with the Janzen-Connell hypothesis. Another key contribution of meta-analysis is that unexplained heterogeneity can generate new hypotheses. It can also be used to check for relative support of competing hypotheses, such as determining male house sparrow bibs are related to dominance, not sexual selection. 
+
+### Section VI: Contributions of meta-analysis in ecology and evolution
+
+#### History and progress of meta-analysis
+
+The first meta-analysis is attributed to Karl Pearson in 1904 when he summarized the effects of typhoid vaccines given to soldiers. The method was actually developed in the 1970s and is mostly credited to Glass, who coined the term in the social sciences, though similar work was being done in medicine by Chalmers. Early criticisms of meta-analysis mostly related to heterogeneity among studies compared, but there are now methods of dealing with this. Another criticism is that some studies included in meta-analysis are higher quality than others. 
+
+>"Narrative reviews typically ended with a call for more research, no matter how many studies had already been conducted."
+
+Meta-analyses can show when studies no longer need to be done because an effect has been established. This makes it more informative for policy because meta-analysis produces evidence-based recommendations for practice. The Cochrane Library (for medicine) and the Campbell Collaboration (for social interventions) both keep databases of evidence for practictioners. 
+
+The earliest meta-analyses in ecology were done in the 1990s. Most ecological meta-analyses tend to either focus on large-scale trends, on exploring heterogeneity and moderating factors, or are applied for conservation management purposes. Outcomes in ecological studies tend to be less binary than in medicine, so the measures of effect are mostly based on continuous outcomes.
+
+#### Contributions of meta-analysis to conservation and management
+
+The first decade or so of ecological meta-analyses ignored systematic review principles, but this has been corrected. The Centre for Evidence-Based Conservation advocates for systematic review in conservation. 
+
+In conservation, management decisions are often based on anecdotes or common sense, rather than evidence. Meta-analyses can show that these approaches are not effective and can even have the opposite of the desired effect. Although currently meta-analyses in conservation are mostly academic, they are expected to be used more for applied management and policy decisions as their use grows. 
+
+#### Conclusions: Past, present, and future of meta-analysis in ecology and evolution
+
+(no notes taken as this was a summary chapter)
 
 
 
@@ -1616,6 +1712,74 @@ Related taxa may show more similar effects than non-related taxa.
 ## Shipley
 
 ## Grace
+
+## Meta-analytic SEM
+
+### Meta-Analytic Structural Equation Modelling
+[@Jak2015]
+
+#### Chapter 1: Introduction to meta-analysis and structural equation modeling
+
+Fixed effects treats the studies in the sample as the entire population, whereas random effects treats the studies in the sample as a sample of the true population so it has greater inference potential.
+
+MASEM combines the causal relationships of SEM with the information from multiple studies in meta-analysis, so a hypothetical relationship is not tested just once but rather with the results from many studies. This fulfills the requirement for large sample sizes in SEM. If different studies don't all report the same variables but there is some overlap, they can all be fit in one MASEM model.
+
+#### Chapter 2: Methods for meta-analytic structural equation modeling
+
+Because SEM can be done on a covariance matrix, the pooled correlation matrix from MASEM can be converted and used as the input for SEM. This can be done with fixed effects or random effects. 
+
+Univariate approaches are not recommended for SEM because generally data violates homogeneity assumptions. This approach also assumes that correlation coefficients within studies are not correlated, which is not valid. 
+
+
+##### Generalized least squares (GLS)
+GLS allows for dependencies between correlations in studies by using both the sampling variances and sampling covariances. The weighted mean correlation across studies should be used. Note that GLS can only fit regression models, not path models. This needs to be done with TSSEM.
+
+For each study in the meta-analysis, you have a covariance matrix ($V_i$) of correlation coefficients. The size of $V_i$ will be different across studies in the meta-analysis. In GLS, the values in $V_i$ are treated as known parameters. This means that we need a vector $r$ and a selection matrix $K$ of ones and zeros to indicate if a study has those correlations. If you have $k$ studies and 3 total variables (A, B, and C), then you have $r_{iAB}$, $r_{iAC}$, and $r_{iBC}$ but not all the studies may report these. So you have $k$ small selection matrices with three columns and the number of rows equal to the number of variables in the study. These mini-matrices are stacked to form $X$, the selection matrix. 
+
+Now you take $r$, $V_i$ and $X$ and with matrix algebra magic, you come up with a up with an estimate of pooled correlation coefficients $\hat{\rho} = (X^T V_{-1} X)^{-1} (X^T V^{-1}r)$. You also have the asymptotic covariance matrix of the parameter estimates as $V_{GLS} = (X^T V^{-1} X)^{-1}$. 
+
+##### Two-stage SEM (TSSEM)
+TSSEM first pools correlation coefficients, then uses weighted least squares (WLS) estimation to fit the path model. WLS us the inverse of $V_{GLS}$. Correlation coefficients are weighted based on how many studies reported them; more studies makes them more precise so they get more weight.
+
+Selection matrices are used to filter out variables, rather than coefficients, in TSSEM. Instead of stacking selection matrixes into $X$, each study has its own selection matrix. Each study is treated as a group in order to estimate the correlation matrix of all variables across all studies. Each study's model is $\sum_i = D_i(X_iRX_i^T)D_i$ for a multigroup structural equation model. $R$ is the population correlation matrix and $D_i$ is a $p_i \times p_i$ matrix to adjust for scaling. Parameters are estimated with maximum likelihood. This model can then be fit as a SEM to get estimates of population correlation coefficients. 
+
+Once the model is fit, then you get a $\chi^2$ measure of fit. This model has been for fixed effects; a random effects model would allow a separate $R_i$ for each study, so then $X_i$ is not necessary. If there is a significant difference in the $\chi^2$ from the random effects model, then homogeneity does not hold so the pooled effects matrix cannot be fit to a SEM. If $R$ is valid, then it can be used to fit SEMs. 
+
+#### Chapter 3: Heterogeneity
+
+Because doing the Q-test for heterogeneity on $r$ is inflated, usually a Fisher transformed $z$ is used instead. The multivariate version of the Q-test rejects homogeneity too often, so instead a Bonferroni adjusted $\alpha$ level should be used on the univariate Q-tests to see if there is heterogeneity in the pooled correlation matrix. 
+
+If there is heterogeneity of correlation coefficients, the size of it can be calculated with the $I^2$ measure, which measures the propotion of variability that is due to heterogeneity among studies. 
+
+A random effects TSSEM can be done, but one issue is that large studies get relatively less weight than in fixed effects. Another problem is that standard errors and confidence intervals for parameter estimates are wider. 
+
+A random effects TSSEM is the same as fixed effects with $\tau^2$ added to the denominator. If moderators are not explaining heterogeneity, subgroups can be defined and separate MASEM can be done on each subgroup. 
+
+#### Chapter 4: Issues in meta-analytic structural equation modeling
+
+##### Software to conduct MASEM
+
+The metaSEM package can fit both fixed effects random effects models using maximum likelihood for stage 1 of TSSEM or for GLS. For stage 2, you can use lavaan or OpenMx. 
+
+##### Fit-indices in TSSEM
+
+$\chi^2$ is an absolute fit index, whereas RMSEA is approximate fit; it allows researchers to assume that homogeneity doesn't have to be exact but there aren't good standards for an acceptable level of heterogeneity. Comparison of fit (CFI) is not a good measure for MASEM and standardized root mean squared residual (SRMSR) has the same problems as RMSEA. 
+
+##### Missing correlations in TSSEM
+
+Missing variables are not a problem in TSSEM because they are filtered out, but missing correlations are. If correlations are missing, they can either be estimated or fixed at zero but this could change the model fit. 
+
+##### The ML-approach to MASEM
+
+Using maximum likelihood instead of WLS leads to almost identical results on simulated data. However, it is limited to fixed effects models. WLS is also much faster because then it is not a multi-group model at stage two so it converges sooner. 
+
+
+#### Chapter 5: Fitting a path model with the two-stage approach
+
+In metaSEM, there are functions to read in a matrix (or lower triangle matrix) of all the correlations for each study. Alternatively, data can be read in as a table. Then a correlation matrix is created for each study and missing variables are dropped. After doing a fixed effects model and checking for homogeneity, you may need to do a random effects model. 
+
+Multi-group comparisons of path coefficients can also be done if sample sizes are large enough. 
+
 
 # Basic statistics {.tabset .tabset-fade .tabset-pills}
 
