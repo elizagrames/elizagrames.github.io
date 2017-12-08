@@ -1781,6 +1781,7 @@ In metaSEM, there are functions to read in a matrix (or lower triangle matrix) o
 Multi-group comparisons of path coefficients can also be done if sample sizes are large enough. 
 
 
+
 # Basic statistics {.tabset .tabset-fade .tabset-pills}
 
 ## >>
