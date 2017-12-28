@@ -1839,7 +1839,7 @@ grViz("digraph causal {
 
 $K_{m,n}$ indicates a complete bipartite graph where every vertex in subset $m$ is connected to every vertex in subset $n$. So if $m$ and $n$ each have three vertices, there will be nine edges. 
 
-1.2.9 A $k$-partite graph has one with $k$ subsets. If a graph $T$ is $m$-partite with $n$ vertices, then $\epsilon (T_{m,n}) = \Big({{n-x} \atop 2}\Big)+(m-1)\Big({x+1 \atop 2}\Big)$ where $x = {n \over m}$. 
+1.2.9 A $k$-partite graph has one with $k$ subsets. If a graph $T$ is $m$-partite with $n$ vertices, then $\epsilon (T_{m,n}) = \Big({n - x \atop 2}\Big)+(m-1)\Big({x+1 \atop 2}\Big)$ where $x = {n \over m}$. 
 
 1.2.10 A $k$-cube has vertices that are $k$-tuples of 0s and 1s that are connected by an edge if they only differ in one position; a $k$-cube has $2^k$ vertices and $k2^{k-1}$ edges. The image above is a $3$-cube. 
 
