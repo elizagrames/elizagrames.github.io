@@ -260,6 +260,32 @@ The simple models assume unlimited dispersal, more complex models include specie
 
 In the basic ENM models, including land use improved prediction, but when land use was included in dispersal or metapopulation models it reduced predictive ability. When more complex models did not have land use included, they were the best at predicting ranges. One reason why including land use in the more complex models did a bad job of predicting actual range dynamics is because land use was a static variable and was unknown for grid cells at the start of the model so projections may have had repercussions for later simulations when land use was known. 
 
+
+### [@Ruxton2010]
+
+In general, a two-tailed test is used if the direction of the effect is unknown or does not matter. A one-tailed test is used if the direction of the effect matters only in one direction and if an opposite direction is equivalent to the null. The main advantage of a one-tailed test is additional power to reject the null, but you ignore the possibility of unexpected results in the other direction. 
+
+Ruxton and Neuhauser propose that if a one-tailed test is used, authors need to explain why the effect could only be in one direction or why that is the only direction of interest, and also they need to justify why a large, negative response is no different from the null. 
+
+Choosing between a one-tailed and two-tailed test needs to be done before exploring the data, otherwise, there is inflation of the type I error rate. 
+
+### [@Manning2010]
+
+Geographic locations can be used as an alternative to capture-recapture methods, but one main issue is that it isn't clear whether individuals sighted at geographic locations can't be identified, unlike a tag. Geographic locations assume that animals use home ranges or nest sites so there is no overlap within a location of individuals sighted. 
+
+This paper proposes a point-coordinate capture-recapture (PCCR) approach to determining population abundance. The approach uses maximum distance moved (MDM) as prior information to estimate space use. Activity centers are estimated based on observations and the activity center and home range are assumed to be constant. 
+
+The method accurately predicts population size based on encounters, rather than trapping. Mean distance between movements should not be used as an estimate of home range because activity centers generally are not the geographic center of a range. 
+
+Individuals should not be modeled with way if MDM overlaps with home range size, as neighbors could be encountered. 
+
+
+### [@Zuur2010]
+
+
+
+
+
 ## Conservation Biology
 
 ## Conservation Letters
@@ -557,6 +583,76 @@ The most threatened ecoregions are grouped geographically. The middle of North A
 
 write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
 
+#### Ruxton2010 ####
+
+id <- "Ruxton2010"
+auth <- "Graeme D Ruxton and Markus Neuhauser"
+title <- "When should we use one-tailed hypothesis testing?"
+jour <- "Methods in Ecology and Evolution"
+volume <- "1"
+num <- ""
+pgs <- "114--117"
+yr <- "2010"
+file <- "/home/aleph/Documents/readings/methods/Ruxton2010.pdf"
+notes <- c("
+
+In general, a two-tailed test is used if the direction of the effect is unknown or does not matter. A one-tailed test is used if the direction of the effect matters only in one direction and if an opposite direction is equivalent to the null. The main advantage of a one-tailed test is additional power to reject the null, but you ignore the possibility of unexpected results in the other direction. 
+
+Ruxton and Neuhauser propose that if a one-tailed test is used, authors need to explain why the effect could only be in one direction or why that is the only direction of interest, and also they need to justify why a large, negative response is no different from the null. 
+
+Choosing between a one-tailed and two-tailed test needs to be done before exploring the data, otherwise, there is inflation of the type I error rate. 
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### Manning2010 ####
+
+id <- "Manning2010"
+auth <- "Jeffrey A Manning and Caren S Goldberg"
+title <- "Estimating population size using capture-recapture encounter histories created from point-coordinate locations of animals"
+jour <- "Methods in Ecology and Evolution"
+volume <- "1"
+num <- ""
+pgs <- "389--397"
+yr <- "2010"
+file <- "/home/aleph/Documents/readings/methods/Manning2010.pdf"
+notes <- c("
+
+Geographic locations can be used as an alternative to capture-recapture methods, but one main issue is that it isn't clear whether individuals sighted at geographic locations can't be identified, unlike a tag. Geographic locations assume that animals use home ranges or nest sites so there is no overlap within a location of individuals sighted. 
+
+This paper proposes a point-coordinate capture-recapture (PCCR) approach to determining population abundance. The approach uses maximum distance moved (MDM) as prior information to estimate space use. Activity centers are estimated based on observations and the activity center and home range are assumed to be constant. 
+
+The method accurately predicts population size based on encounters, rather than trapping. Mean distance between movements should not be used as an estimate of home range because activity centers generally are not the geographic center of a range. 
+
+Individuals should not be modeled with way if MDM overlaps with home range size, as neighbors could be encountered. 
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+
+#### Zuur2010 ####
+
+id <- "Zuur2010"
+auth <- "Alain F Zuur and Elena N Ieno and Chris S Elphick"
+title <- "A protocol for data exploration to avoid common statistical problems"
+jour <- "Methods in Ecology and Evolution"
+volume <- "1"
+num <- ""
+pgs <- "3--14"
+yr <- "2010"
+file <- "/home/aleph/Documents/readings/methods/Zuur2010.pdf"
+notes <- c("
+
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+
 #### NEXT PAPER ####
 
 id <- ""
@@ -567,12 +663,414 @@ volume <- ""
 num <- ""
 pgs <- ""
 yr <- ""
-file <- "/home/aleph/Documents/readings/TREE/"
+file <- "/home/aleph/Documents/readings/methods/"
 notes <- c("
+
 
            ")
 
 write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
+
+
+
+#### NEXT PAPER ####
+
+id <- ""
+auth <- ""
+title <- ""
+jour <- ""
+volume <- ""
+num <- ""
+pgs <- ""
+yr <- ""
+file <- "/home/aleph/Documents/readings/methods/"
+notes <- c("
+
+
+           ")
+
+write2bib(id, auth, title, jour, volume, num, pgs, yr, file, notes)
+
 
 
 ```
@@ -1284,6 +1782,90 @@ The Wishart matrix ($S$) is  the matrix of corrected sums of squares and product
 ## Chung
 
 ## Bayes Theorem
+
+# Graph theory {.tabset .tabset-fade .tabset-pills}
+## Bondy and Murty
+
+### 1 Graphs and subgraphs
+#### 1.1 Graphs and simple graphs 
+A graph $G$ consists of a set of vertices $V(G)$, a set of edges $E(G)$ and an incidence function $\psi_G$ that relates each edge to a pair of vertices. A planar graph has edges that only intersect at their ends, rather than overlapping somewhere in the middle that is not a vertex. Ends of an edge are incident with the edge and adjacent to each other; edges that share a vertex are also adjacent. Loop edges have one end whereas links go between distinct vertices. A trivial graph is one that has only one vertex. A simple graph has no loops and all the edges serve a unique function (i.e. they aren't duplicates between the same vertices). $\nu(G)$ is the number of vertices in a graph and $\epsilon(G)$ is the number of edges. 
+
+#### 1.2 Graph isomorphism
+
+An isomorphic graph shares the same structural characteristics but not the same vertex and edge names. A complete graph has an edge between every pair of vertices (like a pentagram enclosed in a pentagon). An empty graph has no edges. A bipartite graph is one that can have subsets of vertices so that each edge joins vertices from the different subsets. For example, in the image below there are subsets X (turquoise) and Y (coral) and each edge connects a vertex from each subset. 
+
+```{r, eval=FALSE}
+library(DiagrammeR)
+grViz("digraph causal {
+      
+      graph [layout = neato,
+      overlap = true,
+      outputorder = edgesfirst]
+
+      node [shape=circle]
+      x1 [label='x@_{1}', pos='1,4!', color=turquoise]
+      x2 [label='x@_{2}', pos='3,3!', color=turquoise]
+      x3 [label='x@_{3}', pos='2,2!', color=turquoise]
+      x4 [label='x@_{4}', pos='4,1!', color=turquoise]
+      y1 [label='y@_{1}', pos='4,4!', color=coral]
+      y2 [label='y@_{2}', pos='2,3!', color=coral]
+      y3 [label='y@_{3}', pos='3,2!', color=coral]
+      y4 [label='y@_{4}', pos='1,1!', color=coral]
+
+      edge [color = grey, arrowhead = none]
+
+      x1 -> y1
+      x1 -> y2
+      x1 -> y4
+      x2 -> y1
+      x2 -> y2
+      x2 -> y3
+      x3 -> y2
+      x3 -> y3
+      x3 -> y4
+      x4 -> y1
+      x4 -> y3
+      x4 -> y4
+            }")
+```
+![Pipeline of clustering process](./bipartite.png)
+
+
+1.2.7 Let $G$ be simple. Show that $\epsilon = {\Big({\nu \atop 2}\Big)}$ iff $G$ is complete. 
+ 
+(side note: I'm not actually doing every problem if I can work them out easily in my head, and I'm also not doing them formally.) Because a simple graph has no loops and all the edges are unique, then if it is complete there is an edge between every pair, so the number of edges is twice the number of vertices. 
+
+1.2.8 Show that $\epsilon \Big( K_{m,n}\Big) = mn$. 
+
+$K_{m,n}$ indicates a complete bipartite graph where every vertex in subset $m$ is connected to every vertex in subset $n$. So if $m$ and $n$ each have three vertices, there will be nine edges. 
+
+1.2.9 A $k$-partite graph has one with $k$ subsets. If a graph $T$ is $m$-partite with $n$ vertices, then $\epsilon (T_{m,n}) = \Big({{n-x} \atop 2}\Big)+(m-1)\Big({x+1 \atop 2}\Big)$ where $x = {n \over m}$. 
+
+1.2.10 A $k$-cube has vertices that are $k$-tuples of 0s and 1s that are connected by an edge if they only differ in one position; a $k$-cube has $2^k$ vertices and $k2^{k-1}$ edges. The image above is a $3$-cube. 
+
+1.2.11 A complement of a graph is one where any adjacent edges in $G$ are not adjacent in $G^c$. 
+
+1.2.12 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Experimental design {.tabset .tabset-fade .tabset-pills}
 
