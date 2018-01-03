@@ -309,6 +309,7 @@ The mechanistic model overpredicted the species range, though the authors say th
 
 ## Auk
 
+
 ## Nature
 
 ## Science
@@ -1845,15 +1846,72 @@ $K_{m,n}$ indicates a complete bipartite graph where every vertex in subset $m$ 
 
 1.2.11 A complement of a graph is one where any adjacent edges in $G$ are not adjacent in $G^c$. 
 
-1.2.12 
+#### 1.3 The incidence and adjacency matrices
 
+The incidence matrix for a graph $G$ is $M$, where $m_{ij}$ corresponds to the number of times that a vertex $\v_i$ and edge $e_j$ are adjacent; values an only be 0, 1, or 2 (for a loop). The adjacency matrix $A$ is a $\nu \times \nu$ matrix showing how many times a vertex is joined to a vertex; if there is a 1 in the diagonal it is a loop. Because the adjacency matrix is smaller, this is usually how graphs are stored. 
 
+1.3.1 Let $M$ be the incidence matrix and $A$ the adjacency matrix of a graph G. Show that every column sum of $M$ is 2. What are the column sums of A?
+Because each edge only has two ends, the sum of any edge column has to be two, for the two vertices it connects. The column sums of $A$ are the number of edges that connect to that vertex. 
 
+#### 1.4 Subgraphs
 
+A graph $H$ is a proper subgraph of $G$ if the edges and vertices of $H$ are all subsets of $G$ but $H \neq G$. This is symbolized $H \subset G$. You can induce subgraphs by subsetting $G$ by subsets of vectors or edges. Disjoint subgraphs of $G$ have no vertex in common and are edge-disjoint if they don't hsare any edges. Intersections and unions of disjoint subgraphs can be defined. 
 
+#### 1.5 Vertex degrees
 
+The degree of a vertex is the number of edges incident to it (loops count as two edges); it is denoted as $d_{\text{G}}(v)$. Because each edge connects two vertices, we know that that $\sum\limits_{v \in V} d(v) = 2 \epsilon$. We also know that the number of vertices with odd degrees is even, because those edges must have another end. A $k$-regular graph is one where all vertices have the same number of edges. Complete graphs, complete bipartite graphs, and $k$-cubes are all $k$-regular. 
 
+The minimum number of vertex degrees in a graph is $\delta(G)$ and the maximum is $\Delta(G)$.
 
+#### 1.6 Paths and connections
+
+A walk is a series of vertices and edges through a graph. A trail is a walk with unique edges. A path is a walk with unique vertices and edges. Vertices are connected if there is a path between them. 
+
+The number of components, or subgraphs, of $G$ are denoted by $\omega(G)$. 
+
+#### 1.7 Cycles
+
+A closed walk has the same start and end vertex. A closed trail with unique internal vertices is a cycle. The girth of a graph is the length of its shortest cycle (or $\infty$ if there are no cycles). 
+
+### 2. Trees
+
+A tree is an acyclic graph whose components are also trees. All edges in a tree are cut edges, meaning that if they are removed the number of components increases. An edge $e$ is a cut edge if $\omega(G - e) < \omega(G)$. A spanning tree is a spanning subgraph that is also a tree. 
+
+A bond is the minimal cut set of a graph, where if all the edges in the bond are cut then the graph becomes disconnected. 
+
+Similar to cut edges, cut vertices are ones that if removed from $G$ will create multiple components of $G$.
+
+### 3. Connectivity
+
+The connectivity of a graph $\kappa(G)$ is the minimum number of vertices that need to be cut for it to become disconnected. The edge connectivity is $\kappa ' (G)$. 
+
+A connected graph with no cut vertices is a block of the graph. Spanning trees are necessarily poorly connected.
+
+### 4. Euler tours and Hamilton cycles
+
+An Euler trail is one that traverses every edge of $G$; an Euler tour is one that traverses each edge exactly once. A graph is eulerian if it contains an Euler tour. A graph has an Euler trail iff it has a maximum of two vertices with odd degrees. 
+
+A Hamilton path is one that touches every vertex of $G$; a Hamilton cycle is a Hamilton path with the same origin and end points that only touches unique internal vertices. A graph is hamiltonian if it is a Hamilton cycle. A graph is hamiltonian iff its closure is hamiltonian. The closure of a graph is done by putting an edge between any non-adjacent vertices whose degree is less than $\nu$; it does not always make a complete graph. However, if the closure of $G$, denoted $c(G)$ is complete, then $G$ is hamiltonian. 
+
+Take a graph with a degree sequence $(d_1, d_2, d_3, \ldots, d_{\nu})$ written in increasing order and $\nu \geq 3$. If there is no $d_m \leq m$ when $m < {\nu \over 2}$ and $d_{\nu - m} < \nu - m$ then the graph is hamiltonian. 
+
+A graph is hypohamiltonian if removing any vertex makes it hamiltonian. Similarly, a graph can be hypotraceable. 
+
+### 5. Matchings
+
+Matchings are subgraphs where no vertices are adjacent; they are perfect if every vertex is connected to another vertex by an edge. 
+
+### 6. Edge Colourings
+
+Edges can be colored such that adjacent edges don't share the same color. 
+
+### 7. Independent sets and cliques
+
+No notes taken. 
+
+### 8. Vertex colorings
+
+The chromatic number of $G$ is the number of colors required for independent vertices. 
 
 
 
