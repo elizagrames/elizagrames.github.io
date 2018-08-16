@@ -3,10 +3,10 @@ body { background: #F3EFE0; font-size: 15px; line-height: 1.64; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b { font-family: 'Open Sans', sans-serif !important; margin-bottom: 20px; }
 h1,h4 { font-weight: 700; margin-bottom: 10px; }
-h2,h3 { font-weight: 300; color: #7B3539; }
+h2,h3 { font-weight: 300; color: #006E6D; }
 h2 { font-size: 54px; text-align: center; }
 h3 { font-size: 28px; }
-a {color: #7B3539;}
+a {color: #006E6D;}
 
 p.lead { text-align: center; color: #727c6f; }
 p.lead a { color: #FFFFFF; text-decoration: underline; }
@@ -17,7 +17,7 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 .project-referal { margin-top: 40px; }
 .project-referal p { font-style: italic; color: #999999; }
 
-.btn-primary { background-color: #7B3539; border-color: #1c8784; }
+.btn-primary { background-color: #006E6D; border-color: #1c8784; }
 .btn-primary:hover { background-color: #1c8784;  border-color: #1c8784; }
 
 .icon { display: inline-block; background: url(styles/sm_icon_sprite.png) no-repeat; height: 32px; width: 32px; }
@@ -54,7 +54,7 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 	right: 30px;
 	top: 30px;
 }*/
-.jumbotron .overlay { background-color: #7B3539; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 0.75; filter:alpha(opacity=75); z-index: 2; }
+.jumbotron .overlay { background-color: #006E6D; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 0.75; filter:alpha(opacity=75); z-index: 2; }
 
 .jumbotron .container { position: relative; top: 28%; z-index: 4; text-align: center; }
 .jumbotron .container > * { text-align: center; color: #FFFFFF; }
@@ -82,7 +82,7 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 .navbar .nav > li { display: block; float: none; height: 80px; }
 .navbar .nav > li a { display: block;  height: 80px; text-align: center; padding-top: 30px; font-weight: 600; color: #FFFFFF; }
 .navbar .nav > li a:hover, .navbar .nav > li a:focus { color: #999999; }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background: #7B3539; color: #FFFFFF; }
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background: #006E6D; color: #FFFFFF; }
 .navbar-default .navbar-toggle:hover .icon-bar,
 .navbar-default .navbar-toggle:focus .icon-bar { background: #222222; }
 
@@ -176,7 +176,7 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 /*---------------*/
 
 figure.effect {
-	background: #7B3539;
+	background: #006E6D;
 	color: #FFF;
 }
 
