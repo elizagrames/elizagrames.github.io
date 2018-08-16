@@ -3,10 +3,10 @@ body { background: #F3EFE0; font-size: 15px; line-height: 1.64; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b { font-family: 'Open Sans', sans-serif !important; margin-bottom: 20px; }
 h1,h4 { font-weight: 700; margin-bottom: 10px; }
-h2,h3 { font-weight: 300; color: #FF6565; }
+h2,h3 { font-weight: 300; color: #7B3539; }
 h2 { font-size: 54px; text-align: center; }
 h3 { font-size: 28px; }
-a {color: #FF6565;}
+a {color: #7B3539;}
 
 p.lead { text-align: center; color: #727c6f; }
 p.lead a { color: #FFFFFF; text-decoration: underline; }
@@ -17,7 +17,7 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 .project-referal { margin-top: 40px; }
 .project-referal p { font-style: italic; color: #999999; }
 
-.btn-primary { background-color: #FF6565; border-color: #1c8784; }
+.btn-primary { background-color: #7B3539; border-color: #1c8784; }
 .btn-primary:hover { background-color: #1c8784;  border-color: #1c8784; }
 
 .icon { display: inline-block; background: url(styles/sm_icon_sprite.png) no-repeat; height: 32px; width: 32px; }
@@ -29,23 +29,23 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 .jumbotron {
 	background: no-repeat center right fixed url(images/background.jpg);
 
-	-webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
-	
+	-webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	
+
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/background.jpg', sizingMethod='scale')";
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/background.jpg', sizingMethod='scale');
-	
+
 	margin-bottom: 0px;
 	padding: 0px;
-}  
-/*.jumbotron:before { 
+}
+/*.jumbotron:before {
 	border: 1px solid #FFFFFF;
 	bottom: 30px;
 	content: "";
@@ -54,18 +54,18 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 	right: 30px;
 	top: 30px;
 }*/
-.jumbotron .overlay { background-color: #FF6565; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 0.75; filter:alpha(opacity=75); z-index: 2; }
+.jumbotron .overlay { background-color: #7B3539; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 0.75; filter:alpha(opacity=75); z-index: 2; }
 
 .jumbotron .container { position: relative; top: 28%; z-index: 4; text-align: center; }
 .jumbotron .container > * { text-align: center; color: #FFFFFF; }
 .jumbotron .container h1 { padding-bottom: 20px; border-bottom: 1px solid #FFFFFF; border-bottom-color: rgba(255,255,255,0.35); display: inline-block; }
 .jumbotron .container .lead { font-size: 28px; }
 .jumbotron .scroll-down { height: 80px; width: 110px; display: block; position: absolute; bottom: 0px; right: 5%; background-color: #222222; text-align: center; z-index: 6; }
-.jumbotron .scroll-down .glyphicon { 
-	color: #FFFFFF; 
-	font-size: 20px; 
-	padding-right: 2px; 
-	padding-top: 0px; 
+.jumbotron .scroll-down .glyphicon {
+	color: #FFFFFF;
+	font-size: 20px;
+	padding-right: 2px;
+	padding-top: 0px;
 
 	animation-name: wiggle;
 	animation-duration: 1.2s;
@@ -79,10 +79,10 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 .navbar .navbar-collapse { padding: 0px; max-height: none; }
 .navbar .navbar-nav { float: none; }
 .navbar-nav { margin: 0px; }
-.navbar .nav > li { display: block; float: none; height: 80px; } 
+.navbar .nav > li { display: block; float: none; height: 80px; }
 .navbar .nav > li a { display: block;  height: 80px; text-align: center; padding-top: 30px; font-weight: 600; color: #FFFFFF; }
 .navbar .nav > li a:hover, .navbar .nav > li a:focus { color: #999999; }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background: #FF6565; color: #FFFFFF; }
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background: #7B3539; color: #FFFFFF; }
 .navbar-default .navbar-toggle:hover .icon-bar,
 .navbar-default .navbar-toggle:focus .icon-bar { background: #222222; }
 
@@ -101,44 +101,44 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 #contact a:hover { opacity: 1; filter:alpha(opacity=100); text-decoration: none; }
 
 
-@media (max-width: 1200px) { 
+@media (max-width: 1200px) {
 	#interests .interest-content { padding: 20px 0px; }
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
 	.jumbotron:before {
 		bottom: 100px;
 		left: 20px;
 		right: 20px;
-		top: 20px;		
+		top: 20px;
 	}
 	.jumbotron .container { top: 20%; padding-top: 0px; }
 	.jumbotron .scroll-down { width: 100%; right: 0px; }
-	
+
 	.navbar  { left: 0px; width: 100%; }
 	.navbar .nav > li { height: 60px; }
 	.navbar .nav > li a { height: 60px; text-align: center; padding-top: 20px; font-weight: 600; color: #FFFFFF; }
-	
+
 	.fixed .navbar { top: 0px; }
-	
+
 	.container { padding: 60px 20px; min-width: 280px; }
 	.hidden-phone { display: none; }
-	
+
 	#profile .row * { text-align: center; }
-	
+
 	#experiences .experience .experience-details > span { display: block; margin-bottom: 6px; }
 	#experiences .experience .experience-details .seperator { display: none; }
-	
+
 	#interests .left { float: none; }
 	#interests .right { float: none; }
-	
+
 	#interests > * { text-align: center; }
-	#interests img { width: 50%; height: auto; float: none !important; } 
+	#interests img { width: 50%; height: auto; float: none !important; }
 	#interests .interest-content { padding: 20px 0px; }
-	
+
 	#contact { padding-bottom: 60px; }
 	#contact a .icon { float: left; margin-right: 10px; }
-}    
+}
 
 @media only screen and (orientation: portrait) and (max-width: 767px)  {
     .jumbotron {
@@ -152,7 +152,7 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
       -webkit-background-size: 150% auto;
       background-attachment: scroll;
     }
-	
+
 	.jumbotron .lead { display: none; }
 }
 
@@ -176,7 +176,7 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 /*---------------*/
 
 figure.effect {
-	background: #FF6565;
+	background: #7B3539;
 	color: #FFF;
 }
 
