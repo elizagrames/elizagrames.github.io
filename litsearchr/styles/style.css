@@ -89,8 +89,8 @@ hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity
 .fixed .navbar  { position: fixed; top: 60px; }
 
 .background-white { background: #FFFFFF; }
-.background-gray { background: #434242; }
-.background-green { background: #c3c3c3; }
+.background-gray { background: #424242; }
+.background-green { background: #b2b2b2; }
 .container { max-width: 1280px; padding: 40px 180px; }
 
 
