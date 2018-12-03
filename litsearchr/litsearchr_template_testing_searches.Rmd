@@ -17,7 +17,7 @@ Now run the chunk of code below. It will output a Boolean search of title keywor
 
 ```{r}
 
-title_search <- litsearchr::write_title_search(titles=gold_standard$Title)
+title_search <- litsearchr::write_title_search(titles=gold_standard)
 
 writeLines(title_search, "./title_search.txt")
 

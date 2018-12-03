@@ -8,7 +8,7 @@ editor_options:
 
 # Step 1: Conduct scoping search
 
-Conduct your scoping search in any or all of the following databases: BIOSIS Citation Index (Web of Science), Zoological Record (Web of Science), MEDLINE (Web of Science), Scopus, or Academic Search Premier (EBSCO). For Web of Science databases, export Full Records as a tab-delimited (.txt) file with UTF-8 encoding. For Scopus, export a .csv with "Citation information" and "Abstracts & keywords" selected. For Academic Search Premier, save all results to a folder, then export the folder as .csv. Save all results to a single directory.
+Conduct your scoping search in any or all of the following databases: BIOSIS Citation Index (Web of Science), Zoological Record (Web of Science), Scopus, or Academic Search Premier (EBSCO). For Web of Science databases, export Full Records as a tab-delimited (.txt) file with UTF-8 encoding. For Scopus, export a .csv with "Citation information" and "Abstracts & keywords" selected. For Academic Search Premier, save all results to a folder, then export the folder as .csv. Save all results to a single directory.
 
 ```{r}
 scoping_directory <- "./"
@@ -82,7 +82,7 @@ grouped_keywords <- read.csv("./ngram-grouped-keywords.csv", stringsAsFactors = 
 Now you're going to need to write your own code because it will depend on what your concept groups are and how many you have. Once you have all your groups put together, save them as a list. Use the commented-out text in the code chunk below as an example of how to do this. Note that you can also list any terms you think of that might be relevant to a category and they will be added to your search even if litsearchr did not identify them as a keyword. 
 
 ```{r}
-# tillage_group <- unique(append(c("no till", "tillage intensity", "tillage", "mechanical soil disturbance"), 
+# tillage_group <- unique(append(c("no till", "tillage intensity","mechanical soil disturbance"), 
 #                       grouped_keywords$term[which(stringr::str_detect(grouped_keywords$group, "tillage"))]))
 # soil_group <- unique(append(c("soil organic carbon"), 
 #                       grouped_keywords$term[which(stringr::str_detect(grouped_keywords$group, "soil"))]))
