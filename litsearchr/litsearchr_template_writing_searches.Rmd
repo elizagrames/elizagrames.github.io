@@ -5,7 +5,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-
 # Step 1: Conduct scoping search
 
 Conduct your scoping search in any or all of the following databases: BIOSIS Citation Index (Web of Science), Zoological Record (Web of Science), Scopus, or Academic Search Premier (EBSCO). For Web of Science databases, export Full Records as a tab-delimited (.txt) file with UTF-8 encoding. For Scopus, export a .csv with "Citation information" and "Abstracts & keywords" selected. For Academic Search Premier, save all results to a folder, then export the folder as .csv. Save all results to a single directory.
@@ -92,6 +91,25 @@ Now you're going to need to write your own code because it will depend on what y
 # my_search_terms <- list(tillage_group, soil_group, carbon_group)
 
 ```
+
+Get similar terms. You'll likely want to save them as a .csv, group them, and then read the .csv back in (see commented out lines below).
+
+```{r}
+similar_terms <- litsearchr::get_similar_terms(my_search_terms, graph = study_graph)
+
+# write.csv(similar_terms, "similar_terms.csv")
+# new_terms <- read.csv("similar_terms_grouped.csv", stringsAsFactors = FALSE)
+
+# tillage_group <- unique(append(tillage_group, 
+#                       new_terms$term[which(stringr::str_detect(new_terms$group, "tillage"))]))
+# soil_group <- unique(append(soil_group, 
+#                       new_terms$term[which(stringr::str_detect(new_terms$group, "soil"))]))
+# carbon_group <- unique(append(carbon_group, 
+#                       new_terms$term[which(stringr::str_detect(new_terms$group, "carbon"))]))
+
+# my_search_terms <- list(tillage_group, soil_group, carbon_group)
+```
+
 
 # Step 3: Write Boolean searches
 
