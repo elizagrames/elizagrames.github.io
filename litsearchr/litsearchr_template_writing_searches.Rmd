@@ -16,22 +16,25 @@ scoping_directory <- "./"
 Decide if you want to only search for n-grams (phrases with at least two words) or if you also want to include unigrams (single words). Using n-grams leads to more specific searches and is recommended to get more relevant words, especially for the keywords identified by RAKE. If you're worried about missing important unigrams, a good compromise is to allow unigrams in select_actual_terms(). Change the code in the chunk below if you want different n-gram or frequency settings, then run the entire chunk. 
 
 ```{r}
-study_data <- litsearchr::import_scope(scoping_directory, 
-                                       remove_duplicates = TRUE, 
+study_data <- litsearchr::import_results(directory=scoping_directory, filename=NULL,
+                                       remove_duplicates = FALSE, 
                                        clean_dataset = TRUE)
 
-raked_keywords <- litsearchr::extract_terms(study_data, 
+study_data <- litsearchr::deduplicate(study_data, use_abstracts = FALSE, use_titles = TRUE, method = "quick")
+study_data <- litsearchr::deduplicate(study_data, use_abstracts = FALSE, use_titles = TRUE, method = "tokens", title_sim=.95)
+study_data <- litsearchr::deduplicate(study_data, use_abstracts = TRUE, use_titles = TRUE, method = "tokens", doc_sim = .85)
+
+raked_keywords <- litsearchr::extract_terms(study_data, type="RAKE",
                                             new_stopwords = NULL, 
                                             min_freq = 2, 
                                             title = TRUE, 
                                             abstract = TRUE, 
                                             ngrams = TRUE, n=2)
 
-real_keywords <- litsearchr::select_actual_terms(study_data, 
+real_keywords <- litsearchr::extract_terms(study_data, type = "tagged",
                                                  ngrams = TRUE, n=2)
 
-study_dict <- litsearchr::make_dictionary(actual_terms = real_keywords, 
-                                          likely_terms = raked_keywords)
+study_dict <- litsearchr::make_dictionary(terms = list(raked_keywords, real_keywords))
 
 study_corpus <- litsearchr::make_corpus(study_data)
 
