@@ -49,7 +49,7 @@
 
 	
 	<div class="container">
-<h1><span style="font-family:monospace"> litsearchr</span></h1>
+<h1>litsearchr</h1>
 		<p class="lead" style="font-color:#fffff">an R package to facilitate quasi-automatic search strategy development for systematic reviews</p>
 		</div>
 
@@ -86,14 +86,22 @@
 
 <!--about litsearchr -->
 <div id="about" class="container">
-  <h2>About <span style="font-family:monospace"> litsearchr</span></h2>
+  <h2>About litsearchr</h2>
   <hr>
-    <div class="col-md-4"><img src="styles/litsearchr-hex.png" width=250 height=250 float=right></div>
-  <p>The <span style="font-family:monospace"> litsearchr</span> package for R facilitates systematic search strategy development by partially automating keyword selection and writing Boolean search strings. It uses the Rapid Automatic Keyword Extraction algorithm (Rose et al. 2010) to identify potential keywords from a scoping search and selects important keywords based on their influence in a keyword co-occurrence network. After keywords are grouped into concept groups, <span style="font-family:monospace"> litsearchr</span> writes Boolean searches in up to 53 languages, with stemming support for English. The searches have been tested and work fully in 15 commonly used search databases; other databases may also work but have not been tested.</p>
+    <div class="col-md-4"><img src="styles/litsearchr-hex.png" width=240 height=auto float=left></div>
+  <p>The litsearchr package for R facilitates systematic search strategy development by partially automating keyword selection and writing Boolean search strings. It uses the Rapid Automatic Keyword Extraction algorithm (Rose et al. 2010) to identify potential keywords from a scoping search and selects important keywords based on their influence in a keyword co-occurrence network. After keywords are grouped into concept groups, litsearchr writes Boolean searches in up to 53 languages, with stemming support for English. The searches have been tested and work fully in 15 commonly used search databases; other databases may also work but have not been tested.</p>
 
-  <p>Our intent in creating <span style="font-family:monospace"> litsearchr</span> is to make the process of designing a search strategy for systematic reviews easier for researchers in fields that lack Medical Subject Headings (MeSH) by identifying the terms commonly used in a field. By partially automating keyword selection, litsearchr reduces investigator bias in keyword selection and increases the repeatability of systematic reviews. It also reduces errors in creating database-specific searches by generating searches that work across a wide range of databases. Our hope is that <span style="font-family:monospace"> litsearchr</span> can be used to facilitate systematic reviews and contribute to automating evidence synthesis in ecology and conservation biology.</p>
+  <p>Our intent in creating litsearchr is to make the process of designing a search strategy for systematic reviews easier for researchers in fields that lack Medical Subject Headings (MeSH) by identifying the terms commonly used in a field. By partially automating keyword selection, litsearchr reduces investigator bias in keyword selection and increases the repeatability of systematic reviews. It also reduces errors in creating database-specific searches by generating searches that work across a wide range of databases. Our hope is that litsearchr can be used to facilitate systematic reviews and contribute to automating evidence synthesis in ecology and conservation biology.</p>
 
-  <p><span style="font-family:monospace"> litsearchr</span> is a work in progress - any and all comments, suggestions, bugs, or questions are welcome! Please email <a href = "mailto:eliza.grames@uconn.edu">eliza.grames@uconn.edu</a> or open an issue at <a href="https://github.com/elizagrames/litsearchr">https://github.com/elizagrames/litsearchr.</a></p>
+  <p>litsearchr is a work in progress - any and all comments, suggestions, bugs, or questions are welcome! Please email <a href = "mailto:eliza.grames@uconn.edu">eliza.grames@uconn.edu</a> or open an issue at <a href="https://github.com/elizagrames/litsearchr">https://github.com/elizagrames/litsearchr.</a></p>
+  
+  <hr>
+  
+
+
+  <div class="col-md-4"><img src="https://rmetaverse.github.io/assets/images/hex/metaverse_hex.png" width=150 height=auto float=left></div>
+<p><br>litsearchr is part of the metaverse, which is a set of R packages that span the entire scope of evidence synthesis in R, from generating search terms, assembling results, screening articles, visualizing risk of bias, doing a meta-analysis, and presenting results. <a href="https://rmetaverse.github.io/">Check out the metaverse here</a> for other packages like robvis and revtools. </p>
+
 
   </div>
 
@@ -103,20 +111,9 @@
     <h2>Getting Started</h2>
     <hr>
 
-<p>To install <span style="font-family:monospace"> litsearchr</span> use <span style="font-family:monospace">devtools::install_github("elizagrames/litsearchr")</span> in R or RStudio. You may need to install the devtools package if it is not already installed. This will also install all the <span style="font-family:monospace"> litsearchr</span> dependencies.</p>
+<p>To install litsearchr use <span style="font-family:monospace">devtools::install_github("elizagrames/litsearchr")</span> in R or RStudio. You may need to install the devtools package if it is not already installed. This will also install all the litsearchr dependencies.</p>
 
-<p>Before you get started using <span style="font-family:monospace"> litsearchr</span>, we suggest you work through the tutorials and examples below to see how the functions interact with each other. We have also included R Markdown templates that cover the entire <span style="font-family:monospace"> litsearchr</span> process of writing a Boolean search and testing a search; each template has instructions and prompts at steps that need manual input or decisions.</p>
-
-<h3>Downloads</h3>
- <div class="row">
-     <div class="col-md-6">Template for using <span style="font-family:monospace"> litsearchr</span> to conduct a scoping search and write Boolean searches
-     </div>
-     <div class="col-md-6">Template for checking a search strategy against a list of known articles in <span style="font-family:monospace"> litsearchr</span></div>
- </div>
- <div class="row">
-   <div class="col-md-6"><center><a href="litsearchr_template_writing_searches.Rmd"><img src="styles/download.png" width=60 height=60></a></center></div>
-   <div class="col-md-6"><center><a href="litsearchr_template_testing_searches.Rmd"><img src="styles/download.png" width=60 height=60></a></center></div>
- </div>
+<p>Before you get started using litsearchr, we suggest you work through the tutorials and examples below to see how the functions interact with each other. 
 
     </div></div>
 
@@ -127,12 +124,15 @@
   
   
   <div class="row">
-     <div class="col-md-6">Introduction to <span style="font-family:monospace"> litsearchr</span> with an example of writing a systematic review search strategy for Black-backed Woodpecker occupancy of post-fire forest systems </div>
-     <div class="col-md-6">Using in <span style="font-family:monospace"> litsearchr</span> to test a search strategy against a list of known articles with an example of reindeer browsing impacts</div>
+         <div class="col-md-4">Search term selection with litsearchr v0.2.0 for an example systematic review of the effects of prescribed burning on abundance of red-cockaded woodpeckers (Picoides borealis) </div>
+     <div class="col-md-4">Using in litsearchr to test a search strategy against a list of known articles with an example of reindeer browsing impacts</div>
+     <div class="col-md-4"><b>[[OLD: v0.1.0]]</b> Introduction to litsearchr v0.1.0 with an example of writing a systematic review search strategy for Black-backed Woodpecker occupancy of post-fire forest systems </div>
+
   </div>
   <div class="row">
-   <div class="col-md-6"><center><a href="introduction_vignette.html"><img src="styles/file_text.png" width=100 height=100></a></center></div>
-   <div class="col-md-6"><center><a href="testing_tutorial.html"><img src="styles/file_text.png" width=100 height=100></a></center></div>
+   <div class="col-md-4"><center><a href="litsearchr_vignette_v020.html"><img src="styles/file_text.png" width=100 height=100></a></center></div>
+   <div class="col-md-4"><center><a href="testing_tutorial.html"><img src="styles/file_text.png" width=100 height=100></a></center></div>
+   <div class="col-md-4"><center><a href="introduction_vignette_v010.html"><img src="styles/file_text.png" width=100 height=100></a></center></div>
  </div>
   </div>
   
