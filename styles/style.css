@@ -2,7 +2,7 @@ html, body { color: #434242; font-family: 'Open Sans', sans-serif !important; he
 body { background: #F3EFE0; font-size: 15px; line-height: 1.64; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b { font-family: 'Open Sans', sans-serif !important; margin-bottom: 20px; }
-h1,h4 { font-weight: 700; margin-bottom: 10px; }
+h1,h4 { font-weight: 700; font-size:54px; margin-bottom: 10px; }
 h2,h3 { font-weight: 300; color: #006E6D; }
 h2 { font-size: 54px; text-align: center; }
 h3 { font-size: 28px; }
@@ -12,7 +12,7 @@ p.lead { text-align: center; color: #727c6f; }
 p.lead a { color: #FFFFFF; text-decoration: underline; }
 p.lead a:hover { text-decoration: none; }
 ul.no-bullets { list-style-type: none; margin: 0px; padding: 0px; }
-hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.2; filter:alpha(opacity=20); }
+hr { margin: 40px 0px; border-color: #727c6f; opacity: 0.75; filter:alpha(opacity=75); }
 
 .project-referal { margin-top: 40px; }
 .project-referal p { font-style: italic; color: #999999; }
