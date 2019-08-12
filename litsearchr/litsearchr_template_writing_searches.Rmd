@@ -7,67 +7,99 @@ editor_options:
 
 # Step 1: Conduct scoping search
 
-Conduct your scoping search in any or all of the following databases: BIOSIS Citation Index (Web of Science), Zoological Record (Web of Science), Scopus, or Academic Search Premier (EBSCO). For Web of Science databases, export Full Records as a tab-delimited (.txt) file with UTF-8 encoding. For Scopus, export a .csv with "Citation information" and "Abstracts & keywords" selected. For Academic Search Premier, save all results to a folder, then export the folder as .csv. Save all results to a single directory.
+Conduct your scoping search in any database that allows you to export .ris or .bib files, or any of the databases listed with litsearchr::usable_databases(). 
 
 ```{r}
-scoping_directory <- "./"
+litsearchr::usable_databases()
+scoping_directory <- "../BBWO_example/naive_results/"
 ```
 
 Decide if you want to only search for n-grams (phrases with at least two words) or if you also want to include unigrams (single words). Using n-grams leads to more specific searches and is recommended to get more relevant words, especially for the keywords identified by RAKE. If you're worried about missing important unigrams, a good compromise is to allow unigrams in select_actual_terms(). Change the code in the chunk below if you want different n-gram or frequency settings, then run the entire chunk. 
 
 ```{r}
-study_data <- litsearchr::import_results(directory=scoping_directory, filename=NULL,
-                                       remove_duplicates = FALSE, 
-                                       clean_dataset = TRUE)
-
-study_data <- litsearchr::deduplicate(study_data, use_abstracts = FALSE, use_titles = TRUE, method = "quick")
-study_data <- litsearchr::deduplicate(study_data, use_abstracts = FALSE, use_titles = TRUE, method = "tokens", title_sim=.95)
-study_data <- litsearchr::deduplicate(study_data, use_abstracts = TRUE, use_titles = TRUE, method = "tokens", doc_sim = .85)
-
-raked_keywords <- litsearchr::extract_terms(study_data, type="RAKE",
-                                            new_stopwords = NULL, 
-                                            min_freq = 2, 
-                                            title = TRUE, 
-                                            abstract = TRUE, 
-                                            ngrams = TRUE, n=2)
-
-real_keywords <- litsearchr::extract_terms(study_data, type = "tagged",
-                                                 ngrams = TRUE, n=2)
-
-study_dict <- litsearchr::make_dictionary(terms = list(raked_keywords, real_keywords))
-
-study_corpus <- litsearchr::make_corpus(study_data)
-
-study_dfm <- litsearchr::create_dfm(study_corpus, 
-                                    my_dic=study_dict)
-
-study_graph <- litsearchr::create_network(study_dfm, 
-                                          min_studies=3, 
-                                          min_occurrences = 3)
-
-hist(igraph::strength(study_graph), 100, 
-     main="Histogram of node strengths", 
-     xlab="Node strength")
-plot(sort(igraph::strength(study_graph)), 
-     ylab="Node strength", 
-     main="Ranked node strengths", 
-     xlab="Rank")
+study_import <-
+  litsearchr::import_results(directory = scoping_directory)
+  
+  study_data <-
+  litsearchr::remove_duplicates(df = study_import, field = "title", method =
+  "quick")
+  
+  raked_keywords <-
+  litsearchr::extract_terms(
+  text = paste(study_data$text, collapse = "; "),
+  method = "RAKE",
+  min_freq = 2,
+  ngrams = TRUE,
+  n = 2
+  )
+  
+  real_keywords <-
+  litsearchr::extract_terms(
+  keywords = study_data$keywords,
+  method = "tagged",
+  min_freq = 2,
+  ngrams = TRUE,
+  n = 2
+  )
+  
+  all_keywords <- unique(append(raked_keywords, real_keywords))
+  
+  study_dfm <-
+  litsearchr::create_dfm(elements = study_data$text,
+  type = "keywords",
+  keywords = all_keywords)
+  
+  study_graph <- litsearchr::create_network(study_dfm,
+  min_studies = 3,
+  min_occurrences = 3)
+  
+  plot(
+  sort(igraph::strength(study_graph)),
+  ylab = "Node strength",
+  main = "Ranked node strengths",
+  xlab = "Rank",
+  type = "l"
+  )
 ```
 
 Look at the plot of ranked node strengths (plotted by the last line of code in the chunk above) and decide how many knots to place for the spline model. Three works fairly well for most graphs, but if your graph has additional change points you want to capture or doesn't look like the graph from the main vignette, you may want to allow more (or fewer) knots.  
 
 ```{r}
-cutoffs_spline <- litsearchr::find_cutoff(study_graph, method = "spline", degrees = 2, knot_num = 3, diagnostics = TRUE, importance_method = "strength")
+
+cutoffs_spline <-
+  litsearchr::find_cutoff(
+  study_graph,
+  method = "spline",
+  degrees = 2,
+  knot_num = 3,
+  diagnostics = TRUE,
+  importance_method = "strength"
+  )
+
+# alternative that is much quicker
+
+cutoffs_cumulative <-
+  litsearchr::find_cutoff(
+  study_graph,
+  method = "cumulative",
+  percent=0.5,
+  diagnostics = FALSE,
+  importance_method = "strength"
+  )
 ```
 
-Look at the diagnostic plots. Are they showing essentially no trend in the early portions but turning into a funnel plot later on? If there are clear trends early on that deviate from the zero line, you probably need to change the number of knots. Just don't use too many knots because then you're overfitting. 
+Look at the diagnostic plots. Are they showing essentially no trend in the early portions but deviating from zero later on? If there are clear trends early on that deviate from the zero line, you probably need to change the number of knots. Just don't use too many knots because then you're overfitting.
 
-If you're using a cutoff other than the first knot, make a note of it in the spreadsheet and also change cutoffs_spline[1] in the code below. Once you're happy with the spline fit, run this chunk of code:
+If you're using a cutoff other than the first knot, make a note of it in the spreadsheet and also change cutoffs_spline[1] in the code below. If you're using the cumulative method, you don't need to change anything. Once you're happy with the cutoff, run this chunk of code:
 
 ```{r}
-reduced_graph <- litsearchr::reduce_graph(study_graph, cutoff_strength = cutoffs_spline[1])
-search_terms <- litsearchr::get_keywords(reduced_graph, savekeywords = TRUE, makewordle = FALSE)
-write.csv(search_terms, "./ngram-potential-keywords.csv")
+reduced_graph <-
+  litsearchr::reduce_graph(study_graph, cutoff_strength = cutoffs_spline[1])
+  search_terms <-
+  litsearchr::get_keywords(reduced_graph,
+  savekeywords = FALSE,
+  makewordle = FALSE)
+  write.csv(search_terms, "./ngram-potential-keywords.csv")
 ```
 
 
@@ -95,7 +127,7 @@ Now you're going to need to write your own code because it will depend on what y
 
 ```
 
-Get similar terms. You'll likely want to save them as a .csv, group them, and then read the .csv back in (see commented out lines below).
+Optionally, get similar terms to the ones you've already included. You'll likely want to save them as a .csv, group them, and then read the .csv back in (see commented out lines below for an example and modify the code to match your concept groups).
 
 ```{r}
 similar_terms <- litsearchr::get_similar_terms(my_search_terms, graph = study_graph)
@@ -125,29 +157,37 @@ disciplines <- c("ecology", "conservation", "biology")
 
 litsearchr::available_languages()
 
-litsearchr::language_graphs(
-  lang_data = litsearchr::get_language_data(key_topics = disciplines), 
-  no_return = 15, key_topics = disciplines)
+litsearchr::get_language_data(key_topics = disciplines)[1:10, ]
 
 ```
 
 Input the languages you decide to write searches in to the chunk below (replacing the current languages as needed). You also need to include your Google Translate API key.
 
 ```{r}
-search_languages <- c("Russian", "Spanish", "Indonesian", "French", "German")
-
-my_API_key <- readLines("~/Google-Translate-API")
+search_languages <-
+  c("English",
+  "Russian",
+  "Spanish",
+  "Indonesian",
+  "French",
+  "German")
+  
+  my_API_key <- readLines("~/Google-Translate-API")
 
 ```
 
 Now, you're ready to write your search. Run the code chunk below. The searches will appear in your working directory. This step can take some time depending on how many languages you are translating into. 
 
 ```{r}
-litsearchr::write_search(groupdata = my_search_terms, 
-                         languages = search_languages, 
-                         exactphrase = FALSE, directory="./", 
-                         API_key = my_API_key)
-
-litsearchr::write_stemmed_search(groupdata = my_search_terms, 
-                                 exactphrase = TRUE, directory="./")
+litsearchr::write_search(
+  groupdata = my_search_terms,
+  languages = search_languages,
+  exactphrase = TRUE,
+  stemming = TRUE,
+  directory = "./",
+  API_key = my_API_key,
+  writesearch = FALSE,
+  verbose = TRUE
+  )
+  
 ```
