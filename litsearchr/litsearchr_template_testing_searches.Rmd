@@ -28,11 +28,10 @@ dir.create("./title_hits/")
 Run the title searches in all the databases you plan to use. This way, you know if the articles are actually indexed in those databases and could be found by your search strategy. Save the output of these searches in the directory ./title_hits/ which is in your current working directory. 
 
 ```{r}
-title_search <- litsearchr::import_results(directory="./title_hits/", 
-                                         remove_duplicates = TRUE, 
-                                         clean_dataset = FALSE)
+title_search <- litsearchr::import_results(directory="./title_hits/")
 
-articles_found <- litsearchr::check_recall(true_hits = gold_standard, retrieved_articles = title_search$title)
+articles_found <- litsearchr::check_recall(true_hits = gold_standard, 
+                                           retrieved_articles = title_search$title)
 write.csv(articles_found, "./articles_found.csv")
 
 ```
@@ -60,7 +59,7 @@ To see if your searches retrieve the quasi-gold standard articles, repeat them b
 Save these results to the "./search_hits/" directory. Then run the code below.
 
 ```{r}
-my_search <- litsearchr::import_results(directory="./search_hits/", remove_duplicates=TRUE, clean_dataset=FALSE)
+my_search <- litsearchr::import_results(directory="./search_hits/")
 
 search_test <- litsearchr::check_recall(true_hits = qgs, retrieved_articles = my_search$title)
 
