@@ -62,7 +62,7 @@
 <ul class="nav navbar-nav">
   <li class=""><a href="#about">About litsearchr </a></li>
   <li class=""><a href="#introduction">Getting Started</a></li>
-    <li class=""><a href="#examples">Tutorials</a></li>
+    <li class=""><a href="#examples">Vignette</a></li>
       <li class=""><a href="#contact">Contact</a></li>
 </ul>
 </div><!-- /.navbar-collapse -->
@@ -77,13 +77,13 @@
 <span style="color: #006e6d; font-size: 50pt"><b>litsearchr</b></span>
 				<h3>an R package to facilitate quasi-automatic search strategy development for systematic reviews</h3>
 				<br>
-				<hr>
-				Grames, EM, Stillman, AN, Tingley, MW, Elphick, CS. An automated approach to identifying search terms for systematic reviews using keyword co‐occurrence networks. <i>Methods Ecol Evol</i>. 2019; 00: 1– 10. <a href="https://doi.org/10.1111/2041-210X.13268">https://doi.org/10.1111/2041-210X.13268</a></div></div>
+				<hr><b>
+				Grames, EM, Stillman, AN, Tingley, MW, Elphick, CS. An automated approach to identifying search terms for systematic reviews using keyword co‐occurrence networks. <i>Methods Ecol Evol</i>. 2019; 00: 1– 10. <a href="https://doi.org/10.1111/2041-210X.13268">https://doi.org/10.1111/2041-210X.13268</a></b></div></div>
 				<div id="about" class="container">
 <h3>About litsearchr</h3><hr>
-  <p>The litsearchr package for R facilitates systematic search strategy development by partially automating keyword selection and writing Boolean search strings. It uses the Rapid Automatic Keyword Extraction algorithm to identify potential keywords from a scoping search and selects important keywords based on their influence in a keyword co-occurrence network. After keywords are grouped into concept groups, litsearchr writes Boolean searches in up to 53 languages, with stemming support for English. The searches have been tested and work fully in 15 commonly used search databases; other databases may also work but have not been tested.</p>
+  <p>The litsearchr package for R facilitates systematic search strategy development by partially automating keyword selection and writing Boolean search strings. It uses the Rapid Automatic Keyword Extraction algorithm to identify potential keywords from a scoping search and selects important keywords based on their importance in a keyword co-occurrence network. After keywords are grouped into concept groups, litsearchr writes Boolean searches in up to 53 languages, with stemming support for English. The searches have been tested and work fully in 15 commonly used search databases; other databases may also work but have not been tested.</p>
 
-  <p>Our intent in creating litsearchr is to make the process of designing a search strategy for systematic reviews easier for researchers in fields that lack Medical Subject Headings (MeSH) by identifying the terms commonly used in a field. By partially automating keyword selection, litsearchr reduces investigator bias in keyword selection and increases the repeatability of systematic reviews. It also reduces errors in creating database-specific searches by generating searches that work across a wide range of databases. Our hope is that litsearchr can be used to facilitate systematic reviews and contribute to automating evidence synthesis in ecology and conservation biology.</p>
+  <p>Our intent in creating litsearchr is to make the process of designing a search strategy for systematic reviews easier for researchers by identifying the terms commonly used in a field. By partially automating keyword selection, litsearchr reduces investigator bias in keyword selection and increases the repeatability of systematic reviews. It also reduces errors in creating database-specific searches by generating searches that work across a wide range of databases. Our hope is that litsearchr can be used to facilitate systematic reviews and contribute to automating evidence synthesis in ecology and conservation biology.</p>
 
   <p>litsearchr is a work in progress - any and all comments, suggestions, bugs, or questions are welcome! Please email <a href = "mailto:eliza.grames@uconn.edu">eliza.grames@uconn.edu</a> or open an issue at <a href="https://github.com/elizagrames/litsearchr">https://github.com/elizagrames/litsearchr.</a></p>
   
@@ -105,26 +105,24 @@
 
 <p>To install litsearchr use <span style="font-family:monospace">devtools::install_github("elizagrames/litsearchr")</span> in R or RStudio. You may need to install the devtools package if it is not already installed. This will also install all the litsearchr dependencies.</p>
 
-<p>Before you get started using litsearchr, we suggest you work through the tutorials and examples below to see how the functions interact with each other. 
+<p>Before you get started using litsearchr, we suggest you work through the vignette to see how the functions interact with each other. 
 
     </div></div>
 
 <!--examples -->
 <div id="examples" class="container">
-  <h3>Tutorials and Examples</h3>
+  <h3>Vignette</h3>
   <hr>
   
   
   <div class="row">
-         <div class="col-md-4">Search term selection with litsearchr v0.2.0 for an example systematic review of the effects of prescribed burning on abundance of red-cockaded woodpeckers (Picoides borealis) </div>
-     <div class="col-md-4">Using in litsearchr to test a search strategy against a list of known articles with an example of reindeer browsing impacts</div>
-     <div class="col-md-4"><b>[[OLD: v0.1.0]]</b> Introduction to litsearchr v0.1.0 with an example of writing a systematic review search strategy for Black-backed Woodpecker occupancy of post-fire forest systems </div>
+         <div class="col-md-6">Search term selection with litsearchr v0.3.0 for an example systematic review of the effects of fire on black-backed woodpeckers</div>
+     <div class="col-md-6"><b>[[OLD: v0.1.0]]</b> Introduction to litsearchr v0.1.0 with an example of writing a systematic review search strategy for Black-backed Woodpecker occupancy of post-fire forest systems </div>
 
   </div>
   <div class="row">
-   <div class="col-md-4"><center><a href="litsearchr_vignette_v020.html"><img src="styles/file_text.png" width=100 height=100></a></center></div>
-   <div class="col-md-4"><center><a href="testing_tutorial.html"><img src="styles/file_text.png" width=100 height=100></a></center></div>
-   <div class="col-md-4"><center><a href="introduction_vignette_v010.html"><img src="styles/file_text.png" width=100 height=100></a></center></div>
+   <div class="col-md-6"><center><a href="litsearchr_vignette_v030.html"><img src="styles/file_text.png" width=100 height=100></a></center></div>
+   <div class="col-md-6"><center><a href="introduction_vignette_v010.html"><img src="styles/file_text.png" width=100 height=100></a></center></div>
  </div>
   </div>
   
@@ -140,7 +138,7 @@
 
      <div class="row">
      <div class="col-md-6">
-     <b>Eliza Grames</b> is a PhD student at the University of Connecticut focusing on conservation of forest songbirds and methods of improving and automating evidence synthesis.
+     <b>Eliza Grames</b> is a PhD candidate at the University of Connecticut focusing on conservation of forest songbirds and methods of improving and automating evidence synthesis.
      <a href="http://twitter.com/ElizaGrames" target="_blank">
      <img src="styles/twitter.png" width=20, height=20>
      @ElizaGrames				</a>
@@ -153,7 +151,7 @@ eliza.grames@uconn.edu
      Website				</a>
      </div>
      <div class="col-md-6">
-     <b>Andrew Stillman</b> is a PhD student at the University of Connecticut focusing on Black-backed Woodpecker occupancy of post-fire forest systems.
+     <b>Andrew Stillman</b> is a PhD candidate at the University of Connecticut focusing on Black-backed Woodpecker occupancy of post-fire forest systems.
      <a href="http://twitter.com/ANStillman" target="_blank">
      <img src="styles/twitter.png" width=20, height=20>
      @ANStillman				</a>

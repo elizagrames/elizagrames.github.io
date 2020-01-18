@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Eliza M. Grames and Emily A. Hennessy" />
+
+<meta name="date" content="2020-01-18" />
+
+<title>Search term selection with litsearchr for an example systematic review of the effects of fire on black-backed woodpeckers</title>
+
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#header {
+text-align: center;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Search term selection with litsearchr for an example systematic review of the effects of fire on black-backed woodpeckers</h1>
+<h4 class="author">Eliza M. Grames and Emily A. Hennessy</h4>
+<h4 class="date">2020-01-18</h4>
+
+
+
+<div id="about-the-package" class="section level2">
+<h2>About the package</h2>
+<p>The <em>litsearchr</em> package for R is designed to partially automate search term selection and writing search strategies for systematic reviews. This vignette demonstrates its utility through a mock, example review examining the effects of fire on black-backed woodpeckers by demonstrating how the package: (1) Identifies potential keywords through the naive search input, (2) Builds a keyword co-occurence network to assist with building a more precise search strategy, (3) Uses a cutoff function to identify important changes in keyword importance, (4) Assists with grouping terms into concepts, and (5) Writes a Boolean search as a result of completion of the four previous steps.</p>
+</div>
+<div id="write-and-conduct-naive-search" class="section level2">
+<h2>Write and conduct naive search</h2>
+<p>In our empirical example, we begin with a naive search intended to capture a set of relevant articles. Naive search terms: ((“black-backed woodpecker” OR “picoides arcticus” OR “picoides tridactylus” AND (burn* OR fire*)). We ran the search in Scopus and Zoological Record (Web of Science), exporting results in .ris and .txt, respectively. These exported search results are then imported to litsearchr using the <em>import_results</em> function and next deduplicated using the <em>remove_duplicates</em> function. In some cases, it is best to run the <em>remove_duplicates</em> function two or more times, for example starting with exact matches and moving on to fuzzy matching.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">search_directory &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata/&quot;</span>, <span class="dt">package=</span><span class="st">&quot;synthesisr&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">naiveimport &lt;-</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="st">  </span>litsearchr<span class="op">::</span><span class="kw">import_results</span>(<span class="dt">directory =</span> search_directory, <span class="dt">verbose =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">naiveresults &lt;-</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="st">  </span>litsearchr<span class="op">::</span><span class="kw">remove_duplicates</span>(naiveimport, <span class="dt">field =</span> <span class="st">&quot;title&quot;</span>, <span class="dt">method =</span> <span class="st">&quot;stringdist&quot;</span>)</a></code></pre></div>
+</div>
+<div id="identify-potential-keywords" class="section level2">
+<h2>1. Identify potential keywords</h2>
+<p>Using the deduplicated records captured from the naive search, the <em>extract_terms</em> function will systematically extract all potential keywords from the article titles, abstracts, or other fields that are passed to the function as text. There are a couple different methods for extracting terms: the Rapid Automatic Keyword Extraction algorithm (RAKE), a function that approximates RAKE (fakerake), or simple ngram detection. Alternatively, <em>extract_terms</em> can take the keywords field from the deduplicated records (if it exists) and clean up author- and database-tagged keywords.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">rakedkeywords &lt;-</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="st">  </span>litsearchr<span class="op">::</span><span class="kw">extract_terms</span>(</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">    <span class="dt">text =</span> <span class="kw">paste</span>(naiveresults<span class="op">$</span>title, naiveresults<span class="op">$</span>abstract),</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">    <span class="dt">method =</span> <span class="st">&quot;fakerake&quot;</span>,</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">    <span class="dt">min_freq =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">    <span class="dt">ngrams =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">    <span class="dt">min_n =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">    <span class="dt">language =</span> <span class="st">&quot;English&quot;</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9">  )</a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; Loading required namespace: stopwords</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12">taggedkeywords &lt;-</a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="st">  </span>litsearchr<span class="op">::</span><span class="kw">extract_terms</span>(</a>
+<a class="sourceLine" id="cb2-14" data-line-number="14">    <span class="dt">keywords =</span> naiveresults<span class="op">$</span>keywords,</a>
+<a class="sourceLine" id="cb2-15" data-line-number="15">    <span class="dt">method =</span> <span class="st">&quot;tagged&quot;</span>,</a>
+<a class="sourceLine" id="cb2-16" data-line-number="16">    <span class="dt">min_freq =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb2-17" data-line-number="17">    <span class="dt">ngrams =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb2-18" data-line-number="18">    <span class="dt">min_n =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb2-19" data-line-number="19">    <span class="dt">language =</span> <span class="st">&quot;English&quot;</span></a>
+<a class="sourceLine" id="cb2-20" data-line-number="20">  )</a></code></pre></div>
+</div>
+<div id="build-the-keyword-co-occurrence-network" class="section level2">
+<h2>2. Build the keyword co-occurrence network</h2>
+<p>Using the results from <em>Step 1, Identify potential keywords</em>, a series of functions are next run to create a co-occurrence network.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">all_keywords &lt;-<span class="st"> </span><span class="kw">unique</span>(<span class="kw">append</span>(taggedkeywords, rakedkeywords))</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">naivedfm &lt;-</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="st">  </span>litsearchr<span class="op">::</span><span class="kw">create_dfm</span>(</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">    <span class="dt">elements =</span> <span class="kw">paste</span>(naiveresults<span class="op">$</span>title, naiveresults<span class="op">$</span>abstract),</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">    <span class="dt">features =</span> all_keywords</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">  )</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">naivegraph &lt;-</a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="st">  </span>litsearchr<span class="op">::</span><span class="kw">create_network</span>(</a>
+<a class="sourceLine" id="cb3-11" data-line-number="11">    <span class="dt">search_dfm =</span> <span class="kw">as.matrix</span>(naivedfm),</a>
+<a class="sourceLine" id="cb3-12" data-line-number="12">    <span class="dt">min_studies =</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb3-13" data-line-number="13">    <span class="dt">min_occ =</span> <span class="dv">2</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14">  )</a></code></pre></div>
+</div>
+<div id="identify-change-points-in-keyword-importance" class="section level2">
+<h2>3. Identify change points in keyword importance</h2>
+<p>The keyword co-occurrence network can next be quantitatively assessed to detect a cutoff point for changes in the level of importance of a particular keyword to the concept. This will help in making an efficient but comprehensive search by removing terms that are not central to a field of study.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">cutoff &lt;-</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="st">  </span>litsearchr<span class="op">::</span><span class="kw">find_cutoff</span>(</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">    naivegraph,</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">    <span class="dt">method =</span> <span class="st">&quot;cumulative&quot;</span>,</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">    <span class="dt">percent =</span> <span class="fl">.80</span>,</a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">    <span class="dt">imp_method =</span> <span class="st">&quot;strength&quot;</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">  )</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">reducedgraph &lt;-</a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="st">  </span>litsearchr<span class="op">::</span><span class="kw">reduce_graph</span>(naivegraph, <span class="dt">cutoff_strength =</span> cutoff[<span class="dv">1</span>])</a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12">searchterms &lt;-<span class="st"> </span>litsearchr<span class="op">::</span><span class="kw">get_keywords</span>(reducedgraph)</a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="kw">head</span>(searchterms, <span class="dv">20</span>)</a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt;  [1] &quot;beetle-killed forests&quot;                    </span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;  [2] &quot;beetle outbreaks&quot;                         </span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt;  [3] &quot;black-backed woodpecker&quot;                  </span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt;  [4] &quot;black-backed woodpecker picoides arcticus&quot;</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt;  [5] &quot;disturbance agents&quot;                       </span></a>
+<a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co">#&gt;  [6] &quot;environmental variables&quot;                  </span></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt;  [7] &quot;fire-&quot;                                    </span></a>
+<a class="sourceLine" id="cb4-22" data-line-number="22"><span class="co">#&gt;  [8] &quot;fire-associated&quot;                          </span></a>
+<a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co">#&gt;  [9] &quot;forest stands&quot;                            </span></a>
+<a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co">#&gt; [10] &quot;habitat created&quot;                          </span></a>
+<a class="sourceLine" id="cb4-25" data-line-number="25"><span class="co">#&gt; [11] &quot;high-quality habitat&quot;                     </span></a>
+<a class="sourceLine" id="cb4-26" data-line-number="26"><span class="co">#&gt; [12] &quot;higher elevation&quot;                         </span></a>
+<a class="sourceLine" id="cb4-27" data-line-number="27"><span class="co">#&gt; [13] &quot;population dynamics&quot;                      </span></a>
+<a class="sourceLine" id="cb4-28" data-line-number="28"><span class="co">#&gt; [14] &quot;results demonstrate&quot;                      </span></a>
+<a class="sourceLine" id="cb4-29" data-line-number="29"><span class="co">#&gt; [15] &quot;sierra nevada&quot;                            </span></a>
+<a class="sourceLine" id="cb4-30" data-line-number="30"><span class="co">#&gt; [16] &quot;snag-dependent species&quot;                   </span></a>
+<a class="sourceLine" id="cb4-31" data-line-number="31"><span class="co">#&gt; [17] &quot;western united states&quot;                    </span></a>
+<a class="sourceLine" id="cb4-32" data-line-number="32"><span class="co">#&gt; [18] &quot;wildlife species&quot;                         </span></a>
+<a class="sourceLine" id="cb4-33" data-line-number="33"><span class="co">#&gt; [19] &quot;woodpecker occupancy&quot;                     </span></a>
+<a class="sourceLine" id="cb4-34" data-line-number="34"><span class="co">#&gt; [20] &quot;results suggest&quot;</span></a></code></pre></div>
+</div>
+<div id="group-terms-into-concepts" class="section level2">
+<h2>4. Group terms into concepts</h2>
+<p>Now that the important keywords for the search have been identified, they can be grouped into blocks to build the search strategy. For Boolean searches, terms are grouped into similar concept groups where they can be combined with “OR” statements and the separate blocks combined with “AND” statements.</p>
+<p>In our example, all keywords that relate to woodpeckers would be in a similar concept group (e.g., “three-toed woodpeckers”, “cavity-nesting birds” etc.) while terms relating to fire (e.g. “post-fire”, “burned forest”, etc.) would be in their own concept group.</p>
+<p>Terms that fit multiple concept groups can be added to both without changing the logic of the Boolean connections. For example, a term like “post-fire woodpecker ecology” would be added to both the woodpecker and fire concept groups by labeling its group “woodpecker, fire”. We recommend saving the search terms to a .csv file, adding a new column called “group”, and entering the group names in it, then reading in the .csv file. Although this can be done in R, adding tags to 300+ suggested search terms is generally quicker in a .csv file. Example code for this is commented out below as it cannot be run without the .csv file.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co"># write.csv(searchterms, &quot;./search_terms.csv&quot;)</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co"># manually group terms in the csv</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co"># grouped_terms &lt;- read.csv(&quot;./search_terms_grouped.csv&quot;)</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co"># extract the woodpecker terms from the csv</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co"># woodpecker_terms &lt;- grouped_terms$term[which(stringr::str_detect(grouped_terms$group, &quot;woodpecker&quot;))]</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co"># join together a list of manually generated woodpecker terms with the ones from the csv</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co"># woodpeckers &lt;- unique(append(c(&quot;woodpecker&quot;)), woodpecker_terms)</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co"># repeat this for all concept groups</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co"># then merge them into a list, using the code below as an example</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co"># mysearchterms &lt;- list(woodpeckers, fire)</span></a></code></pre></div>
+</div>
+<div id="write-boolean-searches" class="section level2">
+<h2>5. Write Boolean searches</h2>
+<p>Once keywords are grouped into concept groups in a list, the <em>write_search</em> function can be used to write Boolean searches in multiple languages, ready for export and use in chosen databases. The example below demonstrates writing a search in English using the search terms.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co"># Note: these search terms are a shortened example of a full search for illustration purposes only</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">mysearchterms &lt;-</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="st">  </span><span class="kw">list</span>(</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">    <span class="kw">c</span>(</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">      <span class="st">&quot;picoides arcticus&quot;</span>,</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6">      <span class="st">&quot;black-backed woodpecker&quot;</span>,</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7">      <span class="st">&quot;cavity-nesting birds&quot;</span>,</a>
+<a class="sourceLine" id="cb6-8" data-line-number="8">      <span class="st">&quot;picoides tridactylus&quot;</span>,</a>
+<a class="sourceLine" id="cb6-9" data-line-number="9">      <span class="st">&quot;three-toed woodpecker&quot;</span>),</a>
+<a class="sourceLine" id="cb6-10" data-line-number="10">    <span class="kw">c</span>(</a>
+<a class="sourceLine" id="cb6-11" data-line-number="11">      <span class="st">&quot;wildfire&quot;</span>,</a>
+<a class="sourceLine" id="cb6-12" data-line-number="12">      <span class="st">&quot;burned forest&quot;</span>,</a>
+<a class="sourceLine" id="cb6-13" data-line-number="13">      <span class="st">&quot;post-fire&quot;</span>,</a>
+<a class="sourceLine" id="cb6-14" data-line-number="14">      <span class="st">&quot;postfire salvage logging&quot;</span>,</a>
+<a class="sourceLine" id="cb6-15" data-line-number="15">      <span class="st">&quot;fire severity&quot;</span>,</a>
+<a class="sourceLine" id="cb6-16" data-line-number="16">      <span class="st">&quot;recently burned&quot;</span></a>
+<a class="sourceLine" id="cb6-17" data-line-number="17">    )</a>
+<a class="sourceLine" id="cb6-18" data-line-number="18">  )</a>
+<a class="sourceLine" id="cb6-19" data-line-number="19"></a>
+<a class="sourceLine" id="cb6-20" data-line-number="20">my_search &lt;-</a>
+<a class="sourceLine" id="cb6-21" data-line-number="21"><span class="st">  </span>litsearchr<span class="op">::</span><span class="kw">write_search</span>(</a>
+<a class="sourceLine" id="cb6-22" data-line-number="22">    <span class="dt">groupdata =</span> mysearchterms,</a>
+<a class="sourceLine" id="cb6-23" data-line-number="23">    <span class="dt">languages =</span> <span class="st">&quot;English&quot;</span>,</a>
+<a class="sourceLine" id="cb6-24" data-line-number="24">    <span class="dt">stemming =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb6-25" data-line-number="25">    <span class="dt">closure =</span> <span class="st">&quot;none&quot;</span>,</a>
+<a class="sourceLine" id="cb6-26" data-line-number="26">    <span class="dt">exactphrase =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb6-27" data-line-number="27">    <span class="dt">writesearch =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb6-28" data-line-number="28">    <span class="dt">verbose =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb6-29" data-line-number="29">  )</a>
+<a class="sourceLine" id="cb6-30" data-line-number="30"><span class="co">#&gt; [1] &quot;English is written&quot;</span></a>
+<a class="sourceLine" id="cb6-31" data-line-number="31"></a>
+<a class="sourceLine" id="cb6-32" data-line-number="32"><span class="co"># when writing to a plain text file, the extra \ are required to render the * and &quot; properly</span></a>
+<a class="sourceLine" id="cb6-33" data-line-number="33"><span class="co"># if copying straight from the console, simply find and replace them in a text editor</span></a>
+<a class="sourceLine" id="cb6-34" data-line-number="34">my_search</a>
+<a class="sourceLine" id="cb6-35" data-line-number="35"><span class="co">#&gt; [1] &quot;((\&quot;picoid* arcticus*\&quot; OR \&quot;black-back* woodpeck*\&quot; OR \&quot;cavity-nest* bird*\&quot; OR \&quot;picoid* tridactylus*\&quot; OR \&quot;three-to* woodpeck*\&quot;) AND (wildfir* OR \&quot;burn* forest*\&quot; OR post-fir* OR \&quot;postfir* salvag* logging\&quot; OR \&quot;fire* sever*\&quot; OR \&quot;recent* burn*\&quot;))&quot;</span></a></code></pre></div>
+</div>
+<div id="check-search-strategy-precision-and-recall" class="section level2">
+<h2>6. Check search strategy precision and recall</h2>
+<p>Save the titles of the articles you want to retrieve as a character vector called gold_standard. You may want to do this by reading in a .csv file or you can paste/type them out. In this example, we are only using three articles to test our search strategy, though normally you will want to use a longer list of articles identified through expert opinion and/or consulting the list of studies included in previous reviews related to the topic. We will write a simple search of these titles to run in the bibliographic databases we plan to use to check if they are indeed indexed and should be retrieved by our search terms. Any that are not indexed can be ignored for the following step.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">gold_standard &lt;-</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="st">  </span><span class="kw">c</span>(</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">    <span class="st">&quot;Black-backed woodpecker occupancy in burned and beetle killed forests: disturbance agent matters&quot;</span>,</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">    <span class="st">&quot;Nest site selection and nest survival of Black-backed Woodpeckers after wildfire&quot;</span>,</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">    <span class="st">&quot;Cross scale occupancy dynamics of a postfire specialist in response to variation across a fire regime&quot;</span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6">  )</a>
+<a class="sourceLine" id="cb7-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb7-8" data-line-number="8">title_search &lt;-<span class="st"> </span>litsearchr<span class="op">::</span><span class="kw">write_title_search</span>(<span class="dt">titles=</span>gold_standard)</a></code></pre></div>
+<p>We then read in our full search results and compare them to our gold standard to determine which gold standard articles we retrieved. Note: in this case I am using the naive search results from earlier because this is just a demonstration and this is not a real systematic review, so I did not run the full searches. You will want to do this with your actual full search results.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">results_directory &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata/&quot;</span>, <span class="dt">package=</span><span class="st">&quot;synthesisr&quot;</span>)</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">retrieved_articles &lt;-</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="st">  </span>litsearchr<span class="op">::</span><span class="kw">import_results</span>(<span class="dt">directory =</span> results_directory, <span class="dt">verbose =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb8-6" data-line-number="6">retrieved_articles &lt;-<span class="st"> </span>litsearchr<span class="op">::</span><span class="kw">remove_duplicates</span>(retrieved_articles, <span class="dt">field=</span><span class="st">&quot;title&quot;</span>, <span class="dt">method=</span><span class="st">&quot;stringdist&quot;</span>)</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb8-8" data-line-number="8">articles_found &lt;-<span class="st"> </span>litsearchr<span class="op">::</span><span class="kw">check_recall</span>(<span class="dt">true_hits =</span> gold_standard,</a>
+<a class="sourceLine" id="cb8-9" data-line-number="9">                                           <span class="dt">retrieved =</span> retrieved_articles<span class="op">$</span>title)</a>
+<a class="sourceLine" id="cb8-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb8-11" data-line-number="11">articles_found</a>
+<a class="sourceLine" id="cb8-12" data-line-number="12"><span class="co">#&gt;      Title                                                                                                  </span></a>
+<a class="sourceLine" id="cb8-13" data-line-number="13"><span class="co">#&gt; [1,] &quot;Black-backed woodpecker occupancy in burned and beetle killed forests: disturbance agent matters&quot;     </span></a>
+<a class="sourceLine" id="cb8-14" data-line-number="14"><span class="co">#&gt; [2,] &quot;Nest site selection and nest survival of Black-backed Woodpeckers after wildfire&quot;                     </span></a>
+<a class="sourceLine" id="cb8-15" data-line-number="15"><span class="co">#&gt; [3,] &quot;Cross scale occupancy dynamics of a postfire specialist in response to variation across a fire regime&quot;</span></a>
+<a class="sourceLine" id="cb8-16" data-line-number="16"><span class="co">#&gt;      Best_Match                                                                                             </span></a>
+<a class="sourceLine" id="cb8-17" data-line-number="17"><span class="co">#&gt; [1,] &quot;Black-backed woodpecker occupancy in burned and beetle-killed forests: Disturbance agent matters&quot;     </span></a>
+<a class="sourceLine" id="cb8-18" data-line-number="18"><span class="co">#&gt; [2,] &quot;Nest site selection and nest survival of Black-backed Woodpeckers after wildfire&quot;                     </span></a>
+<a class="sourceLine" id="cb8-19" data-line-number="19"><span class="co">#&gt; [3,] &quot;Cross-scale occupancy dynamics of a postfire specialist in response to variation across a fire regime&quot;</span></a>
+<a class="sourceLine" id="cb8-20" data-line-number="20"><span class="co">#&gt;      Similarity         </span></a>
+<a class="sourceLine" id="cb8-21" data-line-number="21"><span class="co">#&gt; [1,] &quot;0.979166666666667&quot;</span></a>
+<a class="sourceLine" id="cb8-22" data-line-number="22"><span class="co">#&gt; [2,] &quot;1&quot;                </span></a>
+<a class="sourceLine" id="cb8-23" data-line-number="23"><span class="co">#&gt; [3,] &quot;0.99009900990099&quot;</span></a></code></pre></div>
+<p>The check indicates that all three of our gold standard articles were included in our search results, so we would go ahead with our final search and use it for our systematic review.</p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
