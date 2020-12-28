@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>litsearchr - an R package to facilitate quasi-automatic search strategy development for systematic reviews</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Eliza Grames">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body>    
+    <header class="header">	    
+        <div class="branding">
+            <div class="container-fluid position-relative py-3">
+                <div class="logo-wrapper">
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/hex-logo-base-page001.png" alt="logo" width=45 height=auto><span class="logo-text">litsearchr</span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	        
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    <section class="hero-section">
+	    <div class="container">
+ <div class="row">
+	 <div class="col-12 col-md-7 pt-5 mb-5 align-self-center">
+ <div class="promo pr-md-3 pr-lg-5">
+	 <h1 class="headline mb-3">litsearchr</h1><!--//headline-->
+	 <div class="subheadline mb-4">
+an R package to facilitate quasi-automatic search strategy development for systematic reviews  
+	 </div><!--//subheading-->
+	  <nav class="floating-menu">
+        <ul class="main-menu">
+            <li>
+                <a href="#" class="ripple"><i class="fas fa-home fa-lg"></i> &nbsp; Home</a>
+            </li>
+            <li>
+                <a href="#get-started" class="ripple"><i class="fas fa-rocket fa-lg"></i> &nbsp;&nbsp; Getting Started</a>
+            </li>
+            <li>
+                <a href="#tutorials" class="ripple"><i class="fas fa-book fa-lg"></i> &nbsp; &nbsp;Tutorials</a>
+            </li>
+            <li>
+                <a href="#bugs" class="ripple"><i class="fas fa-bug fa-lg"></i> &nbsp; Report a Bug</a>
+            </li>
+                        <li>
+                <a href="#tools" class="ripple"><i class="fas fa-tools fa-lg"></i> &nbsp; Related Tools</a>
+            </li>
+            <li>
+                <a href="#contact" class="ripple"><i class="far fa-id-card fa-lg"></i>  &nbsp; Contact</a>
+            </li>
+        </ul>
+        <div class="menu-bg"></div>
+    </nav>
+   
+	 <div class="cta-holder">
+  	 <i class='altmetric-embed' data-badge-type='donut' data-doi="10.1111/2041-210X.13268"></i>
+
+  <a class="btn btn-primary mr-lg-2" href="https://doi.org/10.1111/2041-210X.13268">Read the paper</a>
+  <a class="btn btn-secondary scrollto" href="#get-started">Learn More</a>
+  
+	 </div><!--//cta-holder-->
+	 
+	 <div class="hero-quotes mt-5">
+  <div id="quotes-carousel" class="quotes-carousel carousel slide carousel-fade mb-5" data-ride="carousel" data-interval="8000">
+ 	 <div class="carousel-inner">
+   <div class="carousel-item active">
+   <blockquote class="quote p-4 theme-bg-light"><h4><a href="https://improvingpsych.org/mission/awards/"><i class="fas fa-award fa-lg"></i></a>
+ 2020 Commendation from the Society for the Improvement of Psychological Science      </h4> 
+   </blockquote><!--//item-->
+   
+   Systematic review, meta-analysis, and other forms of evidence synthesis require researchers to identify the body of evidence relevant to their research question. Partially automating evidence synthesis would reduce the amount of human time and effort needed to conduct a systematic review and reduce bias in keyword selection when researchers develop search strategies.   <br><br>
+   
+   The litsearchr R package facilitates quick, objective, reproducible search strategy development using text-mining and keyword co-occurrence networks to identify important terms to include in a search strategy as described in <a href="https://doi.org/10.1111/2041-210X.13268">Grames et al. (2019)</a>. It can automatically write Boolean search strings in up to 53 different languages, with stemming support for English. To assess the quality of a search, it can also check the results of a search against a set of known, relevant articles to get performance metrics.
+   </div>
+   </div><!--//carousel-inner-->
+   	</div><!--//quotes-carousel-->
+   	
+	 </div><!--//hero-quotes-->
+ </div><!--//promo-->
+	 </div><!--col-->
+	 <div class="col-12 col-md-5 mb-5 align-self-center">
+ <div class="book-cover-holder">
+	 <img class="img-fluid book-cover" src="assets/images/hex-logo-base-page001.png" alt="litsearchr logo" >
+ </div><!--//book-cover-holder-->
+	 </div><!--col-->
+ </div><!--//row-->
+	    </div><!--//container-->
+    </section><!--//hero-section-->
+    
+    <section id="get-started" class="benefits-section theme-bg-light-gradient py-5">
+	    <div class="container">
+ <h2 class="section-heading text-center mb-3">Getting Started</h2>
+ 
+ 
+ <div class="section-intro single-col-max mx-auto text-center">litsearchr is designed for users of any level, whether you have no experience coding in R, have never done a systematic review before, or are a seasoned expert.</div>
+ <div class="row">
+	 <div class="item col-12 col-md-6 col-lg-4">
+ <div class="item-inner p-3 p-lg-4">
+	 <div class="item-header mb-3">
+  <div class="item-icon  text-center"><i class="fab fa-r-project"></i></div>
+  <h3 class="item-heading  text-center">Getting started in R and RStudio</h3>
+	 </div><!--//item-heading-->
+	 <div class="item-desc">
+litsearchr is an R package, which means you will need to have R and RStudio installed on your computer to use it. Get help installing R and RStudio, learn about working in the R environment, and navigate RStudio with these resources:
+<br><br>
+<ul>
+  
+  <li><a href="https://cran.r-project.org/">The Comprehensive R Archive Network (CRAN)</a></li><br>
+  <li><a href="https://rstudio.com/products/rstudio/download/">RStudio</a></li><br>
+  <li><a href="https://education.rstudio.com/">RStudio Education</a></li>
+  
+</ul>
+
+</div><!--//item-desc-->
+ </div><!--//item-inner-->
+	 </div><!--//item-->
+	 <div class="item col-12 col-md-6 col-lg-4">
+ <div class="item-inner p-3 p-lg-4">
+	 <div class="item-header mb-3">
+  <div class="item-icon text-center"><i class="fas fa-cloud-download-alt"></i></div>
+  <h3 class="item-heading text-center">Installing litsearchr</h3>
+	 </div><!--//item-heading-->
+	 <div class="item-desc">
+  <ol><li>Install the <span style="font-family:monospace">remotes</span> package in R using <span style="font-family:monospace">install.packages("remotes")</span></li><br>
+  <li>Load the <span style="font-family:monospace">remotes</span> package by running <span style="font-family:monospace">library(remotes)</span></li><br>
+  <li>Install litsearchr by running <span style="font-family:monospace">install_github("elizagrames/litsearchr", ref="main")</span>
+  </li></ol>
+  <div class="row">
+  
+ <div class="item col-md-12 col-lg-2">
+<center><a href="https://github.com/elizagrames/litsearchr/releases/download/0.4.0/litsearchr_0.4.0.tar.gz">
+  <h1><i class="fas fa-download"></i></h1></a> </center> 
+  
+</div>
+<div class="item col-md-12 col-lg-10">
+  	    Alternatively, you can download the <span style="font-family:monospace">litsearchr</span> <a href="https://github.com/elizagrames/litsearchr/releases/download/0.4.0/litsearchr_0.4.0.tar.gz">source code archive</a> and build the package yourself locally.
+</div>
+
+
+</div>
+
+ 
+
+	 </div><!--//item-desc-->
+ </div><!--//item-inner-->
+	 </div><!--//item-->
+	 <div class="item col-12 col-md-6 col-lg-4">
+ <div class="item-inner p-3 p-lg-4">
+	 <div class="item-header mb-3">
+  <div class="item-icon text-center"><i class="fas fa-hammer"></i></div>
+  <h3 class="item-heading text-center">Library Carpentry</h3>
+	 </div><!--//item-heading-->
+	 <div class="item-desc">
+	   If you are starting from the beginning, you may want to attend community-taught Software Carpentry and Library Carpentry workshops or work through some of these lesson materials at your own pace:
+	   <br><br>
+	   <ul>
+	     
+	   <li><a href="https://librarycarpentry.org/lc-r/">Library Carpentry: Introduction to R</a>
+	 </li><br><li> 
+	   <a href="https://ameliakallaher.github.io/lc-litsearchr/">Library Carpentry: Introduction to R and litsearchr (in development)</a>
+	 </li><br><li>  
+	   <a href="http://swcarpentry.github.io/r-novice-gapminder/01-rstudio-intro/index.html">Software Carpentry: Introduction to R and RStudio</a></li>
+	   </ul>
+
+  
+	 </div><!--//item-desc-->
+ </div><!--//item-inner-->
+	 </div><!--//item-->
+	 </div><!--//row-->
+	    </div><!--//container-->
+    </section><!--//benefits-section-->
+    
+    <section id="tutorials" class="content-section theme-bg-light-gradient">
+	    <div class="container">
+ <h2 class="section-heading text-center py-5">Tutorials and Documentation</h2>
+	 <div class="row">
+ <div class="col-12 col-md-7">
+<h5>Identifying Search Terms for a Systematic Review: A Demonstration of the litsearchr Package</h5>
+<b>Note: The video demonstration is for an OLD version (v0.1.0) of litsearchr</b> and some of the content and specific functions are outdated though the general approach to using the package remains the same. Please refer to the vignette for the current version of litsearchr and the function help files for the most recent instructions.<br><br>
+<iframe width="616" height="347" src="https://www.youtube.com/embed/Z0GWTzl9OCE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div><!--//col-->
+ <div class="col-12 col-md-5 mb-5">
+	 <div class="key-points text-center">
+  <ul class="key-points-list list-unstyled mb-4 mx-auto d-inline-block text-left">
+ 	 <li><a href="litsearchr_vignette.html"><span style="font-size:20pt"><i class="fas fa-file-alt mr-2"></i></span>Current Vignette</a>: Search term selection with litsearchr v1.0.0 for an example systematic review of the effects of fire on black-backed woodpeckers</li>
+ 	 <li><a href="https://luketudge.github.io/litsearchr-tutorial/litsearchr_tutorial.html"><span style="font-size:20pt"><i class="fas fa-link mr-2"></i></span>Useful litsearchr tutorial created by Luke Tudge</a> on the subject of medication and cognitive behavioral therapy for phobias </li>
+ 	 <li><a href="https://ameliakallaher.github.io/lc-litsearchr/"><span style="font-size:20pt"><i class="fas fa-hammer mr-2"></i></span>This in-development Library Carpentry lesson</a> introduces people working in library- and information-related roles to using R and RStudio when working on systematic reviews. In addition to the basics of R and RStudio, you will learn to use litsearchr.
+</li>
+ 	 <li><a href="introduction_vignette_v010.html"><span style="font-size:20pt"><i class="fas fa-archive mr-2"></i></span><b>Archived:</b> Introduction to litsearchr v0.1.0</a> with an example of writing a systematic review search strategy for Black-backed Woodpecker occupancy of post-fire forest systems (corresponds to Grames et al. 2019, <a href="https://doi.org/10.1111/2041-210X.13268"><i>Methods in Ecology and Evolutionary Biology</i></a>)</li>
+  </ul><br><br>
+	 </div><!--//key-points-->
+	 
+ </div><!--//col-12-->   
+	 </div><!--//row-->
+ </div><!--//single-col-max-->
+	    </div><!--//container-->
+    </section><!--//content-section-->
+    
+    <section id="bugs" class="audience-section py-5  theme-bg-light-gradient">
+	    <div class="container">
+ <h2 class="section-heading text-center mb-4">Report a Bug or Make a Feature Request</h2>
+
+	 <div class="row py-3">
+ <div class="col-12 col-md-6">
+   
+   If you run into a problem where a function in litsearchr is not behaving as expected, please open an Issue on the litsearchr GitHub repository or email the developer, Eliza, at eliza.grames@uconn.edu. When describing the problem or requesting a feature, please make sure to:
+   <ol><li>Check that you do not have any typos that could be creating the error, especially extra spaces, commas, or periods, and that the error is actually being produced by litsearchr or one of its dependencies, not your computer.</li>
+   <li>Include the error message or describe why the output was not what was expected, and copy the code snippet that creates the error including all the options you used (i.e. not just the function name). We need to be able to reproduce the error in order to fix it.</li> 
+   <li>If possible and there is no sensitive information in your data files, include a copy of your environment when you got the error (i.e. save.image() and attach the .RData file to your email or issue) since that can be really helpful for troubleshooting problems with text processing.</li></ol>
+    <center> <a class="btn btn-primary mr-lg-2" href="https://github.com/elizagrames/litsearchr/issues">Report a Bug</a>
+<br></center><Br>
+   If you think of a feature that would be particularly useful to you, and probably also to other users of litsearchr, feel free to suggest it. We can't promise to implement all suggestions right away since all litsearchr updates and upkeep are done by one PhD student in her spare time, but we will try!
+   
+   </div>
+   
+    <div class="col-12 col-md-6"> <blockquote class="quote theme-bg-light"><h4><i class="fas fa-bug fa-lg"></i>
+ The First "Bug"</h4>
+ 
+ At litsearchr, we love bugs and insects of all kinds (check out the <a href="http://entogem.github.io/">EntoGEM project!</a>). The first programming "bug" was a <a href="https://www.nationalgeographic.org/thisday/sep9/worlds-first-computer-bug/">moth found in Mark II</a>, a machine being developed by one of the first computer programmers, Grace Hopper. 
+ <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/First_Computer_Bug%2C_1945.jpg" width=490px height=auto>
+   </blockquote>
+   </div></div>
+	 	  <h2 class="section-heading text-center mb-4">Contribute</h2>
+	 	  <div class="row"><div class="col-12 col-md-2">	<center>
+	 	  <span style="font-size:100px"><i class="fas fa-code-branch fa-lg"></i></span></center>
+	 	  </div>
+	 	  <div class="col-12 col-md-10">
+	 	    <p>If you have an idea for a feature request, you can either initiate a request (see section above), or you can try to come up with a fix or new feature yourself. You can also work on fixes to open Issues on the litsearchr repository that others have created.</p>
+	 	  
+	 	  <p>Feel free to fork the litsearchr repository, add or modify functions to make litsearchr capable of doing more, and then once you've checked that the changes (probably) don't break any other functions, you can make a pull request and once Eliza has double-checked that the feature increases the functionality of litsearchr and works well with the other functions, she will merge it into the development version of the package for the next release.</p>
+	 	  </div>
+
+	 	  </div>
+	 	  
+	 	  
+
+ </div><!--//media-body-->
+    </section><!--//audience-section-->
+    
+    <section id="tools" class="reviews-section py-5 theme-bg-light-gradient">
+	    <div class="container">
+ <h2 class="section-heading text-center">Related Tools and Resources</h2>
+ <div class="section-intro text-center single-col-max mx-auto mb-5"></div>
+ 
+ 
+ 
+ <div class="row justify-content-center">
+   
+	 	  <div class="col-12 col-md-4">
+   <blockquote><a href="https://github.com/rmetaverse/synthesisr"><h3><img src="https://github.com/rmetaverse/synthesisr/raw/master/synthesisr_hex.png" alt="synthesisr logo" width=90px height=auto >&nbsp;synthesisr</h3></a>Import, assemble, and deduplicate bibliographic data stored as RIS or BibTex formatted text files.
+</blockquote>
+</div>
+
+	 	  <div class="col-12 col-md-4">
+   <blockquote><a href="https://revtools.net/"><h3><img src="https://revtools.net/assets/img/revtools_hex.png" alt="revtools logo" width=90px height=auto >&nbsp;revtools</h3></a>Article screening for evidence synthesis using manual or visual methods.
+</blockquote>
+</div>
+
+	 	  <div class="col-12 col-md-4">
+   <blockquote><a href="https://github.com/elizagrames/topictagger"><h3><img src="https://github.com/elizagrames/topictagger/raw/main/img/topictagger_hex.png" alt="metadigitise logo" width=90px height=auto >&nbsp;topictagger</h3></a>Tag documents with meta-data and based on user-defined ontologies or topic groups.
+</blockquote>
+</div>
+
+
+	 	  <div class="col-12 col-md-4">
+   <blockquote><a href="https://cran.r-project.org/web/packages/metaDigitise/index.html"><h3><img src="https://rmetaverse.github.io/assets/img/hex/metaDigitise_hex.png" alt="metadigitise logo" width=90px height=auto >&nbsp;metaDigitise</h3></a>High-throughput, reproducible extraction of data from figures.
+</blockquote>
+</div>
+
+
+	 	  <div class="col-12 col-md-4">
+   <blockquote><a href="https://mcguinlu.shinyapps.io/robvis/"><h3><img src="https://rmetaverse.github.io/assets/img/hex/robvis_hex.png" alt="robvis logo" width=90px height=auto >&nbsp;robvis</h3></a>Create publication quality risk-of-bias assessment figures.
+</blockquote>
+</div>
+
+
+	 	  <div class="col-12 col-md-4">
+   <blockquote><a href="https://www.eshackathon.org/"><h6><img src="https://www.eshackathon.org/assets/images/logos/esh_hex_final.png" alt="metadigitise logo" width=90px height=auto >&nbsp;Evidence Synthesis Hackathon</h6></a>A series to bring together interested researchers, practitioners and coders to discuss and develop new Open Source technologies for evidence synthesis applications.
+</blockquote>
+</div>
+
+
+   </div>
+
+
+	    </div><!--//container-->
+    </section><!--//reviews-section-->
+    
+    <section id="contact" class="author-section section theme-bg-primary py-5">
+	    <div class="container py-3">
+ <div class="author-profile text-center mb-5">
+	 <img class="author-pic" src="assets/images/me.png" alt="image" width=80px height=auto>
+ </div><!--//author-profile-->
+ <h2 class="section-heading text-center text-white mb-3">About the Developer</h2>
+ <div class="author-bio single-col-max mx-auto">
+	 <p>Eliza Grames is a PhD Candidate in Ecology and Evolutionary Biology at the University of Connecticut. She works on developing partially automated methods and software to reduce the time and effort needed for evidence synthesis projects and applies these approaches to bird and insect conservation. </p>
+	 <p>Her dissertation research combines field work observations of bird behaviors, nest predation, and food availability with meta-analytic structural equation modeling and Bayesian path analysis to understand why small forest fragments are less densely populated by breeding birds than larger fragments and how the underlying mechanisms interact. 
+</p>
+	 <div class="author-links text-center pt-4">
+ <ul class="social-list list-unstyled">
+	 <li class="list-inline-item"><a href="https://twitter.com/ElizaGrames"><i class="fab fa-twitter"></i></a></li>
+	 <li class="list-inline-item"><a href="mailto:eliza.grames@uconn.edu"><i class="far fa-envelope"></i></a></li>
+	 <li class="list-inline-item"><a href="https://github.com/elizagrames"><i class="fab fa-github-alt"></i></a></li> 
+	         <li class="list-inline-item"><a href="https://elizagrames.github.io"><i class="fas fa-globe-europe"></i></a></li>
+	         <li class="list-inline-item"><a href="https://www.researchgate.net/profile/Eliza_Grames"><i class="fab fa-researchgate"></i></a></li>
+	         
+	         <li class="list-inline-item"><a href="https://scholar.google.com/citations?user=JVbm2tgAAAAJ&hl=en&oi=sra"><i class="fab fa-google"></i></a></li>
+	     </ul><!--//social-list-->
+	 </div><!--//author-links-->
+	 
+ </div><!--//author-bio-->
+ 
+	    </div><!--//container-->
+    </section><!--//author-section-->
+    
+  <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>  
+    <script src="assets/plugins/back-to-top.js"></script>  
+    
+    <script src="assets/js/main.js"></script>
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+</body>
+</html> 
+
