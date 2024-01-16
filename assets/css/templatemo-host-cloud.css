@@ -29,7 +29,7 @@ p {
 }
 a {
 	text-decoration: none!important;
-	color: #be3455;
+	color: #169B62;
 }
 a.main-button {
 	outline: none;
@@ -40,7 +40,7 @@ a.main-button {
 	padding: 0px 25px;
 	border: none;
 	margin-left: 10px;
-	background-color: #be3455;
+	background-color: #169B62;
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 15px;
@@ -77,7 +77,7 @@ a.gradient-button:hover {
 	margin-bottom: 80px;
 }
 .section-heading span {
-	color: #be3455;
+	color: #169B62;
 	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: 0.5px;
@@ -233,25 +233,25 @@ header {
 .background-header .functional-buttons	ul li:first-child a {
 	display: inline-block;
 	background-color: #ffffffff;
-	border: 2px solid #be3455;
+	border: 2px solid #169B62;
 	text-transform: uppercase;
 	font-size: 13px;
-	color: #be3455;
+	color: #169B62;
 	padding: 6px 20px;
 	letter-spacing: 0.5px;
 	transition: all 0.5s;
 }
 .background-header .functional-buttons	ul li:first-child a:hover {
 	color: #fff;
-	background-color: #be3455;
-	border-color: #be3455;
+	background-color: #169B62;
+	border-color: #169B62;
 }
 .background-header .navbar-nav .nav-link:hover,
 .background-header .navbar-nav .active>.nav-link,
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show>.nav-link {
-	color: #be3455!important;
+	color: #169B62!important;
 }
 .navbar .navbar-brand {
 	float: 	left;
@@ -294,7 +294,7 @@ header {
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link.show,
 .navbar .navbar-nav .show>.nav-link {
-	color: #be3455;
+	color: #169B62;
 }
 .navbar .navbar-toggler-icon {
 	background-image: none;
@@ -311,7 +311,7 @@ header {
 }
 .navbar .navbar-toggler-icon:after {
 	content: '\f0c9';
-	color: #be3455;
+	color: #169B62;
 	font-size: 18px;
 	line-height: 26px;
 	font-family: 'FontAwesome';
@@ -339,13 +339,13 @@ header {
 	transition: all 0.5s;
 }
 .functional-buttons	ul li:first-child a:hover {
-	color: #be3455;
+	color: #169B62;
 	background-color: #fff;
 }
 .functional-buttons	ul li:last-child a {
 	display: inline-block;
-	background-color: #be3455;
-	border: 2px solid #be3455;
+	background-color: #169B62;
+	border: 2px solid #169B62;
 	text-transform: uppercase;
 	font-size: 13px;
 	color: #fff;
@@ -412,7 +412,7 @@ header {
 }
 .services-section .service-item i {
 	color: #fff;
-	background-color: #be3455;
+	background-color: #169B62;
 	display: inline-block;
 	width: 100px;
 	height: 100px;
@@ -472,7 +472,7 @@ header {
     background: linear-gradient(145deg, rgba(114,2,187,1) 0%, rgba(50,100,245,1) 100%);
 }
 .pricing-item .price {
-	background-color: #be3455;
+	background-color: #169B62;
 	width: 100%;
 	padding: 30px 0px;
 	margin-bottom: 35px;
@@ -610,7 +610,7 @@ header {
 	display: inline-block;
 	margin-top: 8px;
 	font-size: 15px;
-	color: #be3455;
+	color: #169B62;
 }
 .owl-testimonials .owl-dots .owl-dot {
   border-radius: 3px;
@@ -636,7 +636,7 @@ header {
     outline: none
 }
 .owl-testimonials .owl-dots .owl-dot.active {
-    background-color: #be3455;
+    background-color: #169B62;
 }
 
 
@@ -746,7 +746,7 @@ footer .sub-footer a {
   border-bottom: none;
 }
 #tabs ul .ui-tabs-active a {
-  color: #be3455;
+  color: #169B62;
 }
 #tabs ul .ui-tabs-active span {
   color: #1e1e1e;
@@ -774,21 +774,19 @@ footer .sub-footer a {
 .team-section .section-heading h2 {
 	color: #1e1e1e;
 }
-.team-item:hover img {
-	opacity: 0.75;
-}
 .team-item {
-	cursor: pointer;
 	margin-bottom: 30px;
 }
 .team-item img {
-	width: 100%;
+	width: 50%;
+	height: 50%;
+	float: right;
 	overflow: hidden;
 	transition: all 0.5s;
 }
 .team-item .down-content {
 	background-color: #f7f7f7;
-	text-align: center;
+	text-align: left;
 	padding: 30px;
 }
 .team-item h4 {
@@ -802,7 +800,7 @@ footer .sub-footer a {
 	display: inline-block;
 	margin-top: 8px;
 	font-size: 15px;
-	color: #be3455;
+	color: #169B62;
 }
 
 
@@ -867,7 +865,7 @@ footer .sub-footer a {
 	line-height: 50px;
 	padding: 0px 20px;
 	border: none;
-	background-color: #be3455;
+	background-color: #169B62;
 	color: #fff;
 	text-transform: uppercase;
 	font-size: 15px;
@@ -902,7 +900,7 @@ footer .sub-footer a {
 	display: inline-block;
 	text-align: center;
 	line-height: 60px;
-	background-color: #be3455;
+	background-color: #169B62;
 	border-radius: 50%;
 	color: #fff;
 	margin-right: 15px;
@@ -999,7 +997,7 @@ footer .sub-footer a {
 		color: #1e1e1e!important;
 	}
 	.navbar .navbar-nav .active>.nav-link {
-		color: #be345588!important;
+		color: #169B6288!important;
 	}
 	.about-us .left-image {
 		margin-bottom: 30px;
