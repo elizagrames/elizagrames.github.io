@@ -97,12 +97,12 @@ a.gradient-button:hover {
 }
 
 .page-heading {
-	background-image: url(../images/heading-bg.jpg);
+	background-image: url(../images/heading-bg.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-align: center;
-	padding: 230px 0px 180px 0px;
+	padding: 200px 0px 80px 0px;
 }
 
 .page-heading h1 {
@@ -285,7 +285,7 @@ header {
 	font-size: 18px;
 	font-weight: 800;
 	letter-spacing: 0.5px;
-	color: #fff;
+	color: #000;
 	transition: all 0.5s;
 	margin-top: 5px;
 }
@@ -359,15 +359,88 @@ header {
 }
 
 /* Banner Style */
+/* Banner Style */
 .banner {
 	background-image: url(../images/banner-bg.png);
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding: 0px 0px 500px 0px;
+	padding: 300px 0px;
 	background-position: center center;
 }
 .banner .caption {
 	text-align: center;
+	margin-left: 240px;
+	margin-right: 0px;
+	font-size: 22px;
+}
+.banner .caption h2 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	font-size: 32px;
+	font-weight: 700;
+	color: #000;
+}
+.banner #search-section fieldset {
+	display: inline-block;
+}
+.banner #search-section {
+	position: relative;
+}
+.banner #search-section input.searchText {
+	float: left;
+	width: 570px;
+	min-width: 280px;
+	height: 49px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	padding: 0px 15px;
+	color: #fff;
+	outline: none;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	margin-bottom: 30px;
+}
+.banner #search-section input.main-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	outline: none;
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0px 20px;
+	border: none;
+	margin-left: 10px;
+	background-color: #00bcd4;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	transition: all 0.5s;
+	margin-bottom: 30px;
+}
+.banner #search-section button:hover {
+	background-color: #00a4b9;
+}
+
+/* Banner Style */
+.hero {
+	background-size: cover;
+	background-image: url(../images/banner-bg.png);
+	background-repeat: no-repeat;
+	width: 100%;
+	min-height: 1600px;
+	background-color: #f7f7f7;
+	background-position: center center;
+}
+.hero .caption {
+	text-align: center;
+		padding: 50px 80px 40px 0px;
+
 }
 
 
@@ -758,7 +831,7 @@ footer .sub-footer a {
 }
 .tabs-content p {
   font-size: 14px;
-  color: #7a7a7a;
+  color: #fff;
   margin-top: 30px;
   margin-bottom: 0px;
 }
@@ -772,7 +845,7 @@ footer .sub-footer a {
 	text-align: center;
 }
 .team-section .section-heading h2 {
-	color: #1e1e1e;
+	color: #fff;
 }
 .team-item {
 	margin-bottom: 30px;
@@ -785,7 +858,7 @@ footer .sub-footer a {
 	transition: all 0.5s;
 }
 .team-item .down-content {
-	background-color: #f7f7f7;
+	background-color: #fff;
 	text-align: left;
 	padding: 30px;
 }
